@@ -1,0 +1,544 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>noname Projects</title>
+  <!-- icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="./assets/css/projects.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="./assets/image/noname.png" alt="logo">
+    </div>
+
+    <!-- NAV -->
+    <div class="nav">
+      <a href="./index.html">Home</a>
+      <a class="active" href="./projects.html">Project</a>
+      <a href="./studios.html">Studio</a>
+      <a href="./insightss.html">Insights</a>
+      <a href="./contacts.html">Contact</a>
+
+      <!-- underline bar -->
+      <div class="bar"></div>
+    </div>
+
+    <!-- ACTIONS -->
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div class="theme" id="theme">🌙</div>
+
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="./index.html">Home</a>
+    <a href="./projects.html">Project</a>
+    <a href="./studios.html">Studio</a>
+    <a href="./insightss.html">Insights</a>
+    <a href="./contacts.html">Contact</a>
+  </div>
+
+  <section class="heros">
+
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Hero Image">
+
+    <div class="heros-text">
+      <h1>All you need is a 'what if…'</h1>
+      <p>Turn ideas into real projects instantly</p>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">👥</div>
+        <h3>Free for everyone</h3>
+        <p>Start creating instantly.</p>
+        <a href="#">Start ›</a>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">💻</div>
+        <h3>Learn by doing</h3>
+        <p>Build real skills fast.</p>
+        <a href="#">Explore ›</a>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="name1">Name1</button>
+      <button class="filter-btn" data-filter="name2">Name2</button>
+      <button class="filter-btn" data-filter="name3">Name3</button>
+      <button class="filter-btn" data-filter="name4">Name4</button>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards">
+
+      <div class="card" data-category="name1">
+        <a href="#img1"><img src="./assets/image/ex03.jpg"></a>
+        <h3>Card 1</h3>
+        <p>Name1</p>
+      </div>
+
+      <div class="card" data-category="name1">
+        <a href="#img2"><img src="./assets/image/ex04.jpg" alt=""></a>
+        <h3>Card 2</h3>
+        <p>Name1</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img3"><img src="./assets/image/two-peoples.png" alt=""></a>
+        <h3>Card 3</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name1">
+        <a href="#img4"><img src="./assets/image/banner-nuck-center-250701-003.jpg" alt=""></a>
+        <h3>Card 4</h3>
+        <p>Name1</p>
+      </div>
+
+      <div class="card" data-category="name2">
+        <a href="#img5"><img src="./assets/image/uniic.png" alt=""></a>
+        <h3>Card 5</h3>
+        <p>Name2</p>
+      </div>
+
+      <div class="card" data-category="name2">
+        <a href="#img6"><img src="./assets/image/nuck-digital-lab.png" alt=""></a>
+        <h3>Card 6</h3>
+        <p>Name2</p>
+      </div>
+
+      <div class="card" data-category="name1">
+        <a href="#img7"><img src="./assets/image/ហ្វូមលាងមុខ.png" alt=""></a>
+        <h3>Card 7</h3>
+        <p>Name1</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img8"><img src="./assets/image/បុណ្យអុំទូក.jpg" alt=""></a>
+        <h3>Card 8</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name4">
+        <a href="#img9"><img src="./assets/image/បុណ្យឯករាជ្យជាតិ.jpg" alt=""></a>
+        <h3>Card 9</h3>
+        <p>Name4</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img10"><img src="./assets/image/បិណ្ឌមួយ.jpg" alt=""></a>
+        <h3>Card 10</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img11"><img src="./assets/image/banner-nuck-center-250701.jpg" alt=""></a>
+        <h3>Card 11</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name2">
+        <a href="#img12"><img src="./assets/image/welcome-1.png" alt=""></a>
+        <h3>Card 12</h3>
+        <p>Name2</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img13"><img src="./assets/image/អាហារសុខភាព១!.jpg" alt=""></a>
+        <h3>Card 13</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img14"><img src="./assets/image/បិណ្ឌ7.jpg" alt=""></a>
+        <h3>Card 14</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img15"><img src="./assets/image/បិណ្ឌ១០.jpg" alt=""></a>
+        <h3>Card 15</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img16"><img src="./assets/image/សិត-ខន-nuck-digital-zone-background-speaker.jpg" alt=""></a>
+        <h3>Card 16</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img17"><img src="./assets/image/សូ-វិសុទ្ធី-nuck-digital-zone-background-speaker.jpg" alt=""></a>
+        <h3>Card 17</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img18"><img src="./assets/image/ឡៅ-ឈីវអ៊ាវ-nuck.jpg" alt=""></a>
+        <h3>Card 18</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img19"><img src="./assets/image/happy-new-year-2026-first-poster.jpg" alt=""></a>
+        <h3>Card 19</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img20"><img src="./assets/image/untitled-1.jpg" alt=""></a>
+        <h3>Card201</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img21"><img src="./assets/image/happy-new-year-poster-2.jpg" alt=""></a>
+        <h3>Card 21</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img22"><img src="./assets/image/happy-new-year-poster-2.jpg" alt=""></a>
+        <h3>Card 22</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img23"><img src="./assets/image/asean.jpg" alt=""></a>
+        <h3>Card 23</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img24"><img src="./assets/image/king-1.jpg" alt=""></a>
+        <h3>Card 24</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img25"><img src="./assets/image/kafe-drink1.jpg" alt=""></a>
+        <h3>Card 25</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img26"><img src="./assets/image/king.jpg" alt=""></a>
+        <h3>Card 26</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name3">
+        <a href="#img27"><img src="./assets/image/បិណ្ឌ៦.jpg" alt=""></a>
+        <h3>Card 27</h3>
+        <p>Name3</p>
+      </div>
+
+      <div class="card" data-category="name3">
+
+        <h3>Card 11</h3>
+        <p>Name3</p>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+  <!-- 3 Project -->
+  <div id="img1" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/ex03.jpg" alt="">
+  </div>
+  <div id="img2" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/banner-nuck-center-250701-003.jpg" alt="">
+  </div>
+  <div id="img3" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/nuck-digital-lab.png" alt="">
+  </div>
+
+  <!-- 3 Project -->
+  <div id="img4" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/សិត-ខន-nuck-digital-zone-background-speaker.jpg" alt="">
+  </div>
+  <div id="img5" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/សូ-វិសុទ្ធី-nuck-digital-zone-background-speaker.jpg" alt="">
+  </div>
+  <div id="img6" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/ឡៅ-ឈីវអ៊ាវ-nuck.jpg" alt="">
+  </div>
+
+  <!-- 3 Project -->
+  <div id="img7" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/ex04.jpg" alt="">
+  </div>
+  <div id="img8" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/ex03.jpg" alt="">
+  </div>
+  <div id="img9" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/nuck-digital-lab-opt-2.jpg" alt="">
+  </div>
+
+  <!-- 3 Project -->
+  <div id="img10" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/vs-code-color.png" alt="">
+  </div>
+  <div id="img11" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/vs-code.png" alt="">
+  </div>
+  <div id="img12" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/welcome-1.png" alt="">
+  </div>
+  <div id="img13" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/ហ្វូមលាងមុខ.png" alt="">
+  </div>
+  <div id="img14" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/welcome-2.png" alt="">
+  </div>
+  <div id="img15" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/កាស១!.jpg" alt="">
+  </div>
+  <div id="img16" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/uniic.png" alt="">
+  </div>
+  <div id="img17" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/people.png" alt="">
+  </div>
+  <div id="img18" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./assets/image/two-peoples.png" alt="">
+  </div>
+
+
+  <section class="head">
+    <img src="./assets/image/bottom.jpg" alt="Hero Image">
+  </section>
+
+
+  <!-- loop image bottom -->
+  <section class="section">
+
+    <div class="top-content">
+      <h1>Future Star School</h1>
+      <p>Modern education & creativity</p>
+    </div>
+
+    <div class="scroll-box" id="scrollBox">
+
+      <!-- original -->
+      <div class="just"><img src="./assets/image/ex03.jpg">
+        <div class="content">
+          <h3>Classroom</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/ex04.jpg">
+        <div class="content">
+          <h3>Students</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/banner-nuck-center-250701-003.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/banner-nuck-center-250701.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/kafe-drink1.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/happy-new-year-2026-first-poster.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/king.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/សិត-ខន-nuck-digital-zone-background-speaker.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/សូ-វិសុទ្ធី-nuck-digital-zone-background-speaker.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/ឡៅ-ឈីវអ៊ាវ-nuck.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/ហ្វូមលាងមុខ.png">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/អាហារសុខភាព១!.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/អំទូក 1.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/បុណ្យឯករាជ្យជាតិ.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/បិណ្ឌមួយ.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/បិណ្ឌ១០.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/បិណ្ឌ៥.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/បិណ្ឌ៦.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/បុណ្យអុំទូក.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+      <div class="just"><img src="./assets/image/ប្រម៉ូតឡាន.1.jpg">
+        <div class="content">
+          <h3>Library</h3>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Footer HTML -->
+  <footer>
+    <!-- TOP SECTION -->
+    <div class="footer-top">
+
+      <!-- Logo -->
+      <div class="footer-box">
+        <div class="logo">
+          <img src="./assets/image/noname.png" alt="logo">
+        </div>
+      </div>
+
+      <!-- Work with us -->
+      <div class="footer-box">
+        <h3>Work with us</h3>
+        <p>info@noname.design<br>+855 (0) 70770571</p>
+      </div>
+
+      <!-- Address -->
+      <div class="footer-box">
+        <h3>Address</h3>
+        <p>#I86, National Road 3, Sangkat Chom Chao II,<br>Khan Porsenchey, Phnom Penh, CAMBODIA.</p>
+      </div>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- BOTTOM SECTION -->
+    <div class="footer-bottom">
+
+      <div class="scroll-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+      </div>
+
+      <h3>Socials</h3>
+
+      <div class="socials">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://t.me" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <div class="copyright">
+        © 2026 Website => <span class="highlight">noname</span>
+        <= for <span class="design">Design</span> and <span>Digital</span>
+      </div>
+
+    </div>
+    <a name="button"><button style="background-color: #222;border: none;"></button></a>
+  </footer>
+
+
+  <!-- style Js -->
+  <script src="./assets/js/projects.js" defer></script>
+</body>
+
+</html>

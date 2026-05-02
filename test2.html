@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Overlay Header</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111;
+      --accent: #6366f1;
+      --glass: rgba(255,255,255,0.75);
+    }
+
+    body.dark {
+      --bg: #0b0b0b;
+      --text: #f5f5f5;
+      --glass: rgba(25,25,25,0.75);
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.5s;
+    }
+
+    /* HOME BACKGROUND OVERLAY */
+    .home-bg {
+      position: fixed; /* overlay on top */
+      inset: 0;
+      background: url("./assets/image/home-bg.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 48px;
+      font-weight: bold;
+      z-index: 2000; /* higher than header */
+    }
+
+    .home-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4); /* dark overlay */
+    }
+
+    .home-bg h1 {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--glass);
+      backdrop-filter: blur(18px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 30px;
+      z-index: 1000;
+    }
+
+    .logo img { height: 84px; }
+
+    .nav {
+      display: flex;
+      gap: 28px;
+      position: relative;
+      align-items: center;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--text);
+      padding: 6px;
+      position: relative;
+      z-index: 20;
+    }
+
+    .nav a.active { color: var(--accent); }
+
+    .bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 0;
+      background: var(--accent);
+      transition: 0.4s ease;
+      z-index: 10;
+    }
+
+    .burger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+    .burger span { width:28px; height:3px; background:var(--text); border-radius:2px; transition:0.3s; }
+    .burger.active span:nth-child(1){ transform:rotate(45deg) translate(5px,5px);}
+    .burger.active span:nth-child(2){ opacity:0;}
+    .burger.active span:nth-child(3){ transform:rotate(-45deg) translate(5px,-5px);}
+    .burger.bounce{ animation:bounce 0.3s ease;}
+    @keyframes bounce{0%{transform:scale(1);}50%{transform:scale(0.85);}100%{transform:scale(1);}}
+
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.4);opacity:0;pointer-events:none;transition:0.3s;z-index:998;}
+    .overlay.show{opacity:1;pointer-events:all;}
+
+    .mobile-menu{position:fixed;top:0;right:-100%;width:260px;height:100%;background:var(--glass);backdrop-filter:blur(20px);padding:90px 25px;display:flex;flex-direction:column;gap:20px;transition:0.4s;z-index:999;}
+    .mobile-menu.show{right:0;}
+
+    .close{position:absolute;top:20px;right:20px;font-size:28px;font-weight:bold;color:var(--text);cursor:pointer;transition:0.3s;z-index:1001;}
+    .close:hover{color:var(--accent);transform:rotate(90deg);}
+
+    .theme{cursor:pointer;font-size:22px;transition:0.3s;}
+    .theme:hover{transform:rotate(20deg);}
+
+    @media(max-width:768px){.nav{display:none;}.burger{display:flex;}}
+  </style>
+</head>
+<body>
+  <!-- HOME BACKGROUND OVERLAY -->
+  <div class="home-bg">
+    <h1>Welcome Home</h1>
+  </div>
+
+  <header>
+    <div class="logo">
+      <img src="./assets/image/noname.png" alt="logo">
+    </div>
+    <div class="nav">
+      <a href="./index.html">Home</a>
+      <a class="active" href="./projects.html">Project</a>
+      <a href="./studios.html">Studio</a>
+      <a href="./insightss.html">Insights</a>
+      <a href="./contacts.html">Contact</a>
+      <div class="bar"></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div class="theme" id="theme">🌙</div>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="close" id="close">×</div>
+    <a href="./index.html">Home</a>
+    <a href="./projects.html">Project</a>
+    <a href="./studios.html">Studio</a>
+    <a href="./insightss.html">Insights</a>
+    <a href="./contacts.html">Contact</a>
+  </div>
+
+  <script>
+    const links=document.querySelectorAll(".nav a");
+    const bar=document.querySelector(".bar");
+    const burger=document.getElementById("burger");
+    const menu=document.getElementById("mobileMenu");
+    const overlay=document.getElementById("overlay");
+    const theme=document.getElementById("theme");
+    const closeBtn=document.getElementById("close");
+
+    function moveBar(el){ bar.style.width=el.offsetWidth+"px"; bar.style.left=el.offsetLeft+"px"; }
+    moveBar(document.querySelector(".nav a.active"));
+
+    links.forEach(link=>{
+      link.addEventListener("click",function(){
+        links.forEach(l=>l.classList.remove("active"));
+        this.classList.add("active");
+        moveBar(this);
+        if(this.textContent==="Home"){
+          bar.style.transform="scaleX(1.2)";
+          setTimeout(()=>bar.style.transform="scaleX(1)",200);
+        }
+        closeMenu();
+      });
+    });
+
+    burger.addEventListener("click",()=>{
+      burger.classList.toggle("active");
+      menu.classList.toggle("show");
+      overlay.classList.toggle("show");
+      burger.classList.add("bounce");
+      setTimeout(()=>burger.classList.remove("bounce"),300);
+    });
+
+    overlay.addEventListener("click",closeMenu);
+    closeBtn.addEventListener("click",closeMenu);
+
+    function closeMenu(){
+      menu.classList.remove("show");
+      overlay.classList.remove("show");
+      burger.classList.remove("active");
+    }
+
+    theme.addEventListener("click",()=>{
+      document.body.classList.toggle("dark");
+      theme.textContent=document.body.classList.contains("dark")?"☀️":"🌙";
+    });
+  </script>
+</body>
+</html>
