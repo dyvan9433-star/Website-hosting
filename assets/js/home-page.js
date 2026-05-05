@@ -4,6 +4,25 @@ function toggleMode() {
 }
 
 
+// header slider
+window.addEventListener("load", () => {
+  const lines = document.querySelectorAll(".line");
+  const text = document.querySelector("p.hidden-left");
+  const buttons = document.querySelector(".buttons");
+  const image = document.querySelector(".hero-image");
+
+  lines.forEach((line, index) => {
+    setTimeout(() => {
+      line.classList.add("show");
+    }, index * 400);
+  });
+
+  setTimeout(() => text.classList.add("show"), 1200);
+  setTimeout(() => buttons.classList.add("show"), 1500);
+  setTimeout(() => image.classList.add("show"), 600);
+});
+
+
 // Scroll Animation text bottom
 const texts = document.querySelectorAll('.text');
 
@@ -20,19 +39,20 @@ window.addEventListener('scroll', () => {
 // Register plugin
 gsap.registerPlugin(ScrollTrigger);
 
-// Card animation
 gsap.to(".card", {
   scrollTrigger: {
     trigger: ".grid",
-    start: "top 80%",
+    start: "top 95%",
     toggleActions: "play none none reset"
   },
   opacity: 1,
   y: 0,
-  duration: 1,
-  stagger: 0.2,
+  duration: 0.8,   // 👈 បន្ថែម duration
+  stagger: 0.12,
   ease: "power3.out"
 });
+
+
 
 //  box
 const boxes = document.querySelectorAll('.box');
