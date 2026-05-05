@@ -8,110 +8,149 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
-  <!-- bootstrap -->
   <link rel="stylesheet" href="./assets/css/studios.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+<body id="body">
 
-<body>
-  <header>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg px-3">
 
-    <!-- LOGO -->
-    <div class="logo">
-      <img src="./assets/image/noname.png" alt="logo">
-    </div>
+    <div class="container-fluid">
 
-    <!-- NAV -->
-    <div class="nav">
-      <a href="./index.html">Home</a>
-      <a href="./projects.html">Project</a>
-      <a class="active" href="./studios.html">Studio</a>
-      <a href="./insightss.html">Insights</a>
-      <a href="./contacts.html">Contact</a>
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+        <img src="./assets/image/noname.png" class="logo-img">
+      </a>
 
-      <!-- underline bar -->
-      <div class="bar"></div>
-    </div>
+      <!-- Desktop Menu -->
+      <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
+        <ul class="navbar-nav gap-4">
 
-    <!-- ACTIONS -->
-    <div style="display:flex;align-items:center;gap:12px;">
-      <div class="theme" id="theme">🌙</div>
+          <li class="nav-item"><a class="nav-link" href="./index.html"><i class="bi bi-house"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./projects.html"><i class="bi bi-kanban"></i>
+              Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="./studios.html"><i class="bi bi-camera"></i> Studio</a></li>
+          <li class="nav-item"><a class="nav-link" href="./insightss.html"><i class="bi bi-bar-chart"></i> Insights</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./contacts.html"><i class="bi bi-envelope"></i> Contact</a>
+          </li>
 
-      <div class="burger" id="burger">
-        <span></span>
-        <span></span>
-        <span></span>
+        </ul>
       </div>
+
+      <!-- Actions -->
+      <div class="d-flex align-items-center gap-2 header-actions">
+
+        <button onclick="toggleMode()">
+          <i class="bi bi-moon"></i>
+        </button>
+
+        <button class="d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <i class="bi bi-list"></i>
+        </button>
+
+      </div>
+
     </div>
-
-  </header>
-
-  <!-- OVERLAY -->
-  <div class="overlay" id="overlay"></div>
+  </nav>
 
   <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="./index.html">Home</a>
-    <a href="./projects.html">Project</a>
-    <a href="./studios.html">Studio</a>
-    <a href="./insightss.html">Insights</a>
-    <a href="./contacts.html">Contact</a>
+  <div class="offcanvas offcanvas-start" id="mobileMenu">
+
+    <div class="offcanvas-header">
+      <h5>Menu</h5>
+      <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+
+      <div class="list-group">
+
+        <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./index.html">
+          <i class="bi bi-house"></i> Home
+        </a>
+
+        <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./projects.html">
+          <i class="bi bi-kanban"></i> Projects
+        </a>
+
+        <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./studios.html">
+          <i class="bi bi-camera"></i> Studio
+        </a>
+
+        <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./insightss.html">
+          <i class="bi bi-bar-chart"></i> Insights
+        </a>
+
+        <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./contacts.html">
+          <i class="bi bi-envelope"></i> Contact
+        </a>
+
+      </div>
+
+    </div>
   </div>
 
   <!-- ការដាក់រូបភាពជាក្បាល Webpage -->
-  <div class="header">
-    <div class="slides">
+  <div class="slider">
 
-      <div class="slide">
-        <img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28">
-        <div class="content">
-          <h1>Future Technology</h1>
-          <p>AI • Robotics • Innovation</p>
-        </div>
+  <div class="slides">
+
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c">
+      <div class="text">
+        <h1>Cyber Data Network</h1>
+        <p>Global secure networks connecting the digital world.</p>
       </div>
-
-      <div class="slide">
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
-        <div class="content">
-          <h1>Digital World</h1>
-          <p>Code • Data • Cloud</p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-        <div class="content">
-          <h1>Creative Coding</h1>
-          <p>Build • Design • Deploy</p>
-        </div>
-      </div>
-
     </div>
 
-    <button class="btn prev">❮</button>
-    <button class="btn next">❯</button>
+    <div class="slide active">
+      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+      <div class="text">
+        <h1>AI Digital World</h1>
+        <p>Artificial intelligence powering the future of automation and smart systems.</p>
+      </div>
+    </div>
 
-    <div class="dots"></div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+      <div class="text">
+        <h1>Digital Coding</h1>
+        <p>Clean and scalable programming for modern applications.</p>
+      </div>
+    </div>
+
   </div>
 
-  <a href="#button"><i style="color:#2A6094;margin:60px 24px -40px;font-size: 30px;"
-      class="fa-solid fa-arrow-down"></i></a>
+  <!-- RENAMED BUTTONS -->
+  <button class="slider-btn prev">&#10094;</button>
+  <button class="slider-btn next">&#10095;</button>
+
+  <div class="dots"></div>
+
+</div>
+
+<!-- text bottom slider  -->
   <div class="build">
-    <h1>
-      We are a design company <br> specializing in strategy, brand <br> identity, and typeface design. <br><br>
-      We use strategy and creativity <br> to produce work that creates <br> impact with longevity. <br><br>
-      To help build brands that <br> matter, transform <br> communities, and bring <br> positive changes. <br>✨
+    <h1 id="text">
+      We are a design company specializing in strategy, brand identity, and typeface design.
+
+      We use strategy and creativity to produce work that creates impact with longevity.
+
+      To help build brands that matter, transform communities, and bring positive changes. ✨
     </h1>
   </div>
+
 
   <!-- Responsive image -->
   <div class="image-container">
@@ -129,39 +168,47 @@
     <img class="right" src="./assets/image/អំទូក 1.jpg">
   </div>
 
-  <div class="OUR">
-    <h1>Our capabilities</h1>
+<div class="our">
+  <h1>Our capabilities</h1>
+</div>
+
+<div class="all-text">
+
+  <div class="col">
+    <p class="title">Strategy</p>
+    <p class="content">
+      Brand Diagnose <br>
+      Brand Definition <br>
+      Brand Name <br>
+      Brand Architecture <br>
+      Brand Activation Plan
+    </p>
   </div>
 
-  <div class="all-text">
-    <div class="text-left">
-      <p style="color: rgb(110, 110, 110);">Strategy</p>
-      <p style="color: black;">Brand Diagnose <br>
-        Brand Definition <br>
-        Brand Name <br>
-        Brand Architecture <br>
-        Brand Activation Plan
-      </p>
-    </div>
-    <div class="text-cen">
-      <p style="color:rgb(110, 110, 110);">Design</p>
-      <p style="color: black;">Visual Identity <br>
-        Bespoke Typeface <br>
-        Web and Mobile Design <br>
-        Verbal Identity & Messaging <br>
-        Packaging Design
-      </p>
-    </div>
-    <div class="text-right">
-      <p style="color: rgb(110, 110, 110);">Tend</p>
-      <p style="color: black;">Concept Testing <br>
-        Design Training <br>
-        Brand Guideline and Tools <br>
-        Brand Governance</p>
-    </div>
+  <div class="col">
+    <p class="title">Design</p>
+    <p class="content">
+      Visual Identity <br>
+      Bespoke Typeface <br>
+      Web and Mobile Design <br>
+      Verbal Identity & Messaging <br>
+      Packaging Design
+    </p>
   </div>
-  <h1
-    style="font-family: 'Times New Roman', Times, serif;margin-left: 25px;font-size: 35px;margin-top: 40px;color: black;">
+
+  <div class="col">
+    <p class="title">Trend</p>
+    <p class="content">
+      Concept Testing <br>
+      Design Training <br>
+      Brand Guideline and Tools <br>
+      Brand Governance
+    </p>
+  </div>
+</div>
+
+<!-- meet the team -->
+  <h1 style="font-family: 'Times New Roman', Times, serif;margin-left: 25px;font-size: 35px;margin-top: 40px;color: black;">
     Meet The
     Team</h1>
 
@@ -242,65 +289,44 @@
     </div>
   </section>
 
-
-  <!-- 3 Project -->
-  <div id="img1" class="lightbox">
-    <a href="#" class="close">&times;</a>
-    <img src="image/Main-NUCK-Digital-Zone-Background-Speaker.jpg" alt="">
-  </div>
-  <div id="img2" class="lightbox">
-    <a href="#" class="close">&times;</a>
-    <img src="image/Main-NUCK-Digital-Zone-Background-Speaker.jpg" alt="">
-  </div>
-  <div id="img3" class="lightbox">
-    <a href="#" class="close">&times;</a>
-    <img src="image/Banner-NUCK-Center-250701-003.jpg" alt="">
-  </div>
-  <div id="img4" class="lightbox">
-    <a href="#" class="close">&times;</a>
-    <img src="image/2-NUCK-Digital-Lab-Opt-2-350cmx250cm.jpg" alt="">
-  </div>
-  <div id="img5" class="lightbox">
-    <a href="#" class="close">&times;</a>
-    <img src="image/Vs-code-color.png" alt="">
-  </div>
-  <div id="img6" class="lightbox">
-    <a href="#" class="close">&times;</a>
-    <img src="image/Vs-code.png" alt="">
-  </div>
-
-
   <!-- icon -->
-  <section class="benefits-section">
-    <h2 class="benefits-title">Benefits</h2>
-    <p class="benefits-subtitle">Benefits of the HEIP-2 Project for the University</p>
+  <h1 class="section-title">Benefits</h1>
 
-    <div class="benefits-cards">
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-flask"></i></div>
-        <h3>Research</h3>
-        <p>Enhance research capacity for faculty and students</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-chalkboard"></i></div>
-        <h3>Education Quality</h3>
-        <p>Improve program quality and teaching methods</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-cogs"></i></div>
-        <h3>Facilities</h3>
-        <p>Upgrade laboratory facilities and teaching materials</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-handshake"></i></div>
-        <h3>Partnerships</h3>
-        <p>Strengthen partnerships with institutions and industry</p>
-      </div>
+<section class="benefits-container">
+  
+  <div class="benefit-card is-hidden">
+    <div class="benefit-icon">
+      <i class="fas fa-flask"></i>
     </div>
-  </section>
+    <h3>Research</h3>
+    <p>Enhance research capacity</p>
+  </div>
+
+  <div class="benefit-card is-hidden">
+    <div class="benefit-icon">
+      <i class="fas fa-laptop-code"></i>
+    </div>
+    <h3>Education Quality</h3>
+    <p>Improve teaching methods</p>
+  </div>
+
+  <div class="benefit-card is-hidden">
+    <div class="benefit-icon">
+      <i class="fas fa-cogs"></i>
+    </div>
+    <h3>Facilities</h3>
+    <p>Upgrade laboratory tools</p>
+  </div>
+
+  <div class="benefit-card is-hidden">
+    <div class="benefit-icon">
+      <i class="fas fa-handshake"></i>
+    </div>
+    <h3>Partnerships</h3>
+    <p>Strengthen collaborations</p>
+  </div>
+
+</section>
 
 
   <!-- image bottom -->
@@ -359,8 +385,9 @@
       </div>
 
     </div>
-    <a name="button"><button style="background-color: #222;border: none;"></button></a>
   </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- style Js -->
   <script src="./assets/js/studio.js"></script>
 </body>
