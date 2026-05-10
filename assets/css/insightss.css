@@ -161,6 +161,76 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  body {
+    padding-top: 55px;
+    font-size: 14px;
+  }
+
+  .navbar {
+    padding: 8px 12px;
+  }
+
+  .header-actions button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo-img {
+    width: 70px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 5px 10px;
+  }
+
+  .header-actions {
+    gap: 5px;
+  }
+
+  .header-actions button {
+    width: 30px;
+    height: 30px;
+  }
+
+  body {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsive offcanvas */
+@media (max-width: 768px) {
+  .offcanvas {
+    margin-top: 60px;
+  }
+}
+
 
 
 /* slider header */
@@ -253,6 +323,45 @@ body {
     background:#00f5ff;
     transform:scale(1.4);
     box-shadow:0 0 10px #00f5ff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-slider {
+    height: 60vh;
+  }
+
+  .slider-item {
+    height: 60vh;
+    padding-left: 5%;
+  }
+
+  .slide-content h1 {
+    font-size: 32px;
+  }
+
+  .slide-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-slider {
+    height: 50vh;
+  }
+
+  .slider-item {
+    height: 50vh;
+    padding-left: 3%;
+  }
+
+  .slide-content h1 {
+    font-size: 24px;
+  }
+
+  .slide-content p {
+    font-size: 12px;
+  }
 }
 
 
@@ -407,12 +516,32 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .hero {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
   .overlay h1 {
     font-size: 24px;
   }
 
   .overlay p {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .overlay h1 {
+    font-size: 20px;
+  }
+
+  .overlay p {
+    font-size: 12px;
   }
 }
 
@@ -536,6 +665,37 @@ body {
 
       .logo img {
         margin: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      footer {
+        padding: 30px 15px 15px;
+      }
+
+      .footer-top {
+        gap: 15px;
+      }
+
+      .logo img {
+        width: 100px;
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+
+      .footer-box p {
+        font-size: 13px;
+      }
+
+      .socials a {
+        font-size: 16px;
+        margin: 0 8px;
+      }
+
+      .copyright {
+        font-size: 12px;
       }
     }
 

@@ -161,6 +161,76 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  body {
+    padding-top: 55px;
+    font-size: 14px;
+  }
+
+  .navbar {
+    padding: 8px 12px;
+  }
+
+  .header-actions button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo-img {
+    width: 70px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 5px 10px;
+  }
+
+  .header-actions {
+    gap: 5px;
+  }
+
+  .header-actions button {
+    width: 30px;
+    height: 30px;
+  }
+
+  body {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsive offcanvas */
+@media (max-width: 768px) {
+  .offcanvas {
+    margin-top: 60px;
+  }
+}
+
 
 
 
@@ -570,6 +640,51 @@ body.loaded {
       color: #00eaff;
     }
 
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .scroll-box {
+        gap: 15px;
+      }
+
+      .just {
+        min-width: 200px;
+      }
+
+      .just img {
+        height: 120px;
+      }
+
+      .just .content {
+        padding: 10px;
+      }
+
+      .just h3 {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .scroll-box {
+        gap: 10px;
+      }
+
+      .just {
+        min-width: 180px;
+      }
+
+      .just img {
+        height: 100px;
+      }
+
+      .just .content {
+        padding: 8px;
+      }
+
+      .just h3 {
+        font-size: 12px;
+      }
+    }
+
 
 
 
@@ -693,5 +808,36 @@ body.loaded {
 
       .logo img {
         margin: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      footer {
+        padding: 30px 15px 15px;
+      }
+
+      .footer-top {
+        gap: 15px;
+      }
+
+      .logo img {
+        width: 100px;
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+
+      .footer-box p {
+        font-size: 13px;
+      }
+
+      .socials a {
+        font-size: 16px;
+        margin: 0 8px;
+      }
+
+      .copyright {
+        font-size: 12px;
       }
     }
