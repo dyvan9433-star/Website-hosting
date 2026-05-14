@@ -86,27 +86,20 @@ window.addEventListener("load", () => {
 
 
 // meet the team work
-  window.addEventListener("load", () => {
-    const items = document.querySelectorAll(".animate");
-    items.forEach((el, i) => {
-      el.style.animationDelay = (i * 250) + "ms";
-    });
+ const cards = document.querySelectorAll(".team-card");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+      observer.unobserve(entry.target);
+    }
   });
+}, {
+  threshold: 0.2
+});
 
-
-
-// student meet team work
-  const elements = document.querySelectorAll('.animate');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  }, {
-    threshold: 0.2
-  });
-  elements.forEach(el => observer.observe(el));
+cards.forEach(card => observer.observe(card));
 
 
 

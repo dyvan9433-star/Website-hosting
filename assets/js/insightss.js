@@ -66,6 +66,44 @@ function goToSlide(i){
 
     cards.forEach(card => observer.observe(card));
 
+// important
+document.addEventListener("DOMContentLoaded", () => {
+
+    const uiFeatureElements = document.querySelectorAll(".feature-item");
+
+    if (!("IntersectionObserver" in window)) {
+        uiFeatureElements.forEach(el => el.classList.add("active"));
+        return;
+    }
+
+    const uiScrollRevealEngine = new IntersectionObserver((entryList) => {
+
+        entryList.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                const elementIndex = [...uiFeatureElements].indexOf(entry.target);
+
+                setTimeout(() => {
+                    entry.target.classList.add("active");
+                }, elementIndex * 250);
+
+                uiScrollRevealEngine.unobserve(entry.target);
+            }
+
+        });
+
+    }, {
+        threshold: 0.2
+    });
+
+    uiFeatureElements.forEach((element) => {
+        uiScrollRevealEngine.observe(element);
+    });
+
+});
+
+
 
 
 // footer js

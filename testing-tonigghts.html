@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Footer Section</title>
+
+<style>
+
+/* =========================
+   BODY
+========================= */
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+  background: #111;
+  padding: 70px 20px;
+}
+
+/* CONTAINER */
+
+.footer-container{
+  width: min(92%, 1200px);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* FOOTER ITEM */
+
+.footer-box{
+  text-align: center;
+  color: white;
+}
+
+/* NUMBER */
+
+.footer-box h2{
+  font-size: clamp(38px, 5vw, 60px);
+  margin-bottom: 10px;
+  color: #00bcd4;
+}
+
+/* TEXT */
+
+.footer-box p{
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.7;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width:768px){
+
+  .footer{
+    padding: 60px 15px;
+  }
+
+  .footer-container{
+    gap: 25px;
+  }
+
+  .footer-box h2{
+    font-size: 45px;
+  }
+
+  .footer-box p{
+    font-size: 14px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:480px){
+
+  .footer{
+    padding: 50px 15px;
+  }
+
+  .footer-box h2{
+    font-size: 38px;
+  }
+
+  .footer-box p{
+    font-size: 13px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h2>50+</h2>
+      <p>Projects Completed</p>
+    </div>
+
+    <div class="footer-box">
+      <h2>20+</h2>
+      <p>Happy Clients</p>
+    </div>
+
+    <div class="footer-box">
+      <h2>5+</h2>
+      <p>Years Experience</p>
+    </div>
+
+    <div class="footer-box">
+      <h2>100%</h2>
+      <p>Responsive Design</p>
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>

@@ -205,48 +205,32 @@ document.querySelectorAll(".btn").forEach(btn => {
 
 
 
-//  box
-const boxes = document.querySelectorAll('.box');
-function showBoxes() {
-  const triggerBottom = window.innerHeight * 0.85;
-  boxes.forEach((box, index) => {
-    const boxTop = box.getBoundingClientRect().top;
-    if (boxTop < triggerBottom) {
-      box.classList.add('show');
-    }
-  });
-}
-
 
 //zoom iamge
-const images = document.querySelectorAll(".card img");
-  const modal = document.getElementById("modal");
-  const modalImg = document.getElementById("modalImg");
-  const closeBtn = document.querySelector(".close");
-  // loop ទៅលើរូបទាំងអស់
-  images.forEach(img => {
-    img.onclick = function() {
-      modal.style.display = "block";
-      modalImg.src = this.src;
-    }
+const images = document.querySelectorAll(".card img, .image-card img");
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modalImg");
+const closeBtn = document.querySelector(".close");
+
+// open image modal
+images.forEach(img => {
+  img.addEventListener("click", function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
   });
-  closeBtn.onclick = () => modal.style.display = "none";
-  modal.onclick = (e) => {
-    if (e.target !== modalImg) {
-      modal.style.display = "none";
-    }
-  }
-// assign left/right
-boxes.forEach((box, index) => {
-  if (index % 2 === 0) {
-    box.classList.add('left');
-  } else {
-    box.classList.add('right');
+});
+
+// close button
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+// click outside image to close
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
   }
 });
-window.addEventListener('scroll', showBoxes);
-showBoxes();
-
 
 
 // footer js
