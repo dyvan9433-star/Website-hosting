@@ -16,7 +16,7 @@
 /* ================= RESET (IMPORTANT) ================= */
 html,
 body {
-  font-family: Khmer os Muol Light;
+  font-family: Khmer OS Battambang;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -52,7 +52,7 @@ body {
 
 /* ================= MENU LINKS ================= */
 .nav-link {
-  font-family: Khmer os Muol Light;
+  font-family: Khmer OS Battambang;
   font-size: 14px;
   font-weight: 500;
   color: #555 !important;
@@ -108,7 +108,6 @@ body {
 /* ================= OFFCANVAS ================= */
 .offcanvas {
   width: 260px;
-  margin-top: 95px;
 }
 
 /* ================= DARK MODE ================= */
@@ -150,6 +149,48 @@ body {
   background: #2a2a2a;
 }
 
+.dark-mode .lang-dropdown,
+.dark-mode .lang-dropdown i,
+.dark-mode .lang-dropdown select {
+  color: white;
+}
+
+.dark-mode .lang-dropdown {
+  background: #111;
+}
+/* =========================
+       LANGUAGE DROPDOWN
+    ========================= */
+
+    .lang-dropdown{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      background: none;
+      padding:10px 15px;
+      border-radius:8px;
+      border: 1px solid #ddd;
+      margin-right: 10px;
+    }
+
+    .lang-dropdown i{
+      color: var(--bg);
+      font-size:16px;
+    }
+
+    .lang-dropdown select{
+      background:transparent;
+      border:none;
+      color: var(--bg);
+      font-size:15px;
+      outline:none;
+      cursor:pointer;
+    }
+
+    .lang-dropdown option{
+      color:#000;
+    }
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 991px) {
   body {
@@ -159,6 +200,75 @@ body {
   .header-actions button {
     width: 36px;
     height: 36px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 55px;
+    font-size: 14px;
+  }
+
+  .navbar {
+    padding: 8px 12px;
+  }
+
+  .header-actions button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo-img {
+    width: 70px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 5px 10px;
+  }
+
+  .header-actions {
+    gap: 5px;
+  }
+
+  .header-actions button {
+    width: 30px;
+    height: 30px;
+  }
+
+  body {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsive offcanvas */
+@media (max-width: 768px) {
+  .offcanvas {
+    margin-top: 60px;
   }
 }
 
@@ -229,7 +339,7 @@ body {
   font-size: clamp(2rem, 5vw, 52px);
   color: #5a67d8;
   line-height: 1.2;
-  font-family: khmer OS Muol Light;
+  font-family: khmer OS battambang;
   font-weight: bold;
 }
 
@@ -242,7 +352,7 @@ body {
   color: #555;
   font-size: 1rem;
   line-height: 1.7;
-  font-family: Khmer OS Muol Light;
+  font-family: khmer OS battambang;
 }
 
 /* =========================
@@ -442,9 +552,24 @@ body {
   }
 }
 
+.fade-in {
+  animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* we build */
-.section {
+.vision-block {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -453,7 +578,7 @@ body {
   padding: 20px;
 }
 
-.text {
+.vision-text {
   font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 700;
   line-height: 1.4;
@@ -464,15 +589,15 @@ body {
   transition: all 0.6s ease;
 }
 
-/* when active */
-.text.show {
+/* active animation */
+.vision-text.reveal {
   opacity: 1;
   transform: translateY(0) scale(1);
-  animation: popBounce 0.8s ease;
+  animation: visionBounce 0.8s ease;
 }
 
-/* bounce effect */
-@keyframes popBounce {
+/* bounce animation */
+@keyframes visionBounce {
   0% {
     transform: translateY(80px) scale(0.8);
   }
@@ -486,10 +611,28 @@ body {
   }
 }
 
-/* mobile responsiveness */
+/* tablet */
+@media (max-width: 768px) {
+  .vision-block {
+    min-height: 70vh;
+    padding: 60px 20px;
+  }
+
+  .vision-text {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+}
+
+/* mobile */
 @media (max-width: 600px) {
-  .text {
-    font-size: 1.5rem;
+  .vision-block {
+    min-height: auto;
+    padding: 80px 20px;
+  }
+
+  .vision-text {
+    font-size: 1.4rem;
     line-height: 1.3;
   }
 }
@@ -551,7 +694,7 @@ body {
 
 .card img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
   transition: 0.3s;
 }
@@ -565,6 +708,7 @@ body {
 .card p {
   padding: 10px;
   color: var(--bg);
+  font-family: Khmer OS Battambang;
 }
 
 /* Responsive */
@@ -652,9 +796,9 @@ body {
 
 .back-btn h2 {
   color: var(--noname);
-  padding-left: 20px;
+  padding-left: 30px;
   padding-top: 20px;
-  font-size: 18px;
+  font-size: 28px;
   font-family: Arial, Helvetica, sans-serif;
   transition: 0.3s ease;
 }
@@ -686,7 +830,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  /* កាត់ពី 80px ឲ្យជិតគ្នា */
   align-items: center;
   justify-items: center;
 }
@@ -698,8 +841,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.4s ease;
+  transition: all 0.4s ease;
   cursor: pointer;
+  position: relative;
+  padding-bottom: 15px;
 }
 
 /* ===== Logo Image ===== */
@@ -707,18 +852,41 @@ body {
 .logo-card img {
   width: 100%;
   object-fit: contain;
-  transition: 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+/* ===== Animated Line ===== */
+
+.logo-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00d4ff, #8b5cf6);
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+  border-radius: 50px;
 }
 
 /* ===== Hover Effect ===== */
 
 .logo-card:hover {
-  transform: scale(1.1);
+  transform: translateY(-8px);
+}
+
+.logo-card:hover img {
+  transform: scale(1.08);
+}
+
+.logo-card:hover::after {
+  width: 100%;
 }
 
 /* ===== Responsive ===== */
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
 
   .company-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -730,7 +898,7 @@ body {
   }
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
 
   .company-section h1 {
     font-size: 28px;
@@ -758,6 +926,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   padding: 1rem;
+  margin-top: 70px;
 }
 
 /* CARD */
@@ -804,7 +973,7 @@ body {
 .image-card-body h2 {
   margin: 0;
   font-size: 1.5rem;
-  font-family: "IBM Plex Serif", serif;
+  font-family: Khmer OS Battambang;
 }
 
 .image-card-body p {
@@ -831,6 +1000,120 @@ body {
   }
 }
 
+
+/* View */
+.stats-section{
+  background:#111;
+  padding:70px 20px;
+  margin-top: 80px;
+}
+
+/* CONTAINER */
+
+.stats-wrapper{
+  width:min(92%, 1200px);
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:30px;
+}
+
+/* CARD */
+
+.stats-card{
+  text-align:center;
+  color:white;
+  padding:20px;
+  border-radius:12px;
+  transition:0.3s ease;
+}
+
+.stats-card:hover{
+  background:#1b1b1b;
+  transform:translateY(-5px);
+}
+
+/* NUMBER */
+
+.stats-number{
+  font-size:clamp(38px, 5vw, 60px);
+  margin-bottom:10px;
+  color: var(--noname);
+}
+
+/* TEXT */
+
+.stats-text{
+  font-size:16px;
+  color:#ddd;
+  line-height:1.7;
+}
+
+/* =========================
+   LARGE TABLET
+========================= */
+
+@media (max-width:992px){
+
+  .stats-wrapper{
+    grid-template-columns:repeat(2, 1fr);
+  }
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width:768px){
+
+  .stats-section{
+    padding:60px 15px;
+  }
+
+  .stats-wrapper{
+    gap:25px;
+  }
+
+  .stats-number{
+    font-size:45px;
+  }
+
+  .stats-text{
+    font-size:14px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:480px){
+
+  .stats-section{
+    padding:50px 15px;
+  }
+
+  .stats-wrapper{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .stats-card{
+    padding:18px;
+  }
+
+  .stats-number{
+    font-size:38px;
+  }
+
+  .stats-text{
+    font-size:13px;
+  }
+
+}
 
 
 /* =========================
@@ -897,7 +1180,7 @@ body {
 
 /* Footer CSS */
 footer {
-  background: linear-gradient(135deg, #1a1a1a, #222);
+  background: black;
   padding: 50px 20px 20px;
 }
 
@@ -932,14 +1215,19 @@ footer {
   color: #aaa;
 }
 
-h3 {
+.footer-box h3 {
   margin-bottom: 15px;
   font-weight: 500;
-  color: white;
+  color: var(--noname);
+}
+.footer-bottom h3 {
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: var(--noname);
 }
 
 .footer-box p {
-  color: #bbb;
+  color: #ffffff;
   line-height: 1.6;
   font-size: 14px;
 }
@@ -955,14 +1243,29 @@ h3 {
 }
 
 .socials {
-  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .socials a {
-  margin: 0 10px;
-  font-size: 18px;
-  color: #bbb;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--noname);
+  color: white;
+  text-decoration: none;
   transition: 0.3s;
+}
+
+.socials a:hover {
+  transform: translateY(-3px);
+  background-color: #1877f2;
 }
 
 .socials a:hover {
@@ -970,24 +1273,25 @@ h3 {
 }
 
 .fa-facebook:hover {
-  color: #1877f2;
+  color: var(--text);
 }
 
 .fa-instagram:hover {
-  color: #e4405f;
+  color: var(--text);
 }
 
 .fa-telegram:hover {
-  color: #0088cc;
+  color: var(--text);
 }
 
 .copyright {
   font-size: 14px;
-  color: #888;
+  color: var(--text);
+  margin-top: 20px;
 }
 
 .highlight {
-  color: #4da6ff;
+  color: var(--noname);
 }
 
 .design {
@@ -1075,5 +1379,21 @@ h3 {
 @media (max-width: 460px) {
   .product-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Interaction when change Language */
+.fade-in {
+  animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

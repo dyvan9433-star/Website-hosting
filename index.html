@@ -13,7 +13,7 @@
     <!-- Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <!-- icons-footer -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body id="body">
@@ -32,20 +32,57 @@
             <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
                 <ul class="navbar-nav gap-4">
 
-                    <li class="nav-item"><a class="nav-link active" href="./index.html"><i class="bi bi-house"></i>
-                            Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./projects.html"><i class="bi bi-kanban"></i>
-                            Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./studios.html"><i class="bi bi-camera"></i>
-                            Studio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./insightss.html"><i class="bi bi-bar-chart"></i>
-                            Insights</a>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./index.html">
+                            <i class="bi bi-house"></i>
+                            <span id="homeText">Home</span>
+                        </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="./contacts.html"><i class="bi bi-envelope"></i>
-                            Contact</a>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./projects.html">
+                            <i class="bi bi-kanban"></i>
+                            <span id="projectText">Projects</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./studios.html">
+                            <i class="bi bi-camera"></i>
+                            <span id="studioText">Studio</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./insightss.html">
+                            <i class="bi bi-bar-chart"></i>
+                            <span id="insightText">Insights</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacts.html">
+                            <i class="bi bi-envelope"></i>
+                            <span id="contactText">Contact</span>
+                        </a>
                     </li>
 
                 </ul>
+            </div>
+            <!-- Language Dropdown -->
+
+            <div class="lang-dropdown">
+
+                <i class="fa-solid fa-globe"></i>
+
+                <select id="languageSelect" onchange="changeLanguage()">
+
+                    <option value="en">English</option>
+
+                    <option value="km">ខ្មែរ</option>
+
+                </select>
+
             </div>
 
             <!-- Actions -->
@@ -65,43 +102,87 @@
     </nav>
 
     <!-- MOBILE MENU -->
-    <div class="offcanvas offcanvas-start" id="mobileMenu">
+    <div class="offcanvas offcanvas-start" id="mobileMenu" style="margin-top: 82px;">
 
         <div class="offcanvas-header">
-            <h5>Menu</h5>
+
+            <h5 id="mobileMenuTitle">Menu</h5>
+
             <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+
         </div>
 
         <div class="offcanvas-body">
 
             <div class="list-group">
 
+                <!-- HOME -->
+
                 <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./index.html">
-                    <i class="bi bi-house"></i> Home
+
+                    <i class="bi bi-house"></i>
+
+                    <span id="mobileHome">
+                        Home
+                    </span>
+
                 </a>
+
+                <!-- PROJECTS -->
 
                 <a class="list-group-item list-group-item-action d-flex align-items-center gap-2"
                     href="./projects.html">
-                    <i class="bi bi-kanban"></i> Projects
+
+                    <i class="bi bi-kanban"></i>
+
+                    <span id="mobileProjects">
+                        Projects
+                    </span>
+
                 </a>
 
+                <!-- STUDIO -->
+
                 <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./studios.html">
-                    <i class="bi bi-camera"></i> Studio
+
+                    <i class="bi bi-camera"></i>
+
+                    <span id="mobileStudio">
+                        Studio
+                    </span>
+
                 </a>
+
+                <!-- INSIGHTS -->
 
                 <a class="list-group-item list-group-item-action d-flex align-items-center gap-2"
                     href="./insightss.html">
-                    <i class="bi bi-bar-chart"></i> Insights
+
+                    <i class="bi bi-bar-chart"></i>
+
+                    <span id="mobileInsights">
+                        Insights
+                    </span>
+
                 </a>
+
+                <!-- CONTACT -->
 
                 <a class="list-group-item list-group-item-action d-flex align-items-center gap-2"
                     href="./contacts.html">
-                    <i class="bi bi-envelope"></i> Contact
+
+                    <i class="bi bi-envelope"></i>
+
+                    <span id="mobileContact">
+                        Contact
+                    </span>
+
                 </a>
 
             </div>
 
         </div>
+
     </div>
 
     <!-- BACKGROUND SHAPES -->
@@ -113,20 +194,21 @@
             <!-- TEXT -->
             <div class="hero-text">
                 <h1>
-                    <span class="line hidden-left">Design Posters & Digital Art That Stand Out</span>
+                    <span class="line hidden-left" id="textHeader">Design Posters & Digital Art That Stand Out</span>
                 </h1>
-                <p class="hidden-left">
-                    We create modern, clean and high-quality poster designs, branding visuals and digital artwork for your business or personal brand.
+                <p class="hidden-left" id="textWeCreate">
+                    We create modern, clean and high-quality poster designs, branding visuals and digital artwork for
+                    your business or personal brand.
                 </p>
                 <div class="buttons hidden-left">
                     <a href="./projects.html"><button style="border: none;color: var(--text);border-radius: 10px;"
-                            class="btn primary">Projects</button></a>
+                            id="btnProjects" class="btn primary">Projects</button></a>
                     <a href="./contacts.html"><button style="color: var(--noname);border: 1px solid var(--noname);"
-                            class="btn outline">Contacts</button></a>
+                            id="btnContact" class="btn outline">Contacts</button></a>
                 </div>
             </div>
             <!-- IMAGE -->
-            <div class="hero-image hidden-right">
+            <div class="hero-image hidden-right" id="headimage">
                 <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="">
             </div>
         </div>
@@ -134,12 +216,14 @@
 
 
     <!-- text header -->
-    <div class="section">
-        <h1 class="text">We build brands that matter, <br> transform communities, and bring <br> positive changes.✨</h1>
+    <div class="vision-block">
+        <h1 class="vision-text" id="WeBuild">
+            We build brands that matter, <br>
+            transform communities, and bring <br>
+            positive changes.✨
+        </h1>
     </div>
-    <div class="arrow">
-        <a href="#button"><i class="fa-solid fa-arrow-down"></i></a>
-    </div>
+    
     <!-- Sidebar -->
     <div class="gallery">
         <div class="deploy">
@@ -153,81 +237,84 @@
                 <!-- Grid -->
                 <section class="grid">
                     <div class="card">
-                        <a href="#img1"><img src="./assets/image/បុណ្យអុំទូក.jpg"></a>
-                        <p>ព្រះរាជពិធីបុណ្យ អុំទូក បណ្តែតប្រទីប និងសំពះព្រះខែ អកអំបុក តែងតែប្រារព្ធក្នុងរយៈពេល៣ថ្ងៃ</p>
+                        <img src="./assets/image/បុណ្យអុំទូក.jpg">
+                        <p id="Picture1">The Royal Festival of Boats, Floating Buddhas, and the Full Moon Festival, Ak
+                            Ambok, is
+                            always celebrated over a period of 3 days.</p>
                     </div>
 
                     <div class="card">
-                        <a href="#img2"><img src="./assets/image/ប្រម៉ូតឡាន.1.jpg"></a>
-                        <p>ការបញ្ចុះតម្លៃ20% ទៅលើការលក់ឡាន</p>
+                        <img src="./assets/image/ប្រម៉ូតឡាន.1.jpg">
+                        <p id="Picture2">AUTOCAR</p>
                     </div>
 
                     <div class="card">
-                        <a href="#img3"><img src="./assets/image/អាហារសុខភាព១!.jpg"></a>
-                        <p>Social media video ad</p>
+                        <img src="./assets/image/អាហារសុខភាព១!.jpg">
+                        <p id="Picture3">Menu</p>
                     </div>
 
                     <div class="card">
-                        <a href="#img4"><img src="./assets/image/បុណ្យឯករាជ្យជាតិ.jpg"></a>
-                        <p>ពិធីបុណ្យឯករាជ្យជាតិ ដែលប្រារព្ធឡើងជារៀងរាល់ឆ្នាំនៅថ្ងៃទី ៩ ខែវិច្ឆិកា</p>
+                        <img src="./assets/image/បុណ្យឯករាជ្យជាតិ.jpg">
+                        <p id="Picture4">The National Independence Day ceremony, which is celebrated every year on
+                            November 9.</p>
                     </div>
 
                     <div class="card">
-                        <a href="#img5"><img src="./assets/image/king.jpg"></a>
-                        <p>ព្រះរាជពិធីគ្រងព្រះបរមរាជសម្បត្តិ របស់ ព្រះករុណា ព្រះបាទសម្តេចព្រះបរមនាថ នរោត្តម សីហមុនី
-                            ជាព្រះមហាក្សត្រនៃព្រះរាជាណាចក្រកម្ពុជា បានប្រារព្ធឡើងជាផ្លូវការនៅថ្ងៃទី ២៩ ខែតុលា
-                            ឆ្នាំ២០០៤-២៩ ខែតុលា ឆ្នាំ២០០៥</p>
+                        <img src="./assets/image/king.jpg">
+                        <p id="Picture5">The Royal Coronation Ceremony of His Majesty King Norodom Sihamoni, the King of
+                            the Kingdom of Cambodia, was officially celebrated from October 29, 2004, to October 29,
+                            2005.</p>
                     </div>
 
                     <div class="card">
-                        <a href="#img6"><img src="./assets/image/gigital-1.jpg"></a>
-                        <p>វគ្គទី ១ របស់រឿងថ្លុក "យាយតាឌីជីថល"</p>
+                        <img src="./assets/image/gigital-1.jpg">
+                        <p id="Picture6">Episode 1 of the comedy story “Digital Grandma and Grandpa.”</p>
                     </div>
 
                     <div class="card">
-                        <a href="#img7"><img src="./assets/image/banner-nuck-center-250701-003.jpg"></a>
-                        <p>មជ្ឈមណ្ឌលអប់រំ និងបណ្ដុះបណ្ដាល ជា ស៊ីម កំចាយមារ</p>
+                        <img src="./assets/image/banner-nuck-center-250701-003.jpg">
+                        <p id="Picture7">Chea Sim Komchaymear Education and Training Center.</p>
                     </div>
 
                     <div class="card">
-                        <a href="#img8"><img src="./assets/image/banner-nuck-center-250701.jpg"></a>
-                        <p>មជ្ឈមណ្ឌលអប់រំ និងបណ្ដុះបណ្ដាល ជា ស៊ីម កំចាយមារ</p>
+                        <img src="./assets/image/banner-nuck-center-250701.jpg">
+                        <p id="Picture8">Chea Sim Komchaymear Education and Training Center.</p>
                     </div>
                     <div class="card">
-                        <a href="#img9"><img src="./assets/image/ex03.jpg"></a>
-                        <p>មជ្ឈមណ្ឌលអប់រំ និងបណ្ដុះបណ្ដាល ជា ស៊ីម កំចាយមារ</p>
+                        <img src="./assets/image/ex03.jpg">
+                        <p id="Picture9">Chea Sim Komchaymear Education and Training Center.</p>
                     </div>
                     <div class="card">
-                        <a href="#img10"><img src="./assets/image/បិណ្ឌ៦.jpg"></a>
-                        <p>ព្រះរាជពិធីបុណ្យភ្ជុំបិណ្ឌ</p>
+                        <img src="./assets/image/បិណ្ឌ៦.jpg">
+                        <p id="Picture10">The Royal Pchum Ben Festival Ceremony.</p>
                     </div>
                     <div class="card">
-                        <a href="#img11"><img src="./assets/image/nuck-digital-lab.png"></a>
-                        <p>ពិធីសម្ភោធមជ្ឈបណ្ឌលបច្ចេកវិទ្យាឌីជីថល</p>
+                        <img src="./assets/image/nuck-digital-lab.png">
+                        <p id="Picture11">The Inauguration Ceremony of the Digital Technology Center.</p>
                     </div>
                     <div class="card">
-                        <a href="#img12"><img src="./assets/image/សិត-ខន-nuck-digital-zone-background-speaker.jpg"></a>
-                        <p>ពិធីសម្ភោធមជ្ឈបណ្ឌលបច្ចេកវិទ្យាឌីជីថល</p>
+                        <img src="./assets/image/សិត-ខន-nuck-digital-zone-background-speaker.jpg">
+                        <p id="Picture12">The Inauguration Ceremony of the Digital Technology Center.</p>
                     </div>
 
 
                     <div class="card">
-                        <a href="#img13"><img src="./assets/image/asean.jpg"></a>
-                        <p>AI Ready ASEAN Training on Mar 15, 2026</p>
+                        <img src="./assets/image/asean.jpg">
+                        <p id="Picture13">AI Ready ASEAN Training on Mar 15, 2026.</p>
                     </div>
                     <div class="card">
-                        <a href="#img14"><img src="./assets/image/king-1.jpg"></a>
-                        <p>ព្រះរាជពិធីគ្រងព្រះបរមរាជសម្បត្តិ របស់ ព្រះករុណា ព្រះបាទសម្តេចព្រះបរមនាថ នរោត្តម សីហមុនី
-                            ជាព្រះមហាក្សត្រនៃព្រះរាជាណាចក្រកម្ពុជា បានប្រារព្ធឡើងជាផ្លូវការនៅថ្ងៃទី ២៩ ខែតុលា
-                            ឆ្នាំ២០០៤-២៩ ខែតុលា ឆ្នាំ២០០៥</p>
+                        <img src="./assets/image/king-1.jpg">
+                        <p id="Picture14">The Royal Coronation Ceremony of His Majesty King Norodom Sihamoni, the King
+                            of the Kingdom of Cambodia, was officially celebrated from October 29, 2004, to October 29,
+                            2005</p>
                     </div>
                     <div class="card">
-                        <a href="#img15"><img src="./assets/image/untitled-1.jpg"></a>
-                        <p>ការលក់ drink</p>
+                        <img src="./assets/image/untitled-1.jpg">
+                        <p id="Picture15">Selling drinks</p>
                     </div>
                     <div class="card">
-                        <a href="#img16"><img src="./assets/image/happy-new-year-poster-2.jpg"></a>
-                        <p>ព្រះរាជពិធីបុណ្យចូលឆ្នាំថ្មីប្រពៃណីជាតិខ្មែរ </p>
+                        <img src="./assets/image/happy-new-year-poster-2.jpg">
+                        <p id="Picture16">The Royal Ceremony of the Khmer Traditional New Year Festival.</p>
                     </div>
                 </section>
 
@@ -244,38 +331,42 @@
     <div class="company-page">
         <!-- Back Button -->
         <a class="back-btn" href="./projects.html">
-            <h2>← All Project</h2>
+            <h2 id="AllProjects">← All Projects</h2>
         </a>
         <!-- Company Section -->
         <div class="company-section">
-            <h1>Companies we've worked with</h1>
+            <h1 id="Companies">Companies we've worked with</h1>
             <!-- Company Grid -->
-            <div class="company-grid">
+            <section class="company-section">
 
-                <div class="logo-card">
-                    <img src="./assets/image/google.png" alt="Google">
-                </div>
+                <div class="company-grid">
 
-                <div class="logo-card">
-                    <img src="./assets/image/grap.jpg" alt="Grab">
-                </div>
+                    <div class="logo-card">
+                        <img src="./assets/image/ppm.png" alt="Company 1">
+                    </div>
 
-                <div class="logo-card">
-                    <img src="./assets/image/ppm.png" alt="ISI">
-                </div>
+                    <div class="logo-card">
+                        <img src="./assets/image/adidas.jpg" alt="Company 2">
+                    </div>
 
-                <div class="logo-card">
-                    <img src="./assets/image/adidas.jpg" alt="Carlsberg">
-                </div>
+                    <div class="logo-card">
+                        <img src="./assets/image/google.png" alt="Company 3">
+                    </div>
 
-                <div class="logo-card">
-                    <img src="./assets/image/gucci.jpg" alt="Forte">
-                </div>
+                    <div class="logo-card">
+                        <img src="./assets/image/nike.jpg" alt="Company 4">
+                    </div>
 
-                <div class="logo-card">
-                    <img src="./assets/image/nike.jpg" alt="MI">
+                    <div class="logo-card">
+                        <img src="./assets/image/lv.jpg" alt="Company 5">
+                    </div>
+
+                    <div class="logo-card">
+                        <img src="./assets/image/grap.jpg" alt="Company 6">
+                    </div>
+
                 </div>
-            </div>
+            </section>
         </div>
     </div>
 
@@ -289,18 +380,14 @@
             </figure>
 
             <div class="image-card-body">
-                <h2>AI Ready ASEAN Training on Mar 15, 2026</h2>
-                <time datetime="15, 03, 2026">15, 03, 2026</time>
-                <p>
-                    គម្រោង
-                    ការត្រៀមខ្លួនរបស់អាស៊ានដើម្បីទទួលយកបញ្ញាសប្បនិម្មិត (AI Ready ASEAN)
-                    គឺជាគំនិតផ្តួចផ្តើមមួយក្នុងគោលបំណងផ្តល់សិទ្ធិអំណាចដល់អ្នកអប់រំ
-                    សិស្សានុសិស្ស និងអាណាព្យាបាលនៅទូទាំងអាស៊ីអាគ្នេយ៍
-                    ជាពិសេសនៅក្នុងប្រទេសដូចជាប្រទេសកម្ពុជា ដើម្បីស្វែងយល់
-                    និងប្រើប្រាស់បញ្ញាសិប្បនិម្មិត (AI) ប្រកបដោយប្រសិទ្ធភាពក្នុងការអប់រំ
-                    និងជីវិតប្រចាំថ្ងៃ។ គម្រោងនេះផ្តោតលើការកសាងអក្ខរកម្មឌីជីថល
-                    ការលើកកម្ពស់ការប្រើប្រាស់ AI ប្រកបដោយការទទួលខុសត្រូវ
-                    និងការជំរុញកិច្ចសហការក្នុងតំបន់តាមរយៈការបណ្តុះបណ្តាល។
+                <h2 id="Aiasean">AI Ready ASEAN Training on Mar 15, 2026</h2>
+                <time datetime="15, 03, 2026" id="aiAseantime">March 15, 2026</time>
+                <p id="aseanAllready">
+                    The AI Ready ASEAN project is an initiative aimed at empowering educators, students, and parents
+                    across Southeast Asia, especially in countries such as Cambodia, to understand and effectively use
+                    Artificial Intelligence (AI) in education and daily life. The project focuses on building digital
+                    literacy, promoting responsible AI usage, and encouraging regional collaboration through training
+                    programs.
                 </p>
             </div>
         </article>
@@ -311,21 +398,18 @@
             </figure>
 
             <div class="image-card-body">
-                <h3>ពិធីសម្ភោធមជ្ឈបណ្ឌលបច្ចេកវិទ្យាឌីជីថល</h3>
-                <time datetime="11, 07, 2024">11, 07, 2024</time>
-                <p>
-                    ការសម្ពោធសាលាមត្តេយ្យសិក្សា ហ៊ុន សែន កំចាយមារ កាលពីថ្ងៃទី១១ ខែកក្កដា ឆ្នាំ២០២៤ គឺស្ថិតនៅក្នុងបរិវេណ
-                    សាកលវិទ្យាល័យជាតិ ជាស៊ីម កំចាយមារ (ភូមិថ្នល់កែង ឃុំស្មោងខាងជើង)
-                    ផ្ទាល់តែម្តង។ការដាក់បញ្ចូលសាលាមត្តេយ្យនៅក្នុងបរិវេណសាកលវិទ្យាល័យនេះ គឺជាយុទ្ធសាស្ត្រមួយដែលគេហៅថា
-                    "មជ្ឈមណ្ឌលអប់រំ និងបណ្តុះបណ្តាល ជា ស៊ីម កំចាយមារ" ដែលមានចំណុចពិសេសដូចជា៖ការអប់រំពេញលេញមួយកន្លែង៖
-                    វាបង្កើតឱ្យមានប្រព័ន្ធអប់រំតាំងពីថ្នាក់មត្តេយ្យ បឋមសិក្សា វិទ្យាល័យ រហូតដល់ថ្នាក់សាកលវិទ្យាល័យ
-                    នៅក្នុងតំបន់តែមួយ។ភាពងាយស្រួលដល់បុគ្គលិក និងសហគមន៍៖ ផ្តល់ភាពងាយស្រួលដល់មន្ត្រីរាជការ សាស្ត្រាចារ្យ
-                    និងបុគ្គលិកដែលបម្រើការងារក្នុងសាកលវិទ្យាល័យ អាចបញ្ជូនកូនតូចៗឱ្យមករៀននៅក្បែរកន្លែងធ្វើការ
-                    និងសម្រាប់ប្រជាពលរដ្ឋក្នុងឃុំស្មោងខាងជើងផងដែរ។ការបណ្តុះបណ្តាលធនធានមនុស្ស៖
-                    សាលាមត្តេយ្យនេះគឺជាគ្រឹះដំបូងគេបង្អស់ ក្នុងគោលដៅប្រែក្លាយតំបន់កំចាយមារ ដែលពីមុនជាសមរភូមិ ឱ្យទៅជា
-                    "តំបន់អប់រំ និងបណ្តុះបណ្តាលធនធានមនុស្ស" ដ៏សំខាន់សម្រាប់ខេត្តព្រៃវែង និងប្រទេសជាតិ។ក្នុងពិធីសម្ពោធនោះ
-                    សម្តេចក្រឡាហោម ស ខេង ក៏បានសង្កត់ធ្ងន់ថា ការកសាងសាលាមត្តេយ្យនេះ
-                    គឺជាការបំពេញបន្ថែមនូវរចនាសម្ព័ន្ធអប់រំឱ្យកាន់តែសម្បូរបែបនៅក្នុងសាកលវិទ្យាល័យជាតិ ជា ស៊ីម កំចាយមារ
+                <h2 id="DigitalCenter">Digital Technology Middle Age Inauguration Ceremony</h2>
+                <time datetime="11, 07, 2024" id="AddTime">11, 07, 2024</time>
+                <p id="DigitalCenterText">
+                    Hun Sen Kamchamar Kindergarten to August 12, 2017 is the last year of the Chea Sim Kamchamar
+                    (Sangkat Sangkat Sangkat Samang) Global Year. Special features: such as: Learning in one place,
+                    creating a system of preschool education from primary to grade 1. For staff and community:
+                    empowering the Royal Government and staff working in the city to send young children to study on the
+                    spot and for the people of Samang Commune. Human resource training education: The first basic
+                    kindergarten targeted to transform the Kamchamar area, which was previously a battlefield, to
+                    provide a "human resource learning and training area" for Prey Veng province and the country. The
+                    decision that the kindergarten assembly hall adds a more special introduction function in Chea Sim
+                    Kamchamar University
                 </p>
             </div>
         </article>
@@ -336,22 +420,50 @@
             </figure>
 
             <div class="image-card-body">
-                <h3>ព្រះរាជពិធីបុណ្យចូលឆ្នាំថ្មីប្រពៃណីជាតិខ្មែរ</h3>
-                <p>
-                    ព្រះរាជពិធីបុណ្យចូលឆ្នាំថ្មីប្រពៃណីជាតិខ្មែរ គឺជាពិធីបុណ្យដ៏ធំដែលប្រារព្ធឡើងរយៈពេល ៣ ថ្ងៃ
-                    ជារៀងរាល់ឆ្នាំនៅថ្ងៃទី១៣-១៥ ខែមេសា (ជួនកាលថ្ងៃទី១៤-១៦) ដើម្បីអបអរទេវតាឆ្នាំថ្មីចុះមកទទួលតំណែង។
-                    ពិធីនេះមានអត្ថន័យជ្រាលជ្រៅក្នុងការថែរក្សាវប្បធម៌ លក្ខណៈគ្រួសារ ការជួបជុំ និងការគោរពដូនតា
-                    ដោយចាប់ផ្ដើមពីថ្ងៃមហាសង្ក្រាន្ត, ថ្ងៃវនបត, និងថ្ងៃឡើងស័ក
+                <h2 id="HappyNewYear">Khmer New Year Festival</h2>
+                <time datetime="14, 04, 2026"></time>
+                <p id="HappyNewYearTitle">
+                    The Royal Khmer New Year is a grand festival held over three days every year, from April 13-15
+                    (sometimes April 14-16), to celebrate the arrival of the new year’s deities. The festival has a deep
+                    meaning in preserving culture, family, gatherings, and honoring ancestors, starting with Maha
+                    Sangkranti, Vanbat, and Choi Sak.
                 </p>
             </div>
         </article>
     </div>
 
+    <!-- View -->
+    <section class="stats-section">
+
+        <div class="stats-wrapper">
+
+            <div class="stats-card">
+                <h2 class="stats-number" id="Number50">50+</h2>
+                <p class="stats-text" id="ProjectCompleted">Projects Completed</p>
+            </div>
+
+            <div class="stats-card">
+                <h2 class="stats-number" id="Number40">40+</h2>
+                <p class="stats-text" id="HappyClient">Happy Clients</p>
+            </div>
+
+            <div class="stats-card">
+                <h2 class="stats-number" id="Number2">2+</h2>
+                <p class="stats-text" id="YearsEx">Years Experience</p>
+            </div>
+
+            <div class="stats-card">
+                <h2 class="stats-number" id="Number100">100%</h2>
+                <p class="stats-text" id="Responsive">Responsive Design</p>
+            </div>
+        </div>
+    </section>
+
 
     <div class="Insights">
         <a style="font-family:'Times New Roman', Times, serif;color:var(--noname);text-decoration: none;"
             href="./insightss.html">
-            <h1 style="font-size: 27px;padding-left: 13px;margin-top: 10px;">All Insights</h1>
+            <h1 style="font-size: 27px;padding-left: 13px;margin-top: 10px;" id="AllInsights">All Insights</h1>
         </a>
     </div>
 
@@ -375,14 +487,15 @@
 
             <!-- Work with us -->
             <div class="footer-box">
-                <h3>Work with us</h3>
-                <p>info@noname.design<br>+855 (0) 70770571</p>
+                <h3 id="WorkWith">Work with us</h3>
+                <p id="InFo">info@noname.design<br>+855 (0) 70770571</p>
             </div>
 
             <!-- Address -->
             <div class="footer-box">
-                <h3>Address</h3>
-                <p>#I86, National Road 3, Sangkat Chom Chao II,<br>Khan Porsenchey, Phnom Penh, CAMBODIA.</p>
+                <h3 id="Address">Address</h3>
+                <p id="National">#I86, National Road 3, Sangkat Chom Chao II,<br>Khan Porsenchey, Phnom Penh, CAMBODIA.
+                </p>
             </div>
 
         </div>
@@ -396,7 +509,7 @@
                 <i class="fas fa-arrow-up"></i>
             </div>
 
-            <h3>Socials</h3>
+            <h3 id="Socials">Socials</h3>
 
             <div class="socials">
                 <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -404,13 +517,12 @@
                 <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
 
-            <div class="copyright">
+            <div class="copyright" id="Noname">
                 © 2026 Website => <span class="highlight">noname</span>
                 <= for <span class="design">Design</span> and <span>Digital</span>
             </div>
 
         </div>
-        <a name="button"><button style="background-color: #222;border: none;"></button></a>
     </footer>
 
     <!-- Bootstrap JS -->

@@ -18,404 +18,408 @@
   <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
-<body id="body">
 
+<body id="body">
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg px-3">
-
     <div class="container-fluid">
-
       <!-- Logo -->
       <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
         <img src="./assets/image/noname.png" class="logo-img">
       </a>
-
       <!-- Desktop Menu -->
       <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
         <ul class="navbar-nav gap-4">
-
-          <li class="nav-item"><a class="nav-link" href="./index.html"><i class="bi bi-house"></i> Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="./projects.html"><i class="bi bi-kanban"></i> Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="./studios.html"><i class="bi bi-camera"></i> Studio</a></li>
-          <li class="nav-item"><a class="nav-link active" href="./insightss.html"><i class="bi bi-bar-chart"></i> Insights</a></li>
-          <li class="nav-item"><a class="nav-link" href="./contacts.html"><i class="bi bi-envelope"></i> Contact</a></li>
-
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+              <i class="bi bi-house"></i>
+              <span id="homeText">Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./projects.html">
+              <i class="bi bi-kanban"></i>
+              <span id="projectText">Projects</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./studios.html">
+              <i class="bi bi-camera"></i>
+              <span id="studioText">Studio</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./insightss.html">
+              <i class="bi bi-bar-chart"></i>
+              <span id="insightText">Insights</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contacts.html">
+              <i class="bi bi-envelope"></i>
+              <span id="contactText">Contact</span>
+            </a>
+          </li>
         </ul>
       </div>
-
+      <!-- Language Dropdown -->
+      <div class="lang-dropdown">
+        <i class="fa-solid fa-globe"></i>
+        <select id="languageSelect" onchange="changeLanguage()">
+          <option value="en">English</option>
+          <option value="km">ខ្មែរ</option>
+        </select>
+      </div>
       <!-- Actions -->
       <div class="d-flex align-items-center gap-2 header-actions">
-
         <button onclick="toggleMode()">
           <i class="bi bi-moon"></i>
         </button>
-
         <button class="d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
           <i class="bi bi-list"></i>
         </button>
-
       </div>
-
     </div>
   </nav>
-
   <!-- MOBILE MENU -->
-  <div class="offcanvas offcanvas-start" id="mobileMenu">
-
+  <div class="offcanvas offcanvas-start" id="mobileMenu" style="margin-top: 82px;">
     <div class="offcanvas-header">
-      <h5>Menu</h5>
+      <h5 id="mobileMenuTitle">Menu</h5>
       <button class="btn-close" data-bs-dismiss="offcanvas"></button>
     </div>
-
     <div class="offcanvas-body">
-
       <div class="list-group">
-
+        <!-- HOME -->
         <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./index.html">
-          <i class="bi bi-house"></i> Home
+          <i class="bi bi-house"></i>
+          <span id="mobileHome">
+            Home
+          </span>
         </a>
-
+        <!-- PROJECTS -->
         <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./projects.html">
-          <i class="bi bi-kanban"></i> Projects
+          <i class="bi bi-kanban"></i>
+          <span id="mobileProjects">
+            Projects
+          </span>
         </a>
-
+        <!-- STUDIO -->
         <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./studios.html">
-          <i class="bi bi-camera"></i> Studio
+          <i class="bi bi-camera"></i>
+          <span id="mobileStudio">
+            Studio
+          </span>
         </a>
-
+        <!-- INSIGHTS -->
         <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./insightss.html">
-          <i class="bi bi-bar-chart"></i> Insights
+          <i class="bi bi-bar-chart"></i>
+          <span id="mobileInsights">
+            Insights
+          </span>
         </a>
-
+        <!-- CONTACT -->
         <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./contacts.html">
-          <i class="bi bi-envelope"></i> Contact
+          <i class="bi bi-envelope"></i>
+          <span id="mobileContact">
+            Contact
+          </span>
         </a>
-
       </div>
-
     </div>
   </div>
 
-<!-- slier header -->
-  <div class="hero-slider">
-    <div class="slider-track" id="slides">
-      <div class="slider-item">
-        <div class="slide-content">
-          <h1>Neural System<h1>
-          <p>Advanced AI-driven computing technology for modern developers and digital innovation.</p>
-        </div>
-      </div>
+  <!-- slier header -->
+  <section class="insights-section" id="section">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="insights-wave">
+      <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path
+          d="M0,96L80,122.7C160,149,320,203,480,208C640,213,800,171,960,160C1120,149,1280,171,1360,181.3L1440,192L1440,0L0,0Z">
+        </path>
+      </svg>
+    </div>
+    <div class="insights-content">
+      <h1 class="insights-title" id="In">Insights</h1>
+      <p class="insights-description" id="Stay">
+        Stay updated with the latest trends, innovations, and digital insights
+        to help your business grow and succeed online.
+      </p>
+      <div class="insights-line"></div>
+    </div>
+  </section>
 
-      <div class="slider-item">
-        <div class="slide-content">
-          <h1>Code Environment</h1>
-          <p>High performance development workspace for building next-generation applications.</p>
-        </div>
+  <!-- =========================
+   FEATURED SECTION
+=========================  -->
+  <div class="page-wrapper">
+    <div class="featured-post reveal">
+      <img class="featured-media"
+        src="https://media.licdn.com/dms/image/v2/C5612AQHFf5gBCZTi9w/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1578961214180?e=2147483647&v=beta&t=s3uL_d-ixcGWBmtsMLHxe5T9H-mvtMIqIPCXjEQiJW0">
+      <div class="featured-body">
+        <span class="badge" id="Fea">Featured</span>
+        <h2 id="How">How Design Drives Digital Growth</h2>
+        <p id="Design">UI/UX design helps businesses grow faster in digital world.</p>
+        <a class="btn-primary" href="./projects.html" id="Projects">Projects</a>
       </div>
-
-      <div class="slider-item">
-        <div class="slide-content">
-          <h1>Future Technology</h1>
-          <p>Smart systems powered by data, automation, and artificial intelligence.</p>
-        </div>
-      </div>
-
     </div>
 
-    <!-- DOTS -->
-    <div class="slider-dots">
-      <div class="slider-dot active" onclick="goToSlide(0)"></div>
-      <div class="slider-dot" onclick="goToSlide(1)"></div>
-      <div class="slider-dot" onclick="goToSlide(2)"></div>
-    </div>
 
   </div>
+
   <div style="padding: 20px;">
     <div class="container">
-
-      <!-- Card 1 -->
-      <div class="content">
-        <img src="./assets/image/home.jpg" alt="image">
-        <h3>Designing logo Hotel</h3>
-        <h5>23.06.2026</h5>
-        <p align="justify" class="text">
-          Build layouts easily using Flexbox.In this group discussion panel, our type director Sovichet
-          Tep, the designer
-          responsible for Grab Community Khmer; Carina Teo, the Head of Creative at Grab; Tan Sueh Li of hrftype, the
-          designer responsible for Grab Community Latin and Vietnamese, and moderator Anuthin Wongsunkakon of Cadson
-          Demak, came together to have conversations about the thought process behind Grab's rebranding, the creation of
-          the Grab Community typeface, and the process of localizing them into many other Southeast Asian scripts such
-          as
-          Thai, Khmer, and Burmese. <a href="#"> Watch the talk here</a>
-        </p>
-        <button class="btn-toggle">More</button>
-      </div>
-
-      <!-- Card 2 -->
-      <div align="justify" class="content">
-        <img src="./assets/image/boy.jpg" alt="image">
-        <h3>Designing Colorful</h3>
-        <h5>12.12.2026</h5>
-        <p class="text">
-          Align and center content smoothly.We are beyond excited to announce that our type director
-          Sovichet Tep will be
-          one of 8 Southeast Asian Script Specialists for the <a href="#">Granshan Competition</a>, curating the world’s
-          most exceptional typefaces beyond Latin; alongside Sasikarn Vongin, Suppakit Chalermlarp, Sirin Gunkloy,
-          Tristan
-          Hinkel, Sasikarn Vongin, Jinda Nuangjumnong, Fiona Ross, and Panuwat Usakulwattana. Submit your next great
-          type
-          before 29 February!
-        </p>
-        <button class="btn-toggle">More</button>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="content">
-        <img src="./assets/image/pink-girl.jpeg" alt="image">
-        <h3>fram</h3>
-        <h5>01.03.2026</h5>
-        <p align="justify" class="text">
-          Control spacing and order.
-          Slaphouse is a dynamic and emerging record label in Cambodia, featuring talented artists like Kwan, Maifern,
-          Vito, M-Fatt, Mann Doss, and others. By pushing the boundaries of the Khmer sound, Slaphouse artists have
-          achieved great success, amassing millions of views. We're thrilled to have worked with Slaphouse on the design
-          of their brand identity, capturing their distinct, high-energy, and unapologetic spirit. Additionally, we
-          worked
-          with <a href="#">Sokai Yoon</a>, a Khmer-American designer from Atlanta on the photography and art direction
-          of
-          Slaphouse's artist photoshoot.
-        </p>
-        <button class="btn-toggle">More</button>
-      </div>
 
       <!-- Card 4 -->
       <div class="content">
         <img src="./assets/image/សិត-ខន-nuck-digital-zone-background-speaker.jpg" alt="image">
-        <h3>ពិធីសម្ភោធមជ្ឈបណ្ឌលបច្ចេកវិទ្យាឌីជីថល</h3>
-        <h5>01.09.2026</h5>
-        <p align="justify" class="text">
-          While brand identity design in Cambodia has improved significantly in the past decade, there tends to be a
-          disconnect between typography and identity design, in which typography is often overlooked compared to other
-          visual elements within a brand's tool kit. In this talk at BITS10 in Bangkok, our Type Director Sovichet Tep
-          and
-          Creative Director Both Bou discuss the current landscape of Cambodia’s up-and-coming design industry and
-          explore
-          the common problems facing brand identity design relating to the lack of education and resources around Khmer
-          typography and type design. We hope our inclusion in this event will help foster a stronger connection between
-          <a href="#">Watch the talk here</a>
-          our country and the rest of the world.
+        <h3 id="Inauguration">Inauguration ceremony of the "Digital Room"</h3>
+        <time datetime="26.11.2025" id="num1">26.11.2025</time>
+        <p class="text" id="Room">
+          The Digital Room or Digital Tech Center at Chea Sim University of Kamchaymear (CSUK) is a brand-new
+          achievement that was officially inaugurated on November 26, 2025. The center was established under a
+          cooperation framework between the Ministry of Post and Telecommunications (MPTC) and the university to promote
+          digital education.
+          Key Features and Functions:
+          Modern Infrastructure: The room is equipped with technological devices, computers, and a high-speed internet
+          connection to facilitate students' learning and research.
+          Verify.gov.kh Document Verification Platform: It serves as a hub for implementing the use of the official
+          digital platform to verify the authenticity of various documents.
+          Digital Management System: It assists the university in organizing its learning management system and data
+          more efficiently.
+          Education and Training: It serves the purpose of training in Information Technology (IT) majors and developing
+          digital skills for students and educational staff.
+          The creation of this digital room is also part of the Cambodia Cyber University Network (CCUN), which consists
+          of 12 member higher education institutions in Cambodia that share learning resources and joint online training
+          programs.
         </p>
-        <button class="btn-toggle">More</button>
+        <button class="btn-toggle" id="More">Read More</button>
       </div>
 
 
       <!-- Card 5 -->
       <div class="content">
         <img src="./assets/image/សូ-វិសុទ្ធី-nuck-digital-zone-background-speaker.jpg" alt="image">
-        <h3>ពិធីសម្ភោធមជ្ឈបណ្ឌលបច្ចេកវិទ្យាឌីជីថល</h3>
-        <h5>12.12.2026</h5>
-        <p align="justify" class="text">
-          Introducing Anagata Playlist Vol. 2, a playlist hand-curated by the Anagata team. For our second volume Sunset
-          Drive, we're compiling 16 songs for those drives home alone while you're vibing to the music and the sunset
-          lights. Artwork by Oudom Chem.
-          <a href="#">Find the playlist here</a>
+        <h3 id="Ceremony">Inauguration ceremony of the "Digital Room"</h3>
+        <time datetime="26.11.2025" id="num2">26.11.2025</time>
+        <p class="text" id="Digi">
+          The Digital Room or Digital Tech Center at Chea Sim University of Kamchaymear (CSUK) is a brand-new
+          achievement that was officially inaugurated on November 26, 2025. The center was established under a
+          cooperation framework between the Ministry of Post and Telecommunications (MPTC) and the university to promote
+          digital education.
+          Key Features and Functions:
+          Modern Infrastructure: The room is equipped with technological devices, computers, and a high-speed internet
+          connection to facilitate students' learning and research.
+          Verify.gov.kh Document Verification Platform: It serves as a hub for implementing the use of the official
+          digital platform to verify the authenticity of various documents.
+          Digital Management System: It assists the university in organizing its learning management system and data
+          more efficiently.
+          Education and Training: It serves the purpose of training in Information Technology (IT) majors and developing
+          digital skills for students and educational staff.
+          The creation of this digital room is also part of the Cambodia Cyber University Network (CCUN), which consists
+          of 12 member higher education institutions in Cambodia that share learning resources and joint online training
+          programs.
         </p>
-        <button class="btn-toggle">More</button>
+        <button class="btn-toggle" id="Read">Read More</button>
       </div>
 
 
       <!-- Card 6 -->
       <div class="content">
         <img src="./assets/image/ឡៅ-ឈីវអ៊ាវ-nuck.jpg" alt="image">
-        <h3>ពិធីសម្ភោធមជ្ឈបណ្ឌលបច្ចេកវិទ្យាឌីជីថល</h3>
-        <h5>01.03.2026</h5>
-        <p align="justify" class="text">
-          Here’s a look at the work we did for Grab’s expansion of the Inter typeface into Khmer and Thai. This project
-          was initiated to make Grab more accessible to local users within these 2 regions. We worked closely with the
-          Grab design team to ensure the Khmer retained its integrity while also aligning with the Latin's simplicity
-          and
-          versatility, while the Thai expansion was handled by the amazing team at
-          <a href="#"> Cadson Demak. Read the full article here</a>
+        <h3 id="Of">Inauguration ceremony of the "Digital Room"</h3>
+        <time datetime="26.11.2025" id="Time">26.11.2025</time>
+        <p class="text" id="Past">
+          The Digital Room or Digital Tech Center at Chea Sim University of Kamchaymear (CSUK) is a brand-new
+          achievement that was officially inaugurated on November 26, 2025. The center was established under a
+          cooperation framework between the Ministry of Post and Telecommunications (MPTC) and the university to promote
+          digital education.
+          Key Features and Functions:
+          Modern Infrastructure: The room is equipped with technological devices, computers, and a high-speed internet
+          connection to facilitate students' learning and research.
+          Verify.gov.kh Document Verification Platform: It serves as a hub for implementing the use of the official
+          digital platform to verify the authenticity of various documents.
+          Digital Management System: It assists the university in organizing its learning management system and data
+          more efficiently.
+          Education and Training: It serves the purpose of training in Information Technology (IT) majors and developing
+          digital skills for students and educational staff.
+          The creation of this digital room is also part of the Cambodia Cyber University Network (CCUN), which consists
+          of 12 member higher education institutions in Cambodia that share learning resources and joint online training
+          programs.
         </p>
-        <button class="btn-toggle">More</button>
+        <button class="btn-toggle" id="Btt">Read More</button>
       </div>
 
 
       <!-- Card 7 -->
       <div class="content">
         <img src="./assets/image/asean.jpg" alt="image">
-        <h3>AI Ready ASEAN Training on Mar 15, 2026</h3>
-        <h5>15, 03, 2026</h5>
-        <p align="justify" class="text">
-          គម្រោង
-          ការត្រៀមខ្លួនរបស់អាស៊ានដើម្បីទទួលយកបញ្ញាសប្បនិម្មិត (AI Ready ASEAN)
-          គឺជាគំនិតផ្តួចផ្តើមមួយក្នុងគោលបំណងផ្តល់សិទ្ធិអំណាចដល់អ្នកអប់រំ
-          សិស្សានុសិស្ស និងអាណាព្យាបាលនៅទូទាំងអាស៊ីអាគ្នេយ៍
-          ជាពិសេសនៅក្នុងប្រទេសដូចជាប្រទេសកម្ពុជា ដើម្បីស្វែងយល់
-          និងប្រើប្រាស់បញ្ញាសិប្បនិម្មិត (AI) ប្រកបដោយប្រសិទ្ធភាពក្នុងការអប់រំ
-          និងជីវិតប្រចាំថ្ងៃ។ គម្រោងនេះផ្តោតលើការកសាងអក្ខរកម្មឌីជីថល
-          ការលើកកម្ពស់ការប្រើប្រាស់ AI ប្រកបដោយការទទួលខុសត្រូវ
-          និងការជំរុញកិច្ចសហការក្នុងតំបន់តាមរយៈការបណ្តុះបណ្តាល។
+        <h3 id="Ai">AI Ready ASEAN Training on Mar 15, 2026</h3>
+        <time datetime="15, 03, 2026" id="Mar">15, 03, 2026</time>
+        <p class="text" id="AiReady">
+          The AI Ready ASEAN project is an initiative aimed at empowering educators, students, and parents across
+          Southeast Asia, especially in countries such as Cambodia, to understand and effectively use Artificial
+          Intelligence (AI) in education and daily life. The project focuses on building digital literacy, promoting
+          responsible AI usage, and encouraging regional collaboration through training programs.
         </p>
-        <button class="btn-toggle">More</button>
+        <button class="btn-toggle" id="Oo">Read More</button>
       </div>
 
       <!-- Card 8 -->
       <div class="content">
         <img src="./assets/image/nuck-digital-lab.png" alt="image">
-        <h3>ពិធីសម្ភោធដាក់ឱ្យប្រើប្រាស់"បន្ទប់ឌីជីថល"</h3>
-        <h5>12.12.2026</h5>
-        <p align="justify" class="text">
-          Introducing Anagata Playlist Vol. 2, a playlist hand-curated by the Anagata team. For our second volume Sunset
-          Drive, we're compiling 16 songs for those drives home alone while you're vibing to the music and the sunset
-          lights. Artwork by Oudom Chem.
-          <a href="#">Find the playlist here</a>
+        <h3 id="Ro">Inauguration ceremony of the "Digital Room"</h3>
+        <time datetime="26.11.2025" id="Call">26.11.2025</time>
+        <p class="text" id="Was">
+          The Digital Room or Digital Tech Center at Chea Sim University of Kamchaymear (CSUK) is a brand-new
+          achievement that was officially inaugurated on November 26, 2025. The center was established under a
+          cooperation framework between the Ministry of Post and Telecommunications (MPTC) and the university to promote
+          digital education.
+          Key Features and Functions:
+          Modern Infrastructure: The room is equipped with technological devices, computers, and a high-speed internet
+          connection to facilitate students' learning and research.
+          Verify.gov.kh Document Verification Platform: It serves as a hub for implementing the use of the official
+          digital platform to verify the authenticity of various documents.
+          Digital Management System: It assists the university in organizing its learning management system and data
+          more efficiently.
+          Education and Training: It serves the purpose of training in Information Technology (IT) majors and developing
+          digital skills for students and educational staff.
+          The creation of this digital room is also part of the Cambodia Cyber University Network (CCUN), which consists
+          of 12 member higher education institutions in Cambodia that share learning resources and joint online training
+          programs.
         </p>
-        <button class="btn-toggle">More</button>
+        <button class="btn-toggle" id="Mr">Read More</button>
       </div>
 
       <!-- Card 9 -->
       <div class="content">
         <img src="./assets/image/banner-nuck-center-250701-003.jpg" alt="image">
-        <h3>មជ្ឈមណ្ឌលអប់រំ និងបណ្ដុះបណ្ដាល ជា ស៊ីម កំចាយមារ</h3>
-        <h5>01.03.2026</h5>
-        <p align="justify" class="text">
-          Here’s a look at the work we did for Grab’s expansion of the Inter typeface into Khmer and Thai. This project
-          was initiated to make Grab more accessible to local users within these 2 regions. We worked closely with the
-          Grab design team to ensure the Khmer retained its integrity while also aligning with the Latin's simplicity
-          and
-          versatility, while the Thai expansion was handled by the amazing team at
-          <a href="#"> Cadson Demak. Read the full article here</a>
+        <h3 id="Com">Chea Sim Komchaymear Education and Training Center.</h3>
+        <time datetime="11.07.2024" id="Tes">11.07.2024</time>
+        <p class="text" id="Kam">
+          The inauguration of the Hun Sen Kamchaymear Kindergarten on July 11, 2024, is located directly within the
+          campus of Chea Sim University of Kamchaymear (Thnal Kaeng Village, Smaong Khang Cheung Commune). Integrating a
+          kindergarten into this university campus is a strategy called the "Chea Sim Kamchaymear Education and Training
+          Center," which features the following highlights:
+          All-in-One Complete Education: It creates an educational system ranging from kindergarten, primary school, and
+          high school up to university level within the same area.
+          Convenience for Staff and the Community: It provides convenience for civil servants, professors, and staff
+          working at the university to send their young children to school near their workplace, as well as for the
+          residents of Smaong Khang Cheung Commune.
+          Human Resource Training: This kindergarten is the very first foundation aiming to transform the Kamchaymear
+          area, which was previously a battlefield, into an important "Education and Human Resource Training Zone" for
+          Prey Veng Province and the nation.
+          During the inauguration ceremony, Samdech Kralahom Sar Kheng also emphasized that the construction of this
+          kindergarten is a supplementary addition to enrich the educational infrastructure within Chea Sim University
+          of Kamchaymear.
         </p>
-        <button class="btn-toggle">More</button>
+        <button class="btn-toggle" id="Re">Read More</button>
       </div>
 
       <!-- Card 10 -->
       <div class="content">
         <img src="./assets/image/ex03.jpg" alt="image">
-        <h3>មជ្ឈមណ្ឌលអប់រំ និងបណ្ដុះបណ្ដាល ជា ស៊ីម កំចាយមារ</h3>
-        <h5>01.09.2026</h5>
-        <p align="justify" class="text">
-          While brand identity design in Cambodia has improved significantly in the past decade, there tends to be a
-          disconnect between typography and identity design, in which typography is often overlooked compared to other
-          visual elements within a brand's tool kit. In this talk at BITS10 in Bangkok, our Type Director Sovichet Tep
-          and
-          Creative Director Both Bou discuss the current landscape of Cambodia’s up-and-coming design industry and
-          explore
-          the common problems facing brand identity design relating to the lack of education and resources around Khmer
-          typography and type design. We hope our inclusion in this event will help foster a stronger connection between
-          <a href="#">Watch the talk here</a>
-          our country and the rest of the world.
+        <h3 id="Tech">Chea Sim Komchaymear Education and Training Center.</h3>
+        <time datetime="11.07.2024" id="Kal">11.07.2024</time>
+        <p class="text" id="Edu">
+          The inauguration of the Hun Sen Kamchaymear Kindergarten on July 11, 2024, is located directly within the
+          campus of Chea Sim University of Kamchaymear (Thnal Kaeng Village, Smaong Khang Cheung Commune). Integrating a
+          kindergarten into this university campus is a strategy called the "Chea Sim Kamchaymear Education and Training
+          Center," which features the following highlights:
+          All-in-One Complete Education: It creates an educational system ranging from kindergarten, primary school, and
+          high school up to university level within the same area.
+          Convenience for Staff and the Community: It provides convenience for civil servants, professors, and staff
+          working at the university to send their young children to school near their workplace, as well as for the
+          residents of Smaong Khang Cheung Commune.
+          Human Resource Training: This kindergarten is the very first foundation aiming to transform the Kamchaymear
+          area, which was previously a battlefield, into an important "Education and Human Resource Training Zone" for
+          Prey Veng Province and the nation.
+          During the inauguration ceremony, Samdech Kralahom Sar Kheng also emphasized that the construction of this
+          kindergarten is a supplementary addition to enrich the educational infrastructure within Chea Sim University
+          of Kamchaymear.
         </p>
-        <button class="btn-toggle">More</button>
+        <button class="btn-toggle" id="Ko">Read More</button>
       </div>
 
       <!-- Card 11 -->
       <div class="content">
-        <img src="./assets/image/uniic.png" alt="image">
-        <h3>UNIIC SIGNING CEREMONY 2025</h3>
-        <h5>01.03.2026</h5>
-        <p align="justify" class="text">
-          Here’s a look at the work we did for Grab’s expansion of the Inter typeface into Khmer and Thai. This project
-          was initiated to make Grab more accessible to local users within these 2 regions. We worked closely with the
-          Grab design team to ensure the Khmer retained its integrity while also aligning with the Latin's simplicity
-          and
-          versatility, while the Thai expansion was handled by the amazing team at
-          <a href="#"> Cadson Demak. Read the full article here</a>
+        <img src="./assets/image/nuck-digital-lab-opt-2.jpg" alt="image">
+        <h3 id="Light">Inauguration ceremony of the "Digital Room"</h3>
+        <time datetime="26.11.2025" id="Pel">26.11.2025</time>
+        <p class="text" id="Text">
+          The Digital Room or Digital Tech Center at Chea Sim University of Kamchaymear (CSUK) is a brand-new
+          achievement that was officially inaugurated on November 26, 2025. The center was established under a
+          cooperation framework between the Ministry of Post and Telecommunications (MPTC) and the university to promote
+          digital education.
+          Key Features and Functions:
+          Modern Infrastructure: The room is equipped with technological devices, computers, and a high-speed internet
+          connection to facilitate students' learning and research.
+          Verify.gov.kh Document Verification Platform: It serves as a hub for implementing the use of the official
+          digital platform to verify the authenticity of various documents.
+          Digital Management System: It assists the university in organizing its learning management system and data
+          more efficiently.
+          Education and Training: It serves the purpose of training in Information Technology (IT) majors and developing
+          digital skills for students and educational staff.
+          The creation of this digital room is also part of the Cambodia Cyber University Network (CCUN), which consists
+          of 12 member higher education institutions in Cambodia that share learning resources and joint online training
+          programs.
         </p>
-        <button class="btn-toggle">More</button>
-      </div>
-
-      <!-- Card 12 -->
-      <div class="content">
-        <img src="./assets/image/pink-girl.jpeg" alt="image">
-        <h3>មជ្ឈមណ្ឌលអប់រំ និងបណ្ដុះបណ្ដាល ជា ស៊ីម កំចាយមារ</h3>
-        <h5>12.12.2026</h5>
-        <p align="justify" class="text">
-          Introducing Anagata Playlist Vol. 2, a playlist hand-curated by the Anagata team. For our second volume Sunset
-          Drive, we're compiling 16 songs for those drives home alone while you're vibing to the music and the sunset
-          lights. Artwork by Oudom Chem.
-          <a href="#">Find the playlist here</a>
-        </p>
-        <button class="btn-toggle">More</button>
+        <button class="btn-toggle" id="Pade">Read More</button>
       </div>
 
     </div>
   </div>
 
 
-  <!-- picture overlay -->
-<div class="hero">
-
-  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="hero image">
-
-  <div class="hero-text">
-    <h1>We Build Creative Design & Digital Experiences</h1>
-    <p>UI/UX Design • Web Development • Branding • Digital Solutions</p>
-
-   <div class="hero-buttons">
-
-  <a href="./index.html" class="btn primary">Home page</a>
-
-  <a href="./contacts.html" class="btn secondary">Contacts</a>
-
-</div>
-  </div>
-
-</div>
-
-
-<div class="portfolio-section">
-
-    <h2>Why Choose Our Studio?</h2>
-    <p>Creative Design • Web Development • Digital Solutions</p>
-
+  <div class="portfolio-section">
+    <h2 id="Why">Why Choose Our Studio?</h2>
+    <p id="Create">Creative Design • Web Development • Digital Solutions</p>
     <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-tag" id="Sing">Design</div>
+        <div class="feature-icon"><i class="fa-solid fa-palette"></i></div>
+        <h3 id="Poster">Creative Poster Design</h3>
+        <p id="High">High-quality modern posters for branding and marketing.</p>
+      </div>
 
-        <div class="feature-item">
-            <div class="feature-tag">Design</div>
-            <div class="feature-icon"><i class="fa-solid fa-palette"></i></div>
-            <h3>Creative Poster Design</h3>
-            <p>High-quality modern posters for branding and marketing.</p>
-        </div>
+      <div class="feature-item">
+        <div class="feature-tag" id="Tall">Digital</div>
+        <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h3 id="Art">Digital Artwork</h3>
+        <p id="Un">Unique visuals for social media and branding.</p>
+      </div>
 
-        <div class="feature-item">
-            <div class="feature-tag">Digital</div>
-            <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-            <h3>Digital Artwork</h3>
-            <p>Unique visuals for social media and branding.</p>
-        </div>
+      <div class="feature-item">
+        <div class="feature-tag">UI/UX</div>
+        <div class="feature-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3 id="Mo">Modern UI Design</h3>
+        <p id="Clean">Clean and modern interfaces for websites and apps.</p>
+      </div>
 
-        <div class="feature-item">
-            <div class="feature-tag">UI/UX</div>
-            <div class="feature-icon"><i class="fa-solid fa-laptop-code"></i></div>
-            <h3>Modern UI Design</h3>
-            <p>Clean and modern interfaces for websites and apps.</p>
-        </div>
+      <div class="feature-item">
+        <div class="feature-tag" id="Web">Web</div>
+        <div class="feature-icon"><i class="fa-solid fa-globe"></i></div>
+        <h3 id="Website">Website Development</h3>
+        <p id="Responsive">Responsive websites that work on all devices.</p>
+      </div>
 
-        <div class="feature-item">
-            <div class="feature-tag">Web</div>
-            <div class="feature-icon"><i class="fa-solid fa-globe"></i></div>
-            <h3>Website Development</h3>
-            <p>Responsive websites that work on all devices.</p>
-        </div>
+      <div class="feature-item">
+        <div class="feature-tag" id="App">App</div>
+        <div class="feature-icon"><i class="fa-solid fa-code"></i></div>
+        <h3 id="Application">Web Applications</h3>
+        <p in="Interactive">Interactive web apps with smooth performance.</p>
+      </div>
 
-        <div class="feature-item">
-            <div class="feature-tag">App</div>
-            <div class="feature-icon"><i class="fa-solid fa-code"></i></div>
-            <h3>Web Applications</h3>
-            <p>Interactive web apps with smooth performance.</p>
-        </div>
-
-        <div class="feature-item">
-            <div class="feature-tag">Speed</div>
-            <div class="feature-icon"><i class="fa-solid fa-rocket"></i></div>
-            <h3>Optimized Performance</h3>
-            <p>Fast, SEO-friendly and optimized websites.</p>
-        </div>
+      <div class="feature-item">
+        <div class="feature-tag" is="Speed">Speed</div>
+        <div class="feature-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h3 id="Op">Optimized Performance</h3>
+        <p id="Fast">Fast, SEO-friendly and optimized websites.</p>
+      </div>
 
     </div>
-</div>
+  </div>
 
 
 
@@ -433,14 +437,14 @@
 
       <!-- Work with us -->
       <div class="footer-box">
-        <h3>Work with us</h3>
-        <p>info@noname.design<br>+855 (0) 70770571</p>
+        <h3 id="WorkWith">Work with us</h3>
+        <p id="InFo">info@noname.design<br>+855 (0) 70770571</p>
       </div>
 
       <!-- Address -->
       <div class="footer-box">
-        <h3>Address</h3>
-        <p>#I86, National Road 3, Sangkat Chom Chao II,<br>Khan Porsenchey, Phnom Penh, CAMBODIA.</p>
+        <h3 id="Address">Address</h3>
+        <p id="National">#I86, National Road 3, Sangkat Chom Chao II,<br>Khan Porsenchey, Phnom Penh, CAMBODIA.</p>
       </div>
 
     </div>
@@ -454,7 +458,7 @@
         <i class="fas fa-arrow-up"></i>
       </div>
 
-      <h3>Socials</h3>
+      <h3 id="Socials">Socials</h3>
 
       <div class="socials">
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -462,7 +466,7 @@
         <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
 
-      <div class="copyright">
+      <div class="copyright" id="Noname">
         © 2026 Website => <span class="highlight">noname</span>
         <= for <span class="design">Design</span> and <span>Digital</span>
       </div>

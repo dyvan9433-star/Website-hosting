@@ -6,7 +6,7 @@
   <title>noname Studios</title>
   <!-- icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    integrity="sha512-E. vv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./assets/css/studios.css">
 
@@ -21,189 +21,250 @@
 </head>
 
 <body id="body">
-
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg px-3">
-
     <div class="container-fluid">
-
       <!-- Logo -->
       <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
         <img src="./assets/image/noname.png" class="logo-img">
       </a>
-
       <!-- Desktop Menu -->
       <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
         <ul class="navbar-nav gap-4">
-
-          <li class="nav-item"><a class="nav-link" href="./index.html"><i class="bi bi-house"></i> Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="./projects.html"><i class="bi bi-kanban"></i>
-              Projects</a></li>
-          <li class="nav-item"><a class="nav-link active" href="./studios.html"><i class="bi bi-camera"></i> Studio</a>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+              <i class="bi bi-house"></i>
+              <span id="homeText">Home</span>
+            </a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="./insightss.html"><i class="bi bi-bar-chart"></i> Insights</a>
+          <li class="nav-item">
+            <a class="nav-link" href="./projects.html">
+              <i class="bi bi-kanban"></i>
+              <span id="projectText">Projects</span>
+            </a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="./contacts.html"><i class="bi bi-envelope"></i> Contact</a>
+          <li class="nav-item">
+            <a class="nav-link active" href="./studios.html">
+              <i class="bi bi-camera"></i>
+              <span id="studioText">Studio</span>
+            </a>
           </li>
-
+          <li class="nav-item">
+            <a class="nav-link" href="./insightss.html">
+              <i class="bi bi-bar-chart"></i>
+              <span id="insightText">Insights</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contacts.html">
+              <i class="bi bi-envelope"></i>
+              <span id="contactText">Contact</span>
+            </a>
+          </li>
         </ul>
       </div>
-
+      <!-- Language Dropdown -->
+      <div class="lang-dropdown">
+        <i class="fa-solid fa-globe"></i>
+        <select id="languageSelect" onchange="changeLanguage()">
+          <option value="en">English</option>
+          <option value="km">ខ្មែរ</option>
+        </select>
+      </div>
       <!-- Actions -->
       <div class="d-flex align-items-center gap-2 header-actions">
-
         <button onclick="toggleMode()">
           <i class="bi bi-moon"></i>
         </button>
-
         <button class="d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
           <i class="bi bi-list"></i>
         </button>
-
       </div>
-
     </div>
   </nav>
-
   <!-- MOBILE MENU -->
-  <div class="offcanvas offcanvas-start" id="mobileMenu">
-
+  <div class="offcanvas offcanvas-start" id="mobileMenu" style="margin-top: 82px;">
     <div class="offcanvas-header">
-      <h5>Menu</h5>
+      <h5 id="mobileMenuTitle">Menu</h5>
       <button class="btn-close" data-bs-dismiss="offcanvas"></button>
     </div>
-
     <div class="offcanvas-body">
-
       <div class="list-group">
-
+        <!-- HOME -->
         <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./index.html">
-          <i class="bi bi-house"></i> Home
+          <i class="bi bi-house"></i>
+          <span id="mobileHome">
+            Home
+          </span>
         </a>
-
+        <!-- PROJECTS -->
         <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./projects.html">
-          <i class="bi bi-kanban"></i> Projects
+          <i class="bi bi-kanban"></i>
+          <span id="mobileProjects">
+            Projects
+          </span>
         </a>
-
+        <!-- STUDIO -->
         <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./studios.html">
-          <i class="bi bi-camera"></i> Studio
+          <i class="bi bi-camera"></i>
+          <span id="mobileStudio">
+            Studio
+          </span>
         </a>
-
+        <!-- INSIGHTS -->
         <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./insightss.html">
-          <i class="bi bi-bar-chart"></i> Insights
+          <i class="bi bi-bar-chart"></i>
+          <span id="mobileInsights">
+            Insights
+          </span>
         </a>
-
+        <!-- CONTACT -->
         <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" href="./contacts.html">
-          <i class="bi bi-envelope"></i> Contact
+          <i class="bi bi-envelope"></i>
+          <span id="mobileContact">
+            Contact
+          </span>
         </a>
-
       </div>
-
     </div>
   </div>
 
   <!-- ការដាក់រូបភាពជាក្បាល Webpage -->
   <div class="slider">
-
-    <div class="slides">
-
-      <div class="slide">
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c">
-        <div class="text">
-          <h1>Cyber Data Network</h1>
-          <p>Global secure networks connecting the digital world.</p>
-        </div>
-      </div>
-
+    <div class="track">
+      <!-- SLIDE 1 -->
       <div class="slide active">
-        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
-        <div class="text">
-          <h1>AI Digital World</h1>
-          <p>Artificial intelligence powering the future of automation and smart systems.</p>
+        <div class="content">
+          <div class="tag" id="creativeDesign">
+            Creative Design
+          </div>
+          <h1 id="Build">
+            Build Modern Digital Experiences
+          </h1>
+          <p id="Smooth">
+            Smooth cinematic slider with premium
+            glassmorphism UI and elegant responsive layout.
+          </p>
         </div>
       </div>
-
+      <!-- SLIDE 2 -->
       <div class="slide">
-        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
-        <div class="text">
-          <h1>Digital Coding</h1>
-          <p>Clean and scalable programming for modern applications.</p>
+        <div class="content">
+          <div class="tag" id="Respon">
+            Responsive Layout
+          </div>
+          <h1 id="Bea">
+            Beautiful On Every Device
+          </h1>
+          <p id="Op">
+            Optimized for mobile tablet and desktop
+            with smooth interactions and modern design.
+          </p>
         </div>
       </div>
-
+      <!-- SLIDE 3 -->
+      <div class="slide">
+        <div class="content">
+          <div class="tag" id="Pre">
+            Premium UI
+          </div>
+          <h1 id="El">
+            Elegant Motion & Clean Interface
+          </h1>
+          <p id="Mini">
+            Minimal modern layout inspired by
+            premium website hero sections.
+          </p>
+        </div>
+      </div>
     </div>
-
-    <!-- RENAMED BUTTONS -->
-    <button class="slider-btn prev">&#10094;</button>
-    <button class="slider-btn next">&#10095;</button>
-
-    <div class="dots"></div>
-
+    <!-- ARROWS -->
+    <button class="arrow left">❮</button>
+    <button class="arrow right">❯</button>
+    <!-- DOTS -->
+    <div class="dots">
+      <div class="active"></div>
+      <div></div>
+      <div></div>
+    </div>
+    <!-- GLASS CARD -->
+    <div class="glass-card">
+      <h3 id="Sl">Premium Slider</h3>
+      <p id="Spon1">
+        Responsive cinematic hero slider
+        with smooth animation and clean UI.
+      </p>
+    </div>
   </div>
+
+
 
   <!-- text bottom slider  -->
   <div class="build">
     <h1 id="text">
       We are a design company specializing in strategy, brand identity, and typeface design.
-
       We use strategy and creativity to produce work that creates impact with longevity.
-
       To help build brands that matter, transform communities, and bring positive changes. ✨
     </h1>
   </div>
 
 
-  <!-- Responsive image -->
-  <div class="image-container">
-    <img class="left" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-    <img class="right" src="./assets/image/gimini.png">
+  <div class="image-wrapper">
+
+    <div class="image-container">
+      <img src="./assets/image/digital-center.jpg" class="left" alt="">
+      <img src="./assets/image/gimini.png" class="right" alt="">
+    </div>
+
+    <div class="image-container">
+      <img src="./assets/image/elib.png" class="left" alt="">
+      <img src="./assets/image/home.jpg" class="right" alt="">
+    </div>
+
+    <div class="image-container">
+      <img src="./assets/image/people.png" class="left" alt="">
+      <img src="./assets/image/អំទូក 1.jpg" class="right" alt="">
+    </div>
+
   </div>
 
-  <div class="image-container">
-    <img class="left" src="./assets/image/elib.png">
-    <img class="right" src="./assets/image/home.jpg">
-  </div>
 
-  <div class="image-container">
-    <img class="left" src="./assets/image/people.png">
-    <img class="right" src="./assets/image/អំទូក 1.jpg">
-  </div>
 
   <div class="our">
-    <h1>Our capabilities</h1>
+    <h1 id="Our">Our capabilities</h1>
   </div>
 
   <div class="all-text">
 
     <div class="col">
-      <p class="title">Strategy</p>
+      <p class="title" id="St">Strategy</p>
       <p class="content">
-        Brand Diagnose <br>
-        Brand Definition <br>
-        Brand Name <br>
-        Brand Architecture <br>
-        Brand Activation Plan
+        <span id="Brand">Brand Diagnose</span><br>
+        <span id="De">Brand Definition</span><br>
+        <span id="Save">Brand Name</span> <br>
+        <span id="A">Brand Architecture</span> <br>
+        <span id="B">Brand Activation Plan</span>
       </p>
     </div>
 
     <div class="col">
-      <p class="title">Design</p>
+      <p class="title" id="C">Design</p>
       <p class="content">
-        Visual Identity <br>
-        Bespoke Typeface <br>
-        Web and Mobile Design <br>
-        Verbal Identity & Messaging <br>
-        Packaging Design
+        <span id="D">Visual Identity</span> <br>
+        <span id="E"> Bespoke Typeface</span> <br>
+        <span id="F">Web and Mobile Design</span> <br>
+        <span id="G">Verbal Identity & Messaging</span> <br>
+        <span id="H">Packaging Design</span>
       </p>
     </div>
 
     <div class="col">
-      <p class="title">Trend</p>
+      <p class="title" id="I">Trend</p>
       <p class="content">
-        Concept Testing <br>
-        Design Training <br>
-        Brand Guideline and Tools <br>
-        Brand Governance
+        <span id="J">Concept Testing</span> <br>
+        <span id="K">Design Training</span> <br>
+        <span id="L">Brand Guideline and Tools</span> <br>
+        <span id="M"> Brand Governance</span>
       </p>
     </div>
   </div>
@@ -212,7 +273,7 @@
   <!-- Meet the team work -->
   <section class="team-section">
 
-    <h1 class="team-title">Meet The Team</h1>
+    <h1 class="team-title" id="Tes">Meet The Team</h1>
 
     <div class="cards">
 
@@ -220,15 +281,27 @@
       <div class="team-card right">
         <img src="./assets/image/teacher-thavong.jpg">
         <div class="bigtext">
-          <h2>Veng Thavong</h2>
-          <h3>Deployment and Maintenance</h3>
+          <h2 id="O">Veng Thavong</h2>
+          <h3 id="P">Deployment and Maintenance</h3>
           <p>
-            Thavong is a Certified Brand Strategist, designer, and design lecturer. Since 2012, he has been working
-            with clients in industries such as Chavon hospitality, CADT, Forte, and PlerngKob. He utilizes design
-            and strategy to create meaningful changes. He is passionate about building and empowering the next
-            generations
-            of designers. Occasionally, he organizes workshops and talks related to design and creative business.
-            Thavong helps bridge the gap between strategy and creativity.
+            <span id="Q">Role: Deployment and Maintenance Engineer / DevOps Specialist
+              Education: Master’s Degree in Computer Science or Information and Communication Technology (ICT)
+              Experience: 3 Years in the Tech Industry (Cloud Infrastructure Management, System Deployment, and
+              Technical
+              Troubleshooting)
+              Core Competencies
+              1. System Deployment & Automation
+              Release Management: Organizing and coordinating the process of migrating code or applications from the
+              staging/development phase to live production servers safely, ensuring zero disruption to services.
+              Deployment Automation: Building and managing automated Continuous Integration and Continuous Deployment
+              (CI/CD) pipelines to accelerate feature releases for apps or websites while significantly minimizing human
+              errors.</span> <br>
+            <span id="Em">2. System Maintenance & Monitoring
+              System Monitoring: Setting up advanced monitoring tools to track overall infrastructure health—such as
+              system speed, storage capacity, and security metrics—to proactively identify and resolve anomalies before
+              they impact end-users.
+              System Upgrades & Patching: Managing data backup protocols, routine operating system updates (Server OS
+              updates), and vulnerability patching to fortify the infrastructure against cyber security threats.</span>
           </p>
         </div>
       </div>
@@ -237,33 +310,48 @@
       <div class="team-card left">
         <img src="./assets/image/mkr.jpg">
         <div class="bigtext">
-          <h2>Sen Makara</h2>
-          <h3>Coding & Testing</h3>
-          <p>In today’s world, coding is very important because almost every industry depends on technology. It is used
-            in
-            education, business, healthcare, entertainment, and communication. Using html, css, javascript, C, C++, C#,
-            Java, Python, React, php, My SQL, Flutter.
+          <h2 id="R">SEN MAKARA</h2>
+          <h3 id="S">Coding & Testing</h3>
+          <p>
+            <span id="T">Role: Software Developer & QA Tester
+              Education: Community Development Institute
+              Experience: 3 Years in the Tech Industry (Software Development, Automation Testing, and Quality Assurance)
+              Core Competencies
+              1. Creative Coding & Development
+              Software Development: Capable of writing code, building new features, and troubleshooting technical system
+              issues to effectively meet business requirements.
+              Logic & Clean Code: Focused on writing well-structured, easy-to-understand, and clean code that ensures
+              smooth maintenance and seamless scalability in the future.</span><br>
+            <span id="T1">2. Software Testing & QA
+              Bug Detection: Conducting thorough manual testing to discover system gaps, anomalies, and vulnerabilities
+              before the product is officially deployed to customers.
+              Automation Testing: Creating and writing automation scripts to optimize testing workflows, reduce overall
+              time-to-market, and guarantee a high level of technical accuracy.</span>
           </p>
         </div>
       </div>
 
-      <!-- 3 RIGHT -->
+       <!-- 3 LEFT -->
       <div class="team-card right">
         <img src="./assets/image/pisey.jpg">
         <div class="bigtext">
-          <h2>Phorn Pisey</h2>
-          <h3>UX/UI Designer</h3>
-          <p>UI/UX designers research user needs, behaviors, and problems through surveys, interviews, and data analysis
-            to
-            create user-centered designs. <br>
-            They focus on the overall experience of a product, making it easy, efficient, and enjoyable to use. This
-            includes: <br>
-            We are focus on the overall experience of a product, making it easy, efficient, and enjoyable to use. This
-            includes: <br>
-
-            User flows <br>
-            Information architecture <br>
-            Wireframing and prototyping <br></p>
+          <h2 id="U">PHORN PISEY</h2>
+          <h3 id="Choose">UX/UI Designer</h3>
+          <p><span id="MKoo">Role: UX/UI Designer / Product Designer
+              Education: Bachelor of Computer Science – Community Development Institute
+              Experience: 3 Years in the Tech Industry (Software Development, QA Testing, Automation, and UX/UI Design)
+              Core Competencies
+              1. User Experience (UX) Research & Design
+              User Pain Point Analysis: Leveraging meticulous analytical skills developed in Quality Assurance (QA) and
+              Software Testing to identify system friction, user bottlenecks, and usability gaps in web and mobile
+              applications.
+              User Flows & Information Architecture: Designing intuitive, streamlined user journeys and information
+              structures based on data-driven research to maximize user engagement and efficiency.</span> <br>
+            <span id="UTP">2. User Interface (UI) Design & Systems
+              Visual Design & Prototyping: Crafting high-fidelity visual designs, clean wireframes, and interactive,
+              dynamic prototypes that bring digital concepts to life.
+            </span>
+          </p>
         </div>
       </div>
 
@@ -271,19 +359,23 @@
       <div class="team-card left">
         <img src="./assets/image/boy-lik.jpg">
         <div class="bigtext">
-          <h2>Chin Dalik</h2>
-          <h3>UX/UI Designer</h3>
-          <p>UI/UX designers research user needs, behaviors, and problems through surveys, interviews, and data analysis
-            to
-            create user-centered designs. <br>
-            They focus on the overall experience of a product, making it easy, efficient, and enjoyable to use. This
-            includes: <br>
-            We are focus on the overall experience of a product, making it easy, efficient, and enjoyable to use. This
-            includes: <br>
-
-            User flows <br>
-            Information architecture <br>
-            Wireframing and prototyping <br></p>
+          <h2 id="Da">CHIN DALIK</h2>
+          <h3 id="Mouse">UX/UI Designer</h3>
+          <p><span id="Popular">Role: UX/UI Designer / Product Designer
+              Education: Bachelor of Computer Science – Community Development Institute
+              Experience: 3 Years in the Tech Industry (Software Development, QA Testing, Automation, and UX/UI Design)
+              Core Competencies
+              1. User Experience (UX) Research & Design
+              User Pain Point Analysis: Leveraging meticulous analytical skills developed in Quality Assurance (QA) and
+              Software Testing to identify system friction, user bottlenecks, and usability gaps in web and mobile
+              applications.
+              User Flows & Information Architecture: Designing intuitive, streamlined user journeys and information
+              structures based on data-driven research to maximize user engagement and efficiency.</span> <br>
+            <span id="Than">2. User Interface (UI) Design & Systems
+              Visual Design & Prototyping: Crafting high-fidelity visual designs, clean wireframes, and interactive,
+              dynamic prototypes that bring digital concepts to life.
+            </span>
+          </p>
         </div>
       </div>
 
@@ -291,22 +383,25 @@
       <div class="team-card right">
         <img src="./assets/image/boy-nhek.jpg">
         <div class="bigtext">
-          <h2>Sek Seyha</h2>
-          <h3>Planning & Analysis</h3>
-          <p>Planning and Requirements Analysis <br>
-
-            Planning and Requirements Analysis is the process of identifying project goals, understanding user and
-            business
-            needs, and gathering all necessary requirements before development begins. <br>
-
-            Main activities include: <br>
-            Defining project objectives and scope <br>
-            Collecting functional and non-functional requirements <br>
-            Communicating with stakeholders and users <br>
-            Analyzing system needs and constraints <br>
-            Creating project plans and timelines <br>
-            Identifying risks and possible solutions <br>
-            Preparing documentation for development.</p>
+          <h2 id="Sek">SEK SEYHA</h2>
+          <h3 id="Plan">Planning & Analysis</h3>
+          <p><span id="X">Role: Product Planning & Systems Analyst
+              Education: Bachelor of Computer Science – Community Development Institute
+              Experience: 3 Years in the Tech Industry (Project Management, Systems Analysis, and Quality Assurance)
+              Core Competencies
+              1. Business & Systems Analysis
+              Requirements Gathering: Researching and analyzing client needs and business goals, and translating them
+              into
+              detailed Functional Specifications for UX/UI design and development teams to execute.
+              Feasibility Analysis: Evaluating system gaps, technical feasibility, and potential project risks prior to
+              kickoff to minimize development delays and post-launch defects (bugs).</span> <br>
+            <span id="Y">2. Product Planning & Strategy
+              Roadmap Planning: Strategizing and mapping out project timelines, phases, and milestones in perfect
+              alignment with company resources and target deadlines.
+              Sprint & Process Optimization: Organizing and coordinating daily team workflows utilizing modern
+              methodologies (Agile/Scrum) to ensure efficient, high-quality, and on-time product delivery.
+            </span>
+          </p>
         </div>
       </div>
 
@@ -314,22 +409,25 @@
       <div class="team-card left">
         <img src="./assets/image/boy-leab.jpg">
         <div class="bigtext">
-          <h2>Long Sokleap</h2>
-          <h3>Planning & Analysis</h3>
-          <p>Planning and Requirements Analysis <br>
-
-            Planning and Requirements Analysis is the process of identifying project goals, understanding user and
-            business
-            needs, and gathering all necessary requirements before development begins. <br>
-
-            Main activities include: <br>
-            Defining project objectives and scope <br>
-            Collecting functional and non-functional requirements <br>
-            Communicating with stakeholders and users <br>
-            Analyzing system needs and constraints <br>
-            Creating project plans and timelines <br>
-            Identifying risks and possible solutions <br>
-            Preparing documentation for development.</p>
+          <h2 id="Z">LONG SOKLEAP</h2>
+          <h3 id="Plan1">Planning & Analysis</h3>
+          <p><span id="X1">Role: Product Planning & Systems Analyst
+              Education: Bachelor of Computer Science – Community Development Institute
+              Experience: 3 Years in the Tech Industry (Project Management, Systems Analysis, and Quality Assurance)
+              Core Competencies
+              1. Business & Systems Analysis
+              Requirements Gathering: Researching and analyzing client needs and business goals, and translating them
+              into
+              detailed Functional Specifications for UX/UI design and development teams to execute.
+              Feasibility Analysis: Evaluating system gaps, technical feasibility, and potential project risks prior to
+              kickoff to minimize development delays and post-launch defects (bugs).</span> <br>
+            <span id="Y1">2. Product Planning & Strategy
+              Roadmap Planning: Strategizing and mapping out project timelines, phases, and milestones in perfect
+              alignment with company resources and target deadlines.
+              Sprint & Process Optimization: Organizing and coordinating daily team workflows utilizing modern
+              methodologies (Agile/Scrum) to ensure efficient, high-quality, and on-time product delivery.
+            </span>
+          </p>
         </div>
       </div>
 
@@ -340,40 +438,32 @@
 
 
     <!-- icon -->
-    <h1 class="section-title">Benefits</h1>
+    <h1 class="section-title" id="Eff">Website Effectiveness</h1>
 
     <section class="benefits-container">
 
       <div class="benefit-card is-hidden">
         <div class="benefit-icon">
-          <i class="fas fa-flask"></i>
+          <i class="fas fa-comments"></i>
         </div>
-        <h3>Research</h3>
-        <p>Enhance research capacity</p>
+        <h3 id="Com">Fast Communication</h3>
+        <p id="Enda">Websites enable communication and allow users to access information quickly and efficiently.</p>
       </div>
 
       <div class="benefit-card is-hidden">
         <div class="benefit-icon">
-          <i class="fas fa-laptop-code"></i>
+          <i class="fas fa-shield-alt"></i>
         </div>
-        <h3>Education Quality</h3>
-        <p>Improve teaching methods</p>
+        <h3 id="Bbuild">Build Trust</h3>
+        <p id="Well">A well-designed website increases credibility and builds customer confidence.</p>
       </div>
 
       <div class="benefit-card is-hidden">
         <div class="benefit-icon">
-          <i class="fas fa-cogs"></i>
+          <i class="fas fa-code"></i>
         </div>
-        <h3>Facilities</h3>
-        <p>Upgrade laboratory tools</p>
-      </div>
-
-      <div class="benefit-card is-hidden">
-        <div class="benefit-icon">
-          <i class="fas fa-handshake"></i>
-        </div>
-        <h3>Partnerships</h3>
-        <p>Strengthen collaborations</p>
+        <h3 id="Cus">Custom Web Solutions</h3>
+        <p id="Design">We design and develop modern websites and web applications tailored to your business needs.</p>
       </div>
 
     </section>
@@ -381,65 +471,52 @@
 
     <!-- image bottom -->
     <section class="head">
-      <img src="assets/image/even.jpg"
-        alt="Hero Image">
+      <img src="assets/image/even.jpg" alt="Hero Image">
     </section>
-
 
     <!-- Footer HTML -->
     <footer>
       <!-- TOP SECTION -->
       <div class="footer-top">
-
         <!-- Logo -->
         <div class="footer-box">
           <div class="logo">
             <img src="./assets/image/noname.png" alt="logo">
           </div>
         </div>
-
         <!-- Work with us -->
         <div class="footer-box">
-          <h3>Work with us</h3>
-          <p>info@noname.design<br>+855 (0) 70770571</p>
+          <h3 id="WorkWith">Work with us</h3>
+          <p id="InFo">info@noname.design<br>+855 (0) 70770571</p>
         </div>
-
         <!-- Address -->
         <div class="footer-box">
-          <h3>Address</h3>
-          <p>#I86, National Road 3, Sangkat Chom Chao II,<br>Khan Porsenchey, Phnom Penh, CAMBODIA.</p>
+          <h3 id="Address">Address</h3>
+          <p id="National">#I86, National Road 3, Sangkat Chom Chao II,<br>Khan Porsenchey, Phnom Penh, CAMBODIA.</p>
         </div>
-
       </div>
-
       <div class="divider"></div>
-
       <!-- BOTTOM SECTION -->
       <div class="footer-bottom">
-
         <div class="scroll-top" onclick="scrollToTop()">
           <i class="fas fa-arrow-up"></i>
         </div>
-
-        <h3>Socials</h3>
-
+        <h3 id="Socials">Socials</h3>
         <div class="socials">
           <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
           <a href="https://t.me" target="_blank"><i class="fab fa-telegram"></i></a>
           <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
-
-        <div class="copyright">
+        <div class="copyright" id="Noname">
           © 2026 Website => <span class="highlight">noname</span>
           <= for <span class="design">Design</span> and <span>Digital</span>
         </div>
-
       </div>
     </footer>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- style Js -->
-    <script src="./assets/js/studio.js"></script>
+    <script src="./assets/js/studio.js" defer></script>
 </body>
 
 </html>
