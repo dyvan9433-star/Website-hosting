@@ -10,8 +10,6 @@ function toggleMode() {
 window.addEventListener("load", () => {
     document.getElementById("section").classList.add("active");
 });
-
-
 /* FILTER ACTIVE */
 document.addEventListener("DOMContentLoaded", () => {
     const reveals = document.querySelectorAll(".reveal");
@@ -30,6 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// AOS FOR TITLE
+AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+});
 
 //all Insightss
   // Toggle text
@@ -216,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
       address: "Address",
       national: "#I86, National Road 3, Sangkat Chom Chao II, Khan Porsenchey, Phnom Penh, CAMBODIA.",
       socials: "Socials",
-      noname: " © 2026 Website => noname <= Design and Digital",
+      noname: " © 2026 Website noname Design and Digital Services",
     },
     km: {
       home: "ទំព័រដើម",
@@ -286,7 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
       address: "អាស័យដ្ឋាន",
       national: "#I86 ផ្លូវជាតិលេខ3 សង្កាត់ចោមចៅ2 ខណ្ឌពោធិ៍សែនជ័យ រាជធានីភ្នំពេញ ប្រទេសកម្ពុជា",
       socials: "បណ្ដាញសង្គម",
-      noname: "© ២០២៦ គេហទំព័រ => noname <= សម្រាប់ការរចនា និងឌីជីថល",
+      noname: "© ២០២៦ គេហទំព័រ noname សេវាកម្ម សម្រាប់ការរចនា និងឌីជីថល",
     }
   };
 

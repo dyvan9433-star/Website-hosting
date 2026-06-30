@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Hero</title>
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+    body{
+        background-color: black;
+    }
+/* SHARE BUTTON */
+.share-btn{
+    margin-top:30px;
+    padding:12px 26px;
+
+    border:1px solid rgba(0,212,255,.35);
+    background:rgba(0,212,255,.08);
+    color:#00d4ff;
+
+    border-radius:12px;
+    cursor:pointer;
+
+    font-size:14px;
+    font-weight:600;
+
+    transition:0.3s ease;
+    backdrop-filter:blur(10px);
+}
+
+.share-btn:hover{
+    transform:translateY(-3px);
+    background:rgba(0,212,255,.18);
+    box-shadow:0 10px 25px rgba(0,212,255,.25);
+    color:#fff;
+}
+
+</style>
+</head>
+
+<body>
+    <!-- SHARE BUTTON -->
+    <button class="share-btn" data-aos="fade-up" data-aos-delay="800" onclick="sharePage()">
+        Share
+    </button>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({
+    once:true,
+    duration:1000
+});
+
+function sharePage(){
+    if(navigator.share){
+        navigator.share({
+            title: document.title,
+            text: "Check out this Studio Hero UI",
+            url: window.location.href
+        });
+    }else{
+        navigator.clipboard.writeText(window.location.href);
+        alert("Link copied!");
+    }
+}
+</script>
+
+</body>
+</html>

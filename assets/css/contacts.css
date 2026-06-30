@@ -22,7 +22,6 @@ body {
   height: 100%;
   background: #f8fafc;
   color: #0f172a;
-  overflow-x: hidden;
 }
 
 /* ================= BODY SPACING FOR FIXED NAV ================= */
@@ -383,17 +382,6 @@ body {
   left: 10%;
 }
 
-/* initial hidden state */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* subtle hover interaction */
 .hero-content h1 {

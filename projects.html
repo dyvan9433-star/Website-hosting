@@ -10,6 +10,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./assets/css/projects.css">
 
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -184,42 +186,60 @@
   </div>
 
 
-  <section class="hero-section">
+  <header class="hero-header">
+    <div class="header-container">
+      <div class="top-badge" data-aos="fade-down" data-aos-duration="1000" id="Agen">
+        <span class="dot"></span> Digital Creative Agency <span class="dot"></span>
+      </div>
 
-    <img class="hero-bg" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-
-    <div class="hero-overlay">
-
-      <h1 class="hero-title" id="Modern">
-        We build <span style="color:#60a5fa;">modern digital experiences</span>
+      <h1 class="main-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" id="Modern">
+        We build <span>modern digital experiences</span>
       </h1>
 
-      <p class="hero-desc" id="Creative">
-        Creative design, development & branding solutions.
+      <p class="sub-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" id="Creat">
+        Creative design, development & branding solutions for your business success.
       </p>
 
-      <div class="hero-grid">
+      <div class="cta-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+        <a href="./contacts.html" class="btn-secondary" id="Con">
+          <i class="fa-regular fa-envelope"></i> Contact Us
+        </a>
+      </div>
 
-        <div class="hero-card">
-          <h3 id="UIUXDesign">🎨 UI/UX Design</h3>
-          <p id="Clean">Clean modern interface design.</p>
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+          <div class="feature-icon">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <div class="feature-info">
+            <h3 id="UIUXD">UI/UX Design</h3>
+            <p id="Clean">Clean modern interface design.</p>
+          </div>
         </div>
 
-        <div class="hero-card">
-          <h3 id="Web">💻 Web Development</h3>
-          <p id="Fast">Fast and responsive websites.</p>
+        <div class="feature-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
+          <div class="feature-icon">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <div class="feature-info">
+            <h3 id="Web">Web Development</h3>
+            <p id="Fast">Fast and responsive websites.</p>
+          </div>
         </div>
 
-        <div class="hero-card">
-          <h3 id="SEO">🚀 SEO Growth</h3>
-          <p id="ImProve">Improve ranking & traffic.</p>
+        <div class="feature-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1100">
+          <div class="feature-icon">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <div class="feature-info">
+            <h3 id="Mobile">Mobile App</h3>
+            <p id="ImProve">Beautiful and powerful iOS & Android apps.</p>
+          </div>
         </div>
-
       </div>
 
     </div>
-
-  </section>
+  </header>
 
 
 
@@ -227,10 +247,12 @@
   <div class="container">
 
     <div class="sidebar">
-      <div class="logo" id="My">🖼️ My Project</div>
+      <div class="logo" id="My" data-aos="fade-left">
+        <i class="fas fa-folder-open"></i> My Project
+      </div>
 
       <div class="menu">
-        <button class="active" onclick="filter('all', this)" id="All">All</button>
+        <button class="active" onclick="filter('all', this)" id="All" data-aos="fade-up">All</button>
         <button onclick="filter('Festival', this)" id="Festival">festival</button>
         <button onclick="filter('Event', this)" id="Event">Event Programs</button>
         <button onclick="filter('Product', this)" id="Product">Product display</button>
@@ -239,428 +261,568 @@
 
     <div class="content">
       <div class="grid">
-        <div class="card Festival">
+        <div class="card Festival" data-category="Festival">
           <div class="img-box"><img src="./assets/image/បុណ្យអុំទូក.jpg"></div>
           <h4 id="FestivalBoats">The Royal Festival of Boats</h4>
           <p id="Iden">Identity Design</p>
         </div>
 
-        <div class="card Product">
+        <div class="card Product" data-category="Product">
           <div class="img-box"><img src="./assets/image/ប្រម៉ូតឡាន.1.jpg"></div>
           <h4 id="Auto">AUTOCAR</h4>
           <p id="Iden1">Identity Design</p>
         </div>
 
-        <div class="card Festival">
+        <div class="card Festival" data-category="Festival">
           <div class="img-box"><img src="./assets/image/happy-new-year-poster-2.jpg"></div>
           <h4 id="Khmernewyear">The Royal Ceremony of the Khmer</h4>
           <p id="Iden2">Identity Design</p>
         </div>
 
-        <div class="card Product">
+        <div class="card Product" data-category="Product">
           <div class="img-box"><img src="./assets/image/untitled-1.jpg"></div>
           <h4 id="Selling">Selling drinks</h4>
           <p id="Iden3">Identity Design</p>
         </div>
 
-        <div class="card Festival">
+        <div class="card Festival" data-category="Festival">
           <div class="img-box"><img src="./assets/image/king-1.jpg"></div>
           <h4 id="King1">The Royal Coronation Ceremony of King Norodom Sihamoni</h4>
           <p id="Iden4">Identity Design</p>
         </div>
 
-        <div class="card Event">
+        <div class="card Event" data-category="Event">
           <div class="img-box"><img src="./assets/image/asean.jpg"></div>
           <h4 id="Asean">AI Ready ASEAN Training on Mar 15, 2026.</h4>
           <p id="Iden5">Identity Design</p>
         </div>
 
-        <div class="card Event">
+        <div class="card Event" data-category="Event">
           <div class="img-box"><img src="./assets/image/សិត-ខន-nuck-digital-zone-background-speaker.jpg"></div>
           <h4 id="Inauguration">The Inauguration Ceremony of the Digital Technology Center.</h4>
           <p id="Iden6">Identity Design</p>
         </div>
 
-        <div class="card Event">
-          <div class="img-box"><img src="./assets/image/nuck-digital-lab.png"></div>
+        <div class="card Event" data-category="Event">
+          <div class="img-box"><img src="./assets/image/nuck-digital-lab.png">
+          </div>
           <h4 id="Inauguration1">The Inauguration Ceremony of the Digital Technology Center.</h4>
           <p id="Iden7">Identity Design</p>
         </div>
 
-        <div class="card Festival">
+        <div class="card Festival" data-category="Festival">
           <div class="img-box"><img src="./assets/image/បិណ្ឌ៦.jpg"></div>
           <h4 id="PchumBen">The Royal Pchum Ben Festival Ceremony.</h4>
           <p id="Iden8">Identity Design</p>
         </div>
 
-        <div class="card Event">
+        <div class="card Event" data-category="Event">
           <div class="img-box"><img src="./assets/image/ex03.jpg"></div>
           <h4 id="ChearSim">Chea Sim Komchaymear Education and Training Center.</h4>
           <p id="Iden9">Identity Design</p>
         </div>
 
-        <div class="card Event">
+        <div class="card Event" data-category="Event">
           <div class="img-box"><img src="./assets/image/banner-nuck-center-250701.jpg"></div>
           <h4 id="Chaer">Chea Sim Komchaymear Education and Training Center.</h4>
           <p id="Iden10">Identity Design</p>
         </div>
 
-        <div class="card Product">
+        <div class="card Product" data-category="Product">
           <div class="img-box"><img src="./assets/image/gigital-1.jpg"></div>
           <h4 id="Episode">Episode 1 of the comedy story “Digital Grandma and Grandpa.”</h4>
           <p id="Iden11">Identity Design</p>
         </div>
 
-        <div class="card Festival">
+        <div class="card Festival" data-category="Festival">
           <div class="img-box"><img src="./assets/image/king.jpg"></div>
           <h4 id="King2">The Royal Coronation Ceremony of King Norodom Sihamoni</h4>
           <p id="Iden12">Identity Design</p>
         </div>
 
-        <div class="card Festival">
+        <div class="card Festival" data-category="Festival">
           <div class="img-box"><img src="./assets/image/បុណ្យឯករាជ្យជាតិ.jpg"></div>
           <h4 id="Indep">The National Independence Day ceremony, which is celebrated every year on
             November 9.</h4>
           <p id="Iden13">Identity Design</p>
         </div>
 
-        <div class="card Product">
-          <div class="img-box"><img src="./assets/image/អាហារសុខភាព១!.jpg"></div>
+        <div class="card Product" data-category="Product">
+          <div class="img-box"><img src="./assets/image/អាហារសុខភាព១!.jpg">
+          </div>
           <h4 id="Men">Mneu</h4>
           <p id="Iden14">Identity Design</p>
         </div>
 
-        <div class="card Event">
+        <div class="card Event" data-category="Event">
           <div class="img-box"><img src="./assets/image/banner-nuck-center-250701-003.jpg"></div>
           <h4 id="Sim">Chea Sim Komchaymear Education and Training Center.</h4>
           <p id="Iden15">Identity Design</p>
         </div>
 
-        <div class="card Event">
+        <div class="card Event" data-category="Event">
           <div class="img-box"><img src="./assets/image/uniic.png"></div>
           <h4 id="Un">UNIIC SIGNING CEREMONY 2025</h4>
           <p id="Iden16">Identity Design</p>
         </div>
 
-        <div class="card Festival">
+        <div class="card Festival" data-category="Festival">
           <div class="img-box"><img src="./assets/image/បិណ្ឌ១០.jpg"></div>
           <h4 id="Cere">The Royal Pchum Ben Festival Ceremony.</h4>
           <p id="Iden17">Identity Design</p>
         </div>
 
-        <div class="card Product">
-          <div class="img-box"><img src="./assets/image/kafe-drink1.jpg"></div>
-          <h4 id="Kafe">Kafe Srokasre</h4>
+        <div class="card Product" data-category="Product">
+          <div class="img-box"><img src="./assets/image/kafe-drink1.jpg">
+          </div>
+          <h4 id="Kafe">Cafe Srokasre</h4>
           <p id="Iden18">Identity Design</p>
         </div>
 
-        <div class="card Product">
-          <div class="img-box"><img src="./assets/image/ហ្វូមលាងមុខ.png"></div>
+        <div class="card Product" data-category="Product">
+          <div class="img-box"><img src="./assets/image/ហ្វូមលាងមុខ.png">
+          </div>
           <h4 id="Sauto">NATURAL COSMETICS</h4>
           <p id="Iden19">Identity Design</p>
         </div>
 
-        <div class="card Festival">
+        <div class="card Festival" data-category="Festival">
           <div class="img-box"><img src="./assets/image/បិណ្ឌមួយ.jpg"></div>
           <h4 id="Royal">The Royal Pchum Ben Festival Ceremony.</h4>
           <p id="Iden20">Identity Design</p>
         </div>
 
-        <div class="card Festival">
+        <div class="card Festival" data-category="Festival">
           <div class="img-box"><img src="./assets/image/happy-new-year-2026-first-poster.jpg"></div>
           <h4 id="Of">The Royal Ceremony of the Khmer New Year</h4>
           <p id="Iden21">Identity Design</p>
         </div>
 
-        <div class="card Event">
-          <div class="img-box"><img src="./assets/image/ឡៅ-ឈីវអ៊ាវ-nuck-.jpg"></div>
+        <div class="card Event" data-category="Event">
+          <div class="img-box"><img src="./assets/image/ឡៅ-ឈីវអ៊ាវ-nuck-.jpg">
+          </div>
           <h4 id="Digital">The Inauguration Ceremony of the Digital Technology Center.</h4>
           <p id="Iden22">Identity Design</p>
         </div>
 
-        <div class="card Event">
-          <div class="img-box"><img src="./assets/image/welcome-1.png""></div>
+        <div class="card Event" data-category="Event">
+          <div class="img-box"><img src="./assets/image/welcome-1.png"></div>
           <h4 id=" Test">UNIIC SIGNING CEREMONY 2025</h4>
-            <p id="Iden23">Identity Design</p>
+          <p id="Iden23">Identity Design</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <span class="close">&times;</span>
+    <img id="modalImg">
+  </div>
+
+
+  <!-- View Website -->
+  <section class="portfolio">
+
+    <div class="portfolio__header">
+      <h2 class="portfolio__title" data-aos="zoom-in" style="color: var(--noname);" id="Fea">Featured Websites</h2>
+      <p class="portfolio__subtitle" data-aos="fade-up" data-aos-delay="300" id="PRe">Beautiful, user-friendly, and
+        confidence-inspiring.</p>
+    </div>
+
+    <div class="portfolio__grid">
+
+      <!-- CARD 1 -->
+      <div class="portfolio__card" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="mockup">
+          <div class="mockup__bar">
+            <span class="mockup__dot mockup__dot--red"></span>
+            <span class="mockup__dot mockup__dot--yellow"></span>
+            <span class="mockup__dot mockup__dot--green"></span>
           </div>
 
-
-
-        </div>
-      </div>
-    </div>
-
-    <div class="modal" id="modal">
-      <span class="close">&times;</span>
-      <img id="modalImg">
-    </div>
-
-    <!-- image -->
-    <section class="head">
-      <img src="./assets/image/blue.png" alt="Hero Image">
-    </section>
-
-
-    <!-- Scroll Image*/ -->
-    <div class="ui-header">
-      <h1 id="Uihead">All Projects</h1>
-      <p id="Smooth">Smooth and Responsive Design</p>
-    </div>
-
-    <div class="card-slider" id="slider">
-
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/ហ្វូមលាងមុខ.png">
-        <div class="card-content">
-          <span class="card-tag" id="Display">Product display</span>
-          <div class="card-title" id="Fault">NATURAL COSMETICS</div>
-          <div class="card-desc" id="Iden24">Identity Design</div>
-        </div>
-      </div>
-
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/uniic.png">
-        <div class="card-content">
-          <span class="card-tag" id="Programs">Event Programs</span>
-          <div class="card-title" id="U2025">UNIIC SIGNING CEREMONY 2025</div>
-          <div class="card-desc" id="Iden25">Identity Design</div>
-        </div>
-      </div>
-
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/បិណ្ឌ៦.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="Festi1">Festival</span>
-          <div class="card-title" id="Pchum">The Royal Pchum Ben Festival Ceremony.</div>
-          <div class="card-desc" id="Iden26">Identity Design</div>
-        </div>
-      </div>
-
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/happy-new-year-2026-first-poster.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="Festi2">Festival</span>
-          <div class="card-title" id="Khmer1">The Royal Ceremony of the Khmer New Year</div>
-          <div class="card-desc" id="Iden27">Identity Design</div>
-        </div>
-      </div>
-
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/អាហារសុខភាព១!.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="Ev">Event Programs</span>
-          <div class="card-title" id="M">Menu</div>
-          <div class="card-desc" id="Iden28">Identity Design</div>
-        </div>
-      </div>
-
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/asean.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="Et">Event Programs</span>
-          <div class="card-title" id="Aia">AI Ready ASEAN Training on Mar 15, 2026.</div>
-          <div class="card-desc" id="Iden29">Identity Design</div>
-        </div>
-      </div>
-
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/បិណ្ឌ7.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="Festi3">Festival</span>
-          <div class="card-title" id="Ro">The Royal Pchum Ben Festival Ceremony.</div>
-          <div class="card-desc" id="Iden30">Identity Design</div>
-        </div>
-      </div>
-
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/kafe-drink1.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="PD">Product display</span>
-          <div class="card-title" id="KF">Kafe Srokasre</div>
-          <div class="card-desc" id="Iden31">Identity Design</div>
-        </div>
-      </div>
-
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/happy-new-year-poster-2.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="Val">Festival</span>
-          <div class="card-title" id="New">The Royal Ceremony of the Khmer New Year</div>
-          <div class="card-desc" id="Iden32">Identity Design</div>
-        </div>
-      </div>
-
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/ប្រម៉ូតឡាន.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="A1">Product display</span>
-          <div class="card-title" id="B2">AUTOCAR</div>
-          <div class="card-desc" id="Iden33">Identity Design</div>
-        </div>
-      </div>
-
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/អំទូក 1.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="C3">Festival</span>
-          <div class="card-title" id="D4">The Royal Festival of Boats</div>
-          <div class="card-desc" id="Iden34">Identity Design</div>
-        </div>
-      </div>
-
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/king.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="E5">Festival</span>
-          <div class="card-title" id="F6">The Royal Coronation Ceremony of King Norodom Sihamoni</div>
-          <div class="card-desc" id="Iden35">Identity Design</div>
-        </div>
-      </div>
-
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/main-nuck-digital-zone-background-speaker.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="G7">Event Programs</span>
-          <div class="card-title" id="H8">The Inauguration Ceremony of the Digital Technology Center.</div>
-          <div class="card-desc" id="Iden36">Identity Design</div>
-        </div>
-      </div>
-
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/gigital-1.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="I10">Product display</span>
-          <div class="card-title" id="J11">Episode 1 of the comedy story “Digital Grandma and Grandpa.”</div>
-          <div class="card-desc" id="Iden37">Identity Design</div>
-        </div>
-      </div>
-
-          <div class="ui-card">
-        <img class="card-image" src="assets/image/ប្រម៉ូតឡាន.1.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="K12">Product display</span>
-          <div class="card-title" id="L13">AUTOCAR</div>
-          <div class="card-desc" id="Iden38">Identity Design</div>
-        </div>
-      </div>
-
-          <div class="ui-card">
-        <img class="card-image" src="assets/image/from-nicc.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="M14">Event Programs</span>
-          <div class="card-title" id="N15">The inauguration of its Entrepreneurship Development and Incubation Institute On 22nd July 2025</div>
-          <div class="card-desc" id="Iden39">Identity Design</div>
-        </div>
-      </div>
-
-          <div class="ui-card">
-        <img class="card-image" src="assets/image/សិត-ខន-nuck-digital-zone-background-speaker.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="O16">Event Programs</span>
-          <div class="card-title" id="P17">The Inauguration Ceremony of the Digital Technology Center.</div>
-          <div class="card-desc" id="Iden40">Identity Design</div>
-        </div>
-      </div>
-
-     <div class="ui-card">
-        <img class="card-image" src="assets/image/បុណ្យអុំទូក.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="Q18">Festival</span>
-          <div class="card-title" id="R19">The Royal Festival of Boats</div>
-          <div class="card-desc" id="Iden41">Identity Design</div>
-        </div>
-      </div>
-
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/បុណ្យឯករាជ្យជាតិ.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="S20">Festival</span>
-          <div class="card-title" id="T21">The National Independence Day ceremony, which is celebrated every year on November 9.</div>
-          <div class="card-desc" id="Iden42">Identity Design</div>
-        </div>
-      </div> 
-      
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/កាស១!.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="U22">Product display</span>
-          <div class="card-title" id="V23">Beats EP On-Ear Headphones</div>
-          <div class="card-desc" id="Iden43">Identity Design</div>
-        </div>
-      </div>
-
-      <div class="ui-card">
-        <img class="card-image" src="assets/image/nuck-digital-lab-opt-2.jpg">
-        <div class="card-content">
-          <span class="card-tag" id="W24">Event Programs</span>
-          <div class="card-title" id="X25">The Inauguration Ceremony of the Digital Technology Center.</div>
-          <div class="card-desc" id="Iden44">Identity Design</div>
-        </div>
-      </div>
-
-    </div>
-
-
-
-
-
-
-
-    <!-- Footer HTML -->
-    <footer>
-      <!-- TOP SECTION -->
-      <div class="footer-top">
-
-        <!-- Logo -->
-        <div class="footer-box">
-          <div class="logo">
-            <img src="./assets/image/noname.png" alt="logo">
+          <div class="mockup__screen">
+            <img src="./assets/image/fhd.png">
           </div>
         </div>
 
-        <!-- Work with us -->
-        <div class="footer-box">
-          <h3 id="WorkWith">Work with us</h3>
-          <p id="InFo">info@noname.design<br>+855 (0) 70770571</p>
+        <div class="portfolio__content">
+          <h3 class="portfolio__name">FHDev.INFO</h3>
+          <p class="portfolio__desc" id="With">website with clean UI design.</p>
+
+          <div class="tags">
+            <span class="tags__item">HTML</span>
+            <span class="tags__item">CSS</span>
+            <span class="tags__item">JS</span>
+          </div>
+
+          <div class="actions">
+            <!-- SHARE BUTTON -->
+            <button class="actions__link actions__link--share" onclick="sharePage()" id="Share">
+              Share
+            </button>
+            <a id="Live" class="actions__link actions__link--live" href="https://fhdev.info/" target="_blank"
+              rel="noopener noreferrer">
+              Live Website
+            </a>
+
+
+          </div>
         </div>
 
-        <!-- Address -->
-        <div class="footer-box">
-          <h3 id="Address">Address</h3>
-          <p id="National">#I86, National Road 3, Sangkat Chom Chao II,<br>Khan Porsenchey, Phnom Penh, CAMBODIA.</p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="portfolio__card" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="mockup">
+          <div class="mockup__bar">
+            <span class="mockup__dot mockup__dot--red"></span>
+            <span class="mockup__dot mockup__dot--yellow"></span>
+            <span class="mockup__dot mockup__dot--green"></span>
+          </div>
+
+          <div class="mockup__screen">
+            <img src="./assets/image/health.png">
+          </div>
+        </div>
+
+        <div class="portfolio__content">
+          <h3 class="portfolio__name">Health and Food</h3>
+          <p class="portfolio__desc" id="Withs">website with clean UI design.</p>
+
+          <div class="tags">
+            <span class="tags__item">Bootstrap</span>
+            <span class="tags__item">CSS</span>
+            <span class="tags__item">JS</span>
+          </div>
+
+          <div class="actions">
+            <!-- SHARE BUTTON -->
+            <button class="actions__link actions__link--share" onclick="sharePage()" id="Share1">
+              Share
+            </button>
+            <a id="Lives" class="actions__link actions__link--live"
+              href="https://healthandfoodcambodia.com/health/?v=fa46ec0b4924" target="_blank" rel="noopener noreferrer">
+              Live Website
+            </a>
+          </div>
         </div>
 
       </div>
 
-      <div class="divider"></div>
+      <!-- CARD 3 -->
+      <div class="portfolio__card" data-aos="fade-up" data-aos-delay="200">
 
-      <!-- BOTTOM SECTION -->
-      <div class="footer-bottom">
+        <div class="mockup">
+          <div class="mockup__bar">
+            <span class="mockup__dot mockup__dot--red"></span>
+            <span class="mockup__dot mockup__dot--yellow"></span>
+            <span class="mockup__dot mockup__dot--green"></span>
+          </div>
 
-        <div class="scroll-top" onclick="scrollToTop()">
-          <i class="fas fa-arrow-up"></i>
+          <div class="mockup__screen">
+            <img src="./assets/image/web-ppms.png">
+          </div>
         </div>
 
-        <h3 id="Socials">Socials</h3>
+        <div class="portfolio__content">
+          <h3 class="portfolio__name">P.P.M</h3>
+          <p class="portfolio__desc" id="Withss">website with clean UI design.</p>
 
-        <div class="socials">
-          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://t.me" target="_blank"><i class="fab fa-telegram"></i></a>
-          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
+          <div class="tags">
+            <span class="tags__item">Bootstrap</span>
+            <span class="tags__item">CSS</span>
+            <span class="tags__item">JS</span>
+          </div>
 
-        <div class="copyright" id="Noname">
-          © 2026 Website => <span class="highlight">noname</span>
-          <= for <span class="design">Design</span> and <span>Digital</span>
+          <div class="actions">
+            <!-- SHARE BUTTON -->
+            <button class="actions__link actions__link--share" onclick="sharePage()" id="Share2">
+              Share
+            </button>
+            <a id="Livess" class="actions__link actions__link--live" href="https://ppmpharma.com/" target="_blank"
+              rel="noopener noreferrer">
+              Live Website
+            </a>
+          </div>
         </div>
 
       </div>
-    </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- style Js -->
-    <script src="./assets/js/projects.js" defer></script>
+    </div>
+
+  </section>
+
+  <!-- image -->
+  <section class="head">
+    <img src="./assets/image/blue.png" alt="Hero Image">
+  </section>
+
+
+  <!-- Scroll Image*/ -->
+  <div class="ui-header">
+    <h1 id="Uihead" data-aos="zoom-in">All Projects</h1>
+    <p id="Smooth" data-aos="fade-up" data-aos-delay="300">Smooth and Responsive Design</p>
+  </div>
+
+  <div class="card-slider" id="slider">
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/ហ្វូមលាងមុខ.png">
+      <div class="card-content">
+        <span class="card-tag" id="Display">Product display</span>
+        <div class="card-title" id="Fault">NATURAL COSMETICS</div>
+        <div class="card-desc" id="Iden24">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/uniic.png">
+      <div class="card-content">
+        <span class="card-tag" id="Programs">Event Programs</span>
+        <div class="card-title" id="U2025">UNIIC SIGNING CEREMONY 2025</div>
+        <div class="card-desc" id="Iden25">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/បិណ្ឌ៦.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="Festi1">Festival</span>
+        <div class="card-title" id="Pchum">The Royal Pchum Ben Festival Ceremony.</div>
+        <div class="card-desc" id="Iden26">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/happy-new-year-2026-first-poster.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="Festi2">Festival</span>
+        <div class="card-title" id="Khmer1">The Royal Ceremony of the Khmer New Year</div>
+        <div class="card-desc" id="Iden27">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/អាហារសុខភាព១!.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="Ev">Event Programs</span>
+        <div class="card-title" id="M">Menu</div>
+        <div class="card-desc" id="Iden28">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/asean.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="Et">Event Programs</span>
+        <div class="card-title" id="Aia">AI Ready ASEAN Training on Mar 15, 2026.</div>
+        <div class="card-desc" id="Iden29">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/បិណ្ឌ7.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="Festi3">Festival</span>
+        <div class="card-title" id="Ro">The Royal Pchum Ben Festival Ceremony.</div>
+        <div class="card-desc" id="Iden30">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/kafe-drink1.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="PD">Product display</span>
+        <div class="card-title" id="KF">Kafe Srokasre</div>
+        <div class="card-desc" id="Iden31">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/happy-new-year-poster-2.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="Val">Festival</span>
+        <div class="card-title" id="New">The Royal Ceremony of the Khmer New Year</div>
+        <div class="card-desc" id="Iden32">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/ប្រម៉ូតឡាន.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="A1">Product display</span>
+        <div class="card-title" id="B2">AUTOCAR</div>
+        <div class="card-desc" id="Iden33">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/អំទូក 1.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="C3">Festival</span>
+        <div class="card-title" id="D4">The Royal Festival of Boats</div>
+        <div class="card-desc" id="Iden34">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/king.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="E5">Festival</span>
+        <div class="card-title" id="F6">The Royal Coronation Ceremony of King Norodom Sihamoni</div>
+        <div class="card-desc" id="Iden35">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/main-nuck-digital-zone-background-speaker.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="G7">Event Programs</span>
+        <div class="card-title" id="H8">The Inauguration Ceremony of the Digital Technology Center.</div>
+        <div class="card-desc" id="Iden36">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/gigital-1.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="I10">Product display</span>
+        <div class="card-title" id="J11">Episode 1 of the comedy story “Digital Grandma and Grandpa.”</div>
+        <div class="card-desc" id="Iden37">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/ប្រម៉ូតឡាន.1.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="K12">Product display</span>
+        <div class="card-title" id="L13">AUTOCAR</div>
+        <div class="card-desc" id="Iden38">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/from-nicc.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="M14">Event Programs</span>
+        <div class="card-title" id="N15">The inauguration of its Entrepreneurship Development and Incubation Institute
+          On 22nd July 2025</div>
+        <div class="card-desc" id="Iden39">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/សិត-ខន-nuck-digital-zone-background-speaker.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="O16">Event Programs</span>
+        <div class="card-title" id="P17">The Inauguration Ceremony of the Digital Technology Center.</div>
+        <div class="card-desc" id="Iden40">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/បុណ្យអុំទូក.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="Q18">Festival</span>
+        <div class="card-title" id="R19">The Royal Festival of Boats</div>
+        <div class="card-desc" id="Iden41">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/បុណ្យឯករាជ្យជាតិ.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="S20">Festival</span>
+        <div class="card-title" id="T21">The National Independence Day ceremony, which is celebrated every year on
+          November 9.</div>
+        <div class="card-desc" id="Iden42">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/កាស១!.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="U22">Product display</span>
+        <div class="card-title" id="V23">Beats EP On-Ear Headphones</div>
+        <div class="card-desc" id="Iden43">Identity Design</div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <img class="card-image" src="assets/image/nuck-digital-lab-opt-2.jpg">
+      <div class="card-content">
+        <span class="card-tag" id="W24">Event Programs</span>
+        <div class="card-title" id="X25">The Inauguration Ceremony of the Digital Technology Center.</div>
+        <div class="card-desc" id="Iden44">Identity Design</div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <!-- Footer HTML -->
+  <footer>
+    <!-- TOP SECTION -->
+    <div class="footer-top">
+
+      <!-- Logo -->
+      <div class="footer-box">
+        <div class="logo">
+          <img src="./assets/image/noname.png" alt="logo">
+        </div>
+      </div>
+
+      <!-- Work with us -->
+      <div class="footer-box">
+        <h3 id="WorkWith">Work with us</h3>
+        <p id="InFo">info@noname.design<br>+855 (0) 70770571</p>
+      </div>
+
+      <!-- Address -->
+      <div class="footer-box">
+        <h3 id="Address">Address</h3>
+        <p id="National">#I86, National Road 3, Sangkat Chom Chao II,<br>Khan Porsenchey, Phnom Penh, CAMBODIA.</p>
+      </div>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- BOTTOM SECTION -->
+    <div class="footer-bottom">
+
+      <div class="scroll-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+      </div>
+
+      <h3 id="Socials">Socials</h3>
+
+      <div class="socials">
+        <a href="https://fb.com/noname" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://t.me/noname" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a href="https://instagram.com/noname" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <div class="copyright" id="Noname">
+        © 2026 Website <span class="highlight">noname</span><span class="design"> Design</span> and <span>Digital
+          Services</span>
+      </div>
+
+    </div>
+  </footer>
+  <!-- JavaScript For AOS Animation -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- style Js -->
+  <script src="./assets/js/projects.js" defer></script>
 </body>
 
 </html>

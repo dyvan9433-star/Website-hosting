@@ -5,19 +5,13 @@ function toggleMode() {
 
 
 // header slider
-window.addEventListener("load", () => {
-  const lines = document.querySelectorAll(".line");
-  const text = document.querySelector("p.hidden-left");
-  const buttons = document.querySelector(".buttons");
-  const image = document.querySelector(".hero-image");
-  lines.forEach((line, index) => {
-    setTimeout(() => {
-      line.classList.add("show");
-    }, index * 400);
-  });
-  setTimeout(() => text.classList.add("show"), 1200);
-  setTimeout(() => buttons.classList.add("show"), 1500);
-  setTimeout(() => image.classList.add("show"), 600);
+// AOS For Title
+AOS.init({
+    duration: 1200,
+    delay: 100,
+    once: false,
+    offset: 120,
+    easing: 'ease-in-out'
 });
 
 
@@ -40,12 +34,7 @@ const visionObserver = new IntersectionObserver((entries) => {
 visionObserver.observe(visionText);
 
 
-
-
 // element
-// =====================================
-// ADVANCED PREMIUM EFFECTS
-// =====================================
 gsap.registerPlugin(ScrollTrigger);
 // =====================================
 // REVEAL TEXT LETTER ANIMATION
@@ -206,7 +195,6 @@ document.querySelectorAll(".btn").forEach(btn => {
 
 
 
-
 //zoom iamge
 const images = document.querySelectorAll(".card img, .image-card img");
 const modal = document.getElementById("modal");
@@ -232,6 +220,47 @@ modal.addEventListener("click", (e) => {
     modal.style.display = "none";
   }
 });
+
+
+
+/* =========================
+   COUNTER ANIMATION
+========================= */
+function initCounterAnimation() {
+    const counters = document.querySelectorAll(".stat-card h2");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+
+            const counter = entry.target;
+            const text = counter.textContent.trim();
+
+            // Extract number
+            const target = parseFloat(text.replace(/[^\d.]/g, ""));
+            const suffix = text.replace(/[\d.]/g, "");
+
+            const duration = 2000; // 2 seconds
+            const startTime = performance.now();
+
+            function update(now) {
+                const progress = Math.min((now - startTime) / duration, 1);
+                const value = Math.floor(progress * target);
+                counter.textContent = value + suffix;
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    counter.textContent = text;
+                }
+            }
+            requestAnimationFrame(update);
+            observer.unobserve(counter);
+        });
+    }, {
+        threshold: 0.5
+    });
+    counters.forEach(counter => observer.observe(counter));
+}
+document.addEventListener("DOMContentLoaded", initCounterAnimation);
 
 
 // footer js
@@ -297,12 +326,12 @@ const translations = {
     happynewyear:"Khmer New Year Festival",
     happynewyeartitle:"The Royal Khmer New Year is a grand festival held over three days every year, from April 13-15 (sometimes April 14-16), to celebrate the arrival of the new year’s deities. The festival has a deep meaning in preserving culture, family, gatherings, and honoring ancestors, starting with Maha Sangkranti, Vanbat, and Choi Sak.",
     projectcompleted:"Projects Completed",
-    number50:"50+",
-    number40:"40+",
+    number50:"500+",
+    number40:"4000+",
     happyclient:"Happy Clients",
-    number2:"2+",
+    number2:"12+",
     yearsex:"Years Experience",
-    number100:"100+",
+    number100:"100%",
     responsive:"Responsive Design",
     allinsights:"All Insights",
     companies:"Companies we've worked with",
@@ -311,11 +340,10 @@ const translations = {
     address:"Address",
     national:"#I86, National Road 3, Sangkat Chom Chao II, Khan Porsenchey, Phnom Penh, CAMBODIA.",
     socials:"Socials",
-    noname:" © 2026 Website => noname <= Design and Digital",
+    noname:" © 2026 Website noname Design and Digital Services",
   },
 
   km: {
-
     home: "ទំព័រដើម",
     projects: "គម្រោង",
     studio: "ស្ទូឌីយោ",
@@ -351,12 +379,12 @@ const translations = {
     happynewyear:"ព្រះរាជពិធីបុណ្យចូលឆ្នាំថ្មីប្រពៃណីជាតិខ្មែរ",
     happynewyeartitle:"ព្រះរាជពិធីបុណ្យចូលឆ្នាំថ្មីប្រពៃណីជាតិខ្មែរ គឺជាពិធីបុណ្យដ៏ធំដែលប្រារព្ធឡើងមានរយៈពេល ៣ ថ្ងៃ ជារៀងរាល់ឆ្នាំគឺនៅថ្ងៃទី១៣-១៥ ខែមេសា (ជួនកាលថ្ងៃទី១៤-១៦) ដើម្បីអបអរទេវតាឆ្នាំថ្មីចុះមកទទួលតំណែង។ ពិធីនេះមានអត្ថន័យជ្រាលជ្រៅក្នុងការថែរក្សាវប្បធម៌ លក្ខណៈគ្រួសារ ការជួបជុំ និងការគោរពដូនតា ដោយចាប់ផ្ដើមពីថ្ងៃមហាសង្ក្រាន្ត, ថ្ងៃវនបត, និងថ្ងៃឡើងស័ក។",
     projectcompleted:"គម្រោងដែលបានបញ្ចប់",
-    number50:"៥០+",
-    number40:"៤០+",
+    number50:"៥០០+",
+    number40:"៤០០០+",
     happyclient:"អតិថិជនមានភាពពេញចិត្ត",
-    number2:"២+",
+    number2:"១២+",
     yearsex:"បទពិសោធន៍ការងារ (ឆ្នាំ)",
-    number100:"១០០+",
+    number100:"១០០%",
     responsive:"ការរចនាដែលអាចសម្របតាមអេក្រង់",
     allinsights:"ការយល់ដឹងទាំងអស់",
     companies:"ក្រុមហ៊ុនដែលយើងបានសហការជាមួយ",
@@ -365,7 +393,7 @@ const translations = {
     address:"អាស័យដ្ឋាន",
     national:"#I86 ផ្លូវជាតិលេខ3 សង្កាត់ចោមចៅ2 ខណ្ឌពោធិ៍សែនជ័យ រាជធានីភ្នំពេញ ប្រទេសកម្ពុជា",
     socials:"បណ្ដាញសង្គម",
-    noname:"© ២០២៦ គេហទំព័រ => noname <= សម្រាប់ការរចនា និងឌីជីថល",
+    noname:"© ២០២៦ គេហទំព័រ noname សេវាកម្ម សម្រាប់ការរចនា និងឌីជីថល",
   }
 };
 

@@ -4,120 +4,59 @@ function toggleMode() {
 }
 
 
-// header style
-const hero = document.querySelector(".hero-section");
-const cards = document.querySelectorAll(".hero-card");
-/* LOAD ANIMATION */
-window.addEventListener("load", () => {
-  hero.classList.add("loaded");
-});
-/* SCROLL REVEAL */
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add("show");
-      }, i * 150);
-    }
-  });
-}, { threshold: 0.2 });
-cards.forEach(card => observer.observe(card));
-/* HERO PARALLAX MOUSE MOVE */
-hero.addEventListener("mousemove", (e) => {
-  if (window.innerWidth < 768) return;
-  const x = (window.innerWidth / 2 - e.clientX) / 40;
-  const y = (window.innerHeight / 2 - e.clientY) / 40;
-  document.querySelector(".hero-bg").style.transform =
-    `scale(1.12) translate(${x}px, ${y}px)`;
-});
+// right buuton
+function filter(category, btn) {
 
+    // Active button
+    const buttons = document.querySelectorAll(".menu button");
+    buttons.forEach(button => button.classList.remove("active"));
+    btn.classList.add("active");
 
+    // Filter cards
+    const cards = document.querySelectorAll(".card");
 
-// hover interaction enhancement (optional smooth effect)
-document.querySelectorAll(".hero-card").forEach(card => {
-  card.addEventListener("mousemove", (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    card.style.transform = `
-      perspective(600px)
-      rotateX(${(y - rect.height / 2) / 15}deg)
-      rotateY(${-(x - rect.width / 2) / 15}deg)
-      translateY(-10px)
-      scale(1.02)
-    `;
-  });
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "translateY(0) scale(1)";
-  });
-});
+    cards.forEach(card => {
+        if (category === "all") {
+            card.style.display = "block";
+        } else {
+            if (card.getAttribute("data-category") === category) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        }
+    });
+}
 
 
 //My project
 document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("loaded");
 
-  initScrollObserver();
-
   const cards = document.querySelectorAll(".card");
 
-  // smooth entrance
-  cards.forEach((card, i) => {
-    setTimeout(() => {
-      card.classList.add("is-visible");
-    }, i * 150); // ✔ balanced smooth delay
+  cards.forEach((card) => {
+    // initial professional state
+    card.style.opacity = "0";
+    card.style.transform = "translateY(40px)";
   });
-});
-function filter(category, btn) {
-  const cards = document.querySelectorAll(".card");
-  const buttons = document.querySelectorAll(".menu button");
-
-  buttons.forEach(b => b.classList.remove("active"));
-  btn.classList.add("active");
 
   let delay = 0;
 
   cards.forEach((card) => {
-    const match = category === "all" || card.classList.contains(category);
+    setTimeout(() => {
+      card.style.transition =
+        "opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1)";
 
-    if (match) {
-      card.style.display = "block";
+      card.style.opacity = "1";
+      card.style.transform = "translateY(0)";
+    }, delay);
 
-      requestAnimationFrame(() => {
-        setTimeout(() => {
-          card.classList.add("is-visible");
-        }, delay);
-
-        delay += 150; // ✔ smooth wave
-      });
-
-    } else {
-      card.classList.remove("is-visible");
-
-      setTimeout(() => {
-        card.style.display = "none";
-      }, 400);
-    }
-  });
-}
-// ===== SCROLL OBSERVER =====
-function initScrollObserver() {
-  const cards = document.querySelectorAll(".card");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-      } else {
-        entry.target.classList.remove("is-visible");
-      }
-    });
-  }, {
-    threshold: 0.2
+    delay += 140; // smooth wave like agency grid
   });
 
-  cards.forEach(card => observer.observe(card));
-}
+  initScrollObserver();
+});
 
 
 
@@ -249,14 +188,18 @@ document.addEventListener("DOMContentLoaded", () => {
       insights: "Insights",
       contact: "Contact",
       menu: "Menu",
+
+      agen:"Digital Creative Agency",
       modern: "We build modern digital experiences",
-      creative: "Creative design, development & branding solutions.",
-      uiux: "🎨 UI/UX Design",
+      creat:"Creative design, development & branding solutions for your business success.",
+      con:"Contact Us",
+      uiux: "UI/UX Design",
       clean: "Clean modern interface design.",
-      web: "💻 Web Development",
+      web: "Web Development",
       fats: "Fast and responsive websites.",
-      seo: "🚀 SEO Growth",
-      my: "🖼️ My Gallery",
+      mobile:"Mobile App",
+      improve:"Beautiful and powerful iOS & Android apps.",
+      my: "My Gallery",
       all: "All",
       festival: "Festival",
       event: "Event Programs",
@@ -373,14 +316,23 @@ document.addEventListener("DOMContentLoaded", () => {
       w24: "Event Programs",
       x25: "The Inauguration Ceremony of the Digital Technology Center.",
       iden44: "Identity Design",
-
-
+      fea:"Featured Websites",
+      pre:"Beautiful, user-friendly, and confidence-inspiring.",
+      with:"website with clean UI design.",
+      live:"Live Website",
+      withs:"website with clean UI design.",
+      lives:"Live Website",
+      withss:"website with clean UI design.",
+      livess:"Live Website",
+      share:"Share",
+      share1:"Share",
+      share2:"Share",
       workwith: "Work with us",
       info: "info@noname.design  +855 (0) 70770571",
       address: "Address",
       national: "#I86, National Road 3, Sangkat Chom Chao II, Khan Porsenchey, Phnom Penh, CAMBODIA.",
       socials: "Socials",
-      noname: " © 2026 Website => noname <= Design and Digital",
+      noname: " © 2026 Website noname Design and Digital Services",
     },
     km: {
       home: "ទំព័រដើម",
@@ -390,14 +342,16 @@ document.addEventListener("DOMContentLoaded", () => {
       contact: "ទំនាក់ទំនង",
       menu: "មុឺនុយ",
 
+      agen:"ភ្នាក់ងារច្នៃប្រឌិតឌីជីថល",
       modern: "យើងបង្កើតបទពិសោធន៍ឌីជីថលទំនើប",
-      creative: "ការរចនាដ៏ច្នៃប្រឌិត ការអភិវឌ្ឍន៍ និងដំណោះស្រាយម៉ាក",
-      uiux: "🎨 ការរចនា UI/UX",
-      clean: "ការរចនាចំណុចប្រទាក់ទំនើបស្អាត",
-      web: "💻 ការអភិវឌ្ឍន៍វេបសាយ",
-      fats: "គេហទំព័ររហ័ស និងឆ្លើយតបបានល្អ។",
-      seo: "🚀 ការលូតលាស់ SEO",
-      improve: "បង្កើនចំណាត់ថ្នាក់ និងចរាចរណ៍គេហទំព័រ",
+      creat: "ដំណោះស្រាយផ្នែកការរចនាច្នៃប្រឌិត ការអភិវឌ្ឍ និងការកសាងម៉ាកសញ្ញា ដើម្បីជំរុញភាពជោគជ័យនៃអាជីវកម្មរបស់អ្នក",
+      con:"ទាក់ទងមកយើង",
+      uiux: "ការរចនា UI/UX",
+      clean: "ការរចនាចំណុចប្រទាក់ទំនើប ស្អាត និងសាមញ្ញ",
+      web: "ការអភិវឌ្ឍន៍វេបសាយ",
+      fats: "គេហទំព័រលឿន ងាយស្រួលប្រើ និងសម្របតាមគ្រប់អេក្រង់",
+      mobile:"កម្មវិធីទូរស័ព្ទ",
+      improve:"កម្មវិធី iOS និង Android ដែលស្រស់ស្អាត រហ័ស និងមានប្រសិទ្ធភាព",
       my: "បណ្ណាល័យរូបភាពរបស់ខ្ញុំ",
       all: "ទាំងអស់",
       festival: "ពិធីបុណ្យ",
@@ -516,14 +470,23 @@ document.addEventListener("DOMContentLoaded", () => {
       w24: "កម្មវិធីព្រឹត្តិការណ៍",
       x25: "ពិធីបើកសម្ពោធមជ្ឈមណ្ឌលបច្ចេកវិទ្យាឌីជីថល",
       iden44: "ការរចនាអត្តសញ្ញាណ",
-
-
+      fea:"គេហទំព័រលេចធ្លោ",
+      pre:"ស្អាតទាក់ទាញ និងប្រើប្រាស់យ៉ាងមានទំនុកចិត្ត",
+      with:"គេហទំព័រដែលមានការរចនាចំណុចប្រទាក់ស្អាត និងទំនើប",
+      live:"គេហទំព័រពិត",
+      withs:"គេហទំព័រដែលមានការរចនាចំណុចប្រទាក់ស្អាត និងទំនើប",
+      lives:"គេហទំព័រពិត",
+      withss:"គេហទំព័រដែលមានការរចនាចំណុចប្រទាក់ស្អាត និងទំនើប",
+      livess:"គេហទំព័រពិត",
+      share:"ចែករំលែក",
+      share1:"ចែករំលែក",
+      share2:"ចែករំលែក",
       workwith: "ធ្វើការជាមួយយើង",
       info: "info@noname.design +៨៥៥ (០) ៧០៧៧០៥៧១",
       address: "អាស័យដ្ឋាន",
       national: "#I86 ផ្លូវជាតិលេខ3 សង្កាត់ចោមចៅ2 ខណ្ឌពោធិ៍សែនជ័យ រាជធានីភ្នំពេញ ប្រទេសកម្ពុជា",
       socials: "បណ្ដាញសង្គម",
-      noname: "© ២០២៦ គេហទំព័រ => noname <= សម្រាប់ការរចនា និងឌីជីថល",
+      noname: "© ២០២៦ គេហទំព័រ noname សេវាកម្ម សម្រាប់ការរចនា និងឌីជីថល",
     }
   };
 
@@ -553,13 +516,15 @@ document.addEventListener("DOMContentLoaded", () => {
     set("mobileInsights", t.insights);
     set("mobileContact", t.contact);
 
+    set("Agen", t.agen);
     set("Modern", t.modern);
-    set("Creative", t.modern);
-    set("UIUXDesign", t.uiux);
+    set("Creat", t.creat);
+    set("Con", t.con);
+    set("UIUXD", t.uiux);
     set("Clean", t.clean);
     set("Web", t.web);
     set("Fast", t.fats);
-    set("SEO", t.seo);
+    set("Mobile", t.mobile);
     set("ImProve", t.improve);
     set("My", t.my);
     set("All", t.all);
@@ -678,10 +643,17 @@ document.addEventListener("DOMContentLoaded", () => {
     set:("W24", t.w24);
     set("X25", t.x25);
     set("Iden44", t.iden44);
-
-
-
-
+    set("Fea", t.fea);
+    set("PRe", t.pre);
+    set("With", t.with);
+    set("Live", t.live);
+    set("Withs", t.with);
+    set("Lives", t.live);
+    set("Withss", t.with);
+    set("Livess", t.live);
+    set("Share", t.share);
+    set("Share1", t.share1);
+    set("Share2", t.share2);
     set("WorkWith", t.workwith);
     set("InFo", t.info);
     set("Address", t.address);
@@ -706,13 +678,14 @@ document.addEventListener("DOMContentLoaded", () => {
         "mobileInsights",
         "mobileContact",
 
+        "Agen",
         "Modern",
-        "Creative",
+        "Creat",
         "UIUXDesign",
         "Clean",
         "Web",
         "Fast",
-        "SEO",
+        "Mobile",
         "ImProve",
         "My",
         "All",
@@ -832,7 +805,17 @@ document.addEventListener("DOMContentLoaded", () => {
         "W24",
         "X25",
         "Iden44",
-        
+        "Fea",
+        "PRe",
+        "With",
+        "Live",
+        "Withs",
+        "Lives",
+        "Withss",
+        "Livess",
+        "Share",
+        "Share1",
+        "Share2",
 
 
         "WorkWith",
@@ -850,3 +833,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 });
+
+
+// header style
+AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+});
+
+
+
+// Share Button
+function sharePage(){
+  if(navigator.share){
+    navigator.share({
+      title: document.title,
+      text: "Check this Live Website",
+      url: window.location.href
+    });
+  }else{
+    navigator.clipboard.writeText(window.location.href);
+    alert("Link copied!");
+  }
+}

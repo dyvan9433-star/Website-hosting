@@ -199,19 +199,11 @@ document.addEventListener("DOMContentLoaded", () => {
       insights: "Insights",
       contact: "Contact",
       menu: "Menu",
-      creativedesign: "Creative Design",
-      build: "Build Modern Digital Experiences",
-      smooth: "Smooth cinematic slider with premium glassmorphism UI and elegant responsive layout.",
-      respon: "Responsive Layout",
-      beautiful: "Beautiful On Every Device",
-      optimized: "Optimized for mobile tablet and desktop with smooth interactions and modern design.",
-      pre: "Premium UI",
-      elegant: "Elegant Motion & Clean Interface",
-      mini: "Minimal modern layout inspired by premium website hero sections.",
-      sl: "Premium Slider",
-      spon: "Responsive cinematic hero slider with smooth animation and clean UI.",
       our: "Our capabilities",
       st: "Strategy",
+      st1:"Digital Studio • Creative Agency",
+      expre:"Build Modern Studio Experience",
+      height:"We design and develop high-performance websites, mobile apps, and digital experiences with modern UI/UX systems built for scale.",
       bran:"Brand Diagnose",
       de:"Brand Definition",
       n:"Brand Name",
@@ -240,13 +232,12 @@ document.addEventListener("DOMContentLoaded", () => {
       mouse:"UX/UI Design",
       popular:"Role: UX/UI Designer / Product Designer Education: Bachelor of Computer Science – Community Development Institute Experience: 3 Years in the Tech Industry (Software Development, QA Testing, Automation, and UX/UI Design) Core Competencies 1. User Experience (UX) Research & Design User Pain Point Analysis: Leveraging meticulous analytical skills developed in Quality Assurance (QA) and Software Testing to identify system friction, user bottlenecks, and usability gaps in web and mobile applications. User Flows & Information Architecture: Designing intuitive, streamlined user journeys and information structures based on data-driven research to maximize user engagement and efficiency.",
       than:"2. User Interface (UI) Design & Systems Visual Design & Prototyping: Crafting high-fidelity visual designs, clean wireframes, and interactive, dynamic prototypes that bring digital concepts to life. Design Systems: Structuring standardized, scalable design systems (components, typography, and color palettes) to ensure seamless, efficient, and error-free developer handoffs.",
-
       workwith: "Work with us",
       info: "info@noname.design  +855 (0) 70770571",
       address: "Address",
       national: "#I86, National Road 3, Sangkat Chom Chao II, Khan Porsenchey, Phnom Penh, CAMBODIA.",
       socials: "Socials",
-      noname: " © 2026 Website => noname <= Design and Digital",
+      noname: " © 2026 Website => noname <= Design and Digital Services",
     },
     km: {
       home: "ទំព័រដើម",
@@ -255,19 +246,11 @@ document.addEventListener("DOMContentLoaded", () => {
       insights: "ព័ត៌មាន",
       contact: "ទំនាក់ទំនង",
       menu: "មុឺនុយ",
-      creativedesign: "ការរចនាដ៏ច្នៃប្រឌិត",
-      build: "បង្កើតបទពិសោធន៍ឌីជីថលសម័យទំនើប",
-      smooth: "Slider ស្អាតបែបភាពយន្ត (cinematic) មាន UI បែបកញ្ចក់ប្រណិត (glassmorphism) និង layout ឆើតឆាយដែលអាចប្រើបានលើគ្រប់ទំហំអេក្រង់ (responsive)",
-      respon: "បត់បែនបានល្អ",
-      beautiful: "ស្អាតលើគ្រប់ឧបករណ៍",
-      optimized: "បានបង្កើតឡើងសម្រាប់ទូរស័ព្ទដៃ កុំព្យូទ័រទូរស័ព្ទ និងកុំព្យូទ័រដែលមានអន្តរកម្មរលូន និងការរចនាទំនើប",
-      pre: "UI ប្រណិត",
-      elegant: "ចលនាដ៏ស្រស់ស្អាត និងចំណុចប្រទាក់ស្អាត",
-      mini: "ប្លង់ទំនើបតិចតួចដែលបានបង្កើតឡើងពីផ្នែកខាងមុខរបស់គេហទំព័រប្រណិត",
-      sl: "Slider ប្រណិត",
-      spon1: "Hero slider បែបភាពយន្ត (cinematic) ដែលអាចប្រើបានលើគ្រប់ទំហំអេក្រង់ (responsive) មាន animation រលូន និង UI ស្អាតសាមញ្ញ",
       our: "សមត្ថភាពរបស់យើង",
       st: "យុទ្ធសាស្ត្រ",
+      st1:"ស្ទូឌីយោឌីជីថល • សេវាកម្មរចនា និងច្នៃប្រឌិត",
+      expre:"បង្កើតបទពិសោធន៍ស្ទូឌីយោទំនើប និងមានស្តង់ដារខ្ពស់",
+      height:"យើងរចនា និងអភិវឌ្ឍគេហទំព័រ និងកម្មវិធីទូរស័ព្ទដែលមានប្រសិទ្ធភាពខ្ពស់ រួមជាមួយបទពិសោធន៍ឌីជីថលទំនើប ដោយប្រើប្រព័ន្ធ UI/UX ដែលអាចពង្រីក និងអភិវឌ្ឍបានតាមតម្រូវការ",
       brand: "ការធ្វើរោគវិនិច្ឆ័យម៉ាកយីហោ",
       de:"និយមន័យម៉ាកយីហោ", n:"ឈ្មោះម៉ាកយីហោ", a:"ស្ថាបត្យកម្មម៉ាកយីហោ",
       b:"ផែនការធ្វើឱ្យម៉ាកយីហោសកម្ម", c:"ការរចនា", d:"អត្តសញ្ញាណដែលមើលឃើញ", f:"ការរចនាគេហទំព័រ និងទូរស័ព្ទចល័ត", g:"អត្តសញ្ញាណពាក្យសំដី និងការផ្ញើសារ",
@@ -289,13 +272,12 @@ document.addEventListener("DOMContentLoaded", () => {
       mouse:"ការរចនា UX/UI",
       popular:"តួនាទី៖ UX/UI Designer / Product Designer (អ្នករចនាបទពិសោធន៍ និងផ្ទៃកម្មវិធី / អ្នករចនាផលិតផលឌីជីថល) ការអប់រំ៖ វិទ្យាស្ថានអភិវឌ្ឍន៍សហគមន៍ - វិទ្យាសាស្ត្រកុំព្យូទ័រ បទពិសោធន៍៖ ៣ ឆ្នាំក្នុងវិស័យបច្ចេកវិទ្យា (ការអភិវឌ្ឍប្រព័ន្ធ, ការធានាគុណភាព QA, កូដស្វ័យប្រវត្តិកម្ម និងការរចនា UX/UI) ជំនាញ និងបទពិសោធន៍លេចធ្លោ (Core Competencies) ១. ការស្រាវជ្រាវ និងការរចនាបទពិសោធន៍អ្នកប្រើប្រាស់ (User Experience - UX Research & Design) ការវិភាគចំណុចខ្សោយរបស់អ្នកប្រើប្រាស់ (User Pain Point Analysis)៖ ប្រើប្រាស់ជំនាញវិភាគដ៏ម៉ត់ចត់ ដែលទទួលបានពីបទពិសោធន៍ផ្នែកការធានាគុណភាព (QA) និងការតេស្តសាកល្បងប្រព័ន្ធ (Software Testing) ដើម្បីស្វែងរកចំណុចរអាក់រអួល ភាពស្ទះដំណើរការ និងចន្លោះប្រហោងនៃការប្រើប្រាស់នៅលើកម្មវិធីទូរស័ព្ទ និងគេហទំព័រ។ លំហូរការងារ និងរចនាសម្ព័ន្ធព័ត៌មាន (User Flows & Information Architecture)៖ រចនាលំហូរនៃការប្រើប្រាស់ (User Journeys) ឱ្យមានភាពងាយស្រួល មិនស្មុគស្មាញ និងរៀបចំរចនាសម្ព័ន្ធទិន្នន័យផ្អែកលើការស្រាវជ្រាវជាក់ស្តែង ដើម្បីបង្កើនការពេញចិត្ត និងប្រសិទ្ធភាពក្នុងការប្រើប្រាស់ខ្ពស់បំផុត។",
       than:"២. ការរចនាសោភ័ណភាព និងគំរូសាកល្បង (Visual Design & Prototyping)៖ បង្កើតទម្រង់រចនាដែលមានភាពលម្អិត និងសោភ័ណភាពខ្ពស់ (High-fidelity), ប្លង់ព្រាងស្អាតៗ (Clean Wireframes) ព្រមទាំងគំរូសាកល្បងដែលអាចចុចបញ្ជាបាន និងមានចលនារស់រវើក (Interactive, Dynamic Prototypes) ដើម្បីធ្វើឱ្យគំនិតច្នៃប្រឌិតឌីជីថលក្លាយជារូបរាងពិតជាក់ស្តែង។",
-
       workwith: "ធ្វើការជាមួយយើង",
       info: "info@noname.design +៨៥៥ (០) ៧០៧៧០៥៧១",
       address: "អាស័យដ្ឋាន",
       national: "#I86 ផ្លូវជាតិលេខ3 សង្កាត់ចោមចៅ2 ខណ្ឌពោធិ៍សែនជ័យ រាជធានីភ្នំពេញ ប្រទេសកម្ពុជា",
       socials: "បណ្ដាញសង្គម",
-      noname: "© ២០២៦ គេហទំព័រ => noname <= សម្រាប់ការរចនា និងឌីជីថល",
+      noname: "© ២០២៦ គេហទំព័រ noname សេវាកម្ម សម្រាប់ការរចនា និងឌីជីថល",
     }
   };
 
@@ -324,19 +306,11 @@ document.addEventListener("DOMContentLoaded", () => {
     set("mobileStudio", t.studio);
     set("mobileInsights", t.insights);
     set("mobileContact", t.contact);
-    set("creativeDesign", t.creativedesign);
-    set("Build", t.build);
-    set("Smooth", t.smooth);
-    set("Respon", t.respon);
-    set("Bea", t.beautiful);
-    set("Op", t.optimized);
-    set("Pre", t.pre);
-    set("El", t.elegant);
-    set("Mini", t.mini);
-    set("Sl", t.sl);
-    set("Spon1", t.spon1);
     set("Our", t.our);
     set("St", t.st);
+    set("Height", t.height);
+    set("ST1", t.st1)
+    set("ExPre", t.expre);
     set("Brand", t.brand);
     set("De", t.de); set("Em", t.em); set("U", t.u); 
     set("N", t.n); set("A", t.a); set("B", t.b); set("C", t.c); set("D", t.d);
@@ -353,7 +327,6 @@ document.addEventListener("DOMContentLoaded", () => {
     set("Mouse", t.mouse);
     set("Popular", t.popular);
     set("Than", t.than);
-
     set("WorkWith", t.workwith);
     set("InFo", t.info);
     set("Address", t.address);
@@ -377,19 +350,11 @@ document.addEventListener("DOMContentLoaded", () => {
         "mobileStudio",
         "mobileInsights",
         "mobileContact",
-        "creativeDesign",
-        "Build",
-        "Smooth",
-        "Respon",
-        "Bea",
-        "Op",
-        "Pre",
-        "El",
-        "Mini",
-        "Sl",
-        "Spon1",
         "Our",
         "St",
+        "ST1",
+        "ExPre",
+        "Height",
         "Brand",
         "De",
         "N","Em", 
@@ -402,9 +367,6 @@ document.addEventListener("DOMContentLoaded", () => {
        "Mouse",
        "Popular",
        "Than",
-        
-        
-
         "WorkWith",
         "InFo",
         "Address",
@@ -419,4 +381,14 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   };
+});
+
+
+// AOS Animation
+AOS.init({
+    duration: 1200,
+    delay: 100,
+    once: false,
+    offset: 120,
+    easing: 'ease-in-out'
 });

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./assets/css/home.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -184,37 +186,27 @@
         </div>
 
     </div>
-
-    <!-- BACKGROUND SHAPES -->
-    <div class="bg-shape shape1"></div>
-    <div class="bg-shape shape2"></div>
-    <div class="bg-shape shape3"></div>
-    <section class="hero">
-        <div class="hero-container">
-            <!-- TEXT -->
-            <div class="hero-text">
-                <h1>
-                    <span class="line hidden-left" id="textHeader">Design Posters & Digital Art That Stand Out</span>
-                </h1>
-                <p class="hidden-left" id="textWeCreate">
-                    We create modern, clean and high-quality poster designs, branding visuals and digital artwork for
-                    your business or personal brand.
-                </p>
-                <div class="buttons hidden-left">
-                    <a href="./projects.html"><button style="border: none;color: var(--text);border-radius: 10px;"
-                            id="btnProjects" class="btn primary">Projects</button></a>
-                    <a href="./contacts.html"><button style="color: var(--noname);border: 1px solid var(--noname);"
-                            id="btnContact" class="btn outline">Contacts</button></a>
-                </div>
-            </div>
-            <!-- IMAGE -->
-            <div class="hero-image hidden-right" id="headimage">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="">
+    <!-- HEADER TEXT -->
+    <div class="hero">
+        <div class="hero-glow hero-glow--left"></div>
+        <div class="hero-glow hero-glow--right"></div>
+        <div class="hero-content" data-aos="zoom-in">
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200" id="textHeader">
+                Design Posters & Digital Art That Stand Out
+            </h1>
+            <p class="hero-desc" data-aos="fade-up" data-aos-delay="400" id="textWeCreate">
+                We create modern, clean and high-quality poster designs, branding visuals and digital artwork.
+            </p>
+            <div class="hero-actions" data-aos="fade-up" data-aos-delay="600">
+                <a href="./projects.html">
+                    <button class="hero-btn hero-btn--primary" id="btnProjects">Projects</button>
+                </a>
+                <a href="./contacts.html">
+                    <button class="hero-btn hero-btn--outline" id="btnContact">Contacts</button>
+                </a>
             </div>
         </div>
-    </section>
-
-
+    </div>
     <!-- text header -->
     <div class="vision-block">
         <h1 class="vision-text" id="WeBuild">
@@ -223,7 +215,7 @@
             positive changes.✨
         </h1>
     </div>
-    
+
     <!-- Sidebar -->
     <div class="gallery">
         <div class="deploy">
@@ -297,7 +289,6 @@
                         <p id="Picture12">The Inauguration Ceremony of the Digital Technology Center.</p>
                     </div>
 
-
                     <div class="card">
                         <img src="./assets/image/asean.jpg">
                         <p id="Picture13">AI Ready ASEAN Training on Mar 15, 2026.</p>
@@ -331,38 +322,38 @@
     <div class="company-page">
         <!-- Back Button -->
         <a class="back-btn" href="./projects.html">
-            <h2 id="AllProjects">← All Projects</h2>
+            <h2 id="AllProjects" data-aos="fade-up">← All Projects</h2>
         </a>
         <!-- Company Section -->
         <div class="company-section">
-            <h1 id="Companies">Companies we've worked with</h1>
+            <h1 id="Companies" data-aos="fade-up">Companies we've worked with</h1>
             <!-- Company Grid -->
             <section class="company-section">
 
                 <div class="company-grid">
 
-                    <div class="logo-card">
-                        <img src="./assets/image/ppm.png" alt="Company 1">
+                    <div class="logo-card" data-aos="zoom-in-up">
+                        <img src="./assets/image/nuck.png" alt="Company 1">
                     </div>
 
-                    <div class="logo-card">
-                        <img src="./assets/image/adidas.jpg" alt="Company 2">
+                    <div class="logo-card" data-aos="zoom-in-up" data-aos-delay="50">
+                        <img src="./assets/image/kinal.png" alt="Company 2">
                     </div>
 
-                    <div class="logo-card">
-                        <img src="./assets/image/google.png" alt="Company 3">
+                    <div class="logo-card" data-aos="zoom-in-up" data-aos-delay="100">
+                        <img src="./assets/image/flashsante.png" alt="Company 3">
                     </div>
 
-                    <div class="logo-card">
-                        <img src="./assets/image/nike.jpg" alt="Company 4">
+                    <div class="logo-card" data-aos="zoom-in-up" data-aos-delay="120">
+                        <img src="./assets/image/vitamin.png" alt="Company 4">
                     </div>
 
-                    <div class="logo-card">
-                        <img src="./assets/image/lv.jpg" alt="Company 5">
+                    <div class="logo-card" data-aos="zoom-in-up" data-aos-delay="140">
+                        <img src="./assets/image/ppm.png" alt="Company 5">
                     </div>
 
-                    <div class="logo-card">
-                        <img src="./assets/image/grap.jpg" alt="Company 6">
+                    <div class="logo-card" data-aos="zoom-in-up" data-aos-delay="150">
+                        <img src="./assets/image/fh-dev.png" alt="Company 6">
                     </div>
 
                 </div>
@@ -376,11 +367,11 @@
 
         <article class="image-card">
             <figure>
-                <img src="./assets/image/asean.jpg" alt="Image 1">
+                <img src="./assets/image/asean.jpg" alt="Image 1" data-aos="fade-left">
             </figure>
 
             <div class="image-card-body">
-                <h2 id="Aiasean">AI Ready ASEAN Training on Mar 15, 2026</h2>
+                <h2 id="Aiasean" data-aos="zoom-in-up">AI Ready ASEAN Training on Mar 15, 2026</h2>
                 <time datetime="15, 03, 2026" id="aiAseantime">March 15, 2026</time>
                 <p id="aseanAllready">
                     The AI Ready ASEAN project is an initiative aimed at empowering educators, students, and parents
@@ -394,11 +385,11 @@
 
         <article class="image-card">
             <figure>
-                <img src="./assets/image/banner-nuck-center-250701-003.jpg" alt="Image 2">
+                <img src="./assets/image/banner-nuck-center-250701-003.jpg" alt="Image 2" data-aos="zoom-in">
             </figure>
 
             <div class="image-card-body">
-                <h2 id="DigitalCenter">Digital Technology Middle Age Inauguration Ceremony</h2>
+                <h2 id="DigitalCenter" data-aos="zoom-in-up">Digital Technology Middle Age Inauguration Ceremony</h2>
                 <time datetime="11, 07, 2024" id="AddTime">11, 07, 2024</time>
                 <p id="DigitalCenterText">
                     Hun Sen Kamchamar Kindergarten to August 12, 2017 is the last year of the Chea Sim Kamchamar
@@ -416,14 +407,14 @@
 
         <article class="image-card">
             <figure>
-                <img src="./assets/image/happy-new-year-poster-2.jpg" alt="Image 3">
+                <img src="./assets/image/happy-new-year-poster-2.jpg" alt="Image 3" data-aos="fade-right">
             </figure>
 
             <div class="image-card-body">
-                <h2 id="HappyNewYear">Khmer New Year Festival</h2>
+                <h2 id="HappyNewYear" data-aos="zoom-in-up">Khmer New Year Festival</h2>
                 <time datetime="14, 04, 2026"></time>
                 <p id="HappyNewYearTitle">
-                    The Royal Khmer New Year is a grand festival held over three days every year, from April 13-15
+                    The Royal Khmer New Year is a grand˜ festival held over three days every year, from April 13-15
                     (sometimes April 14-16), to celebrate the arrival of the new year’s deities. The festival has a deep
                     meaning in preserving culture, family, gatherings, and honoring ancestors, starting with Maha
                     Sangkranti, Vanbat, and Choi Sak.
@@ -433,28 +424,23 @@
     </div>
 
     <!-- View -->
-    <section class="stats-section">
-
-        <div class="stats-wrapper">
-
-            <div class="stats-card">
-                <h2 class="stats-number" id="Number50">50+</h2>
-                <p class="stats-text" id="ProjectCompleted">Projects Completed</p>
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+                <h2 id="Number50">500+</h2>
+                <p id="ProjectCompleted">Projects Completed</p>
             </div>
-
-            <div class="stats-card">
-                <h2 class="stats-number" id="Number40">40+</h2>
-                <p class="stats-text" id="HappyClient">Happy Clients</p>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                <h2 id="Number40">4000+</h2>
+                <p id="HappyClient">Happy Clients</p>
             </div>
-
-            <div class="stats-card">
-                <h2 class="stats-number" id="Number2">2+</h2>
-                <p class="stats-text" id="YearsEx">Years Experience</p>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                <h2 id="Number2">12+</h2>
+                <p id="YearsEx">Years Experience</p>
             </div>
-
-            <div class="stats-card">
-                <h2 class="stats-number" id="Number100">100%</h2>
-                <p class="stats-text" id="Responsive">Responsive Design</p>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                <h2 id="Number100">100%</h2>
+                <p id="Responsive">Responsive Design</p>
             </div>
         </div>
     </section>
@@ -463,7 +449,8 @@
     <div class="Insights">
         <a style="font-family:'Times New Roman', Times, serif;color:var(--noname);text-decoration: none;"
             href="./insightss.html">
-            <h1 style="font-size: 27px;padding-left: 13px;margin-top: 10px;" id="AllInsights">All Insights</h1>
+            <h1 style="font-size: 27px;padding-left: 13px;margin-top: 10px;" id="AllInsights" data-aos="zoom-in-up">All
+                Insights</h1>
         </a>
     </div>
 
@@ -512,19 +499,21 @@
             <h3 id="Socials">Socials</h3>
 
             <div class="socials">
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://t.me" target="_blank"><i class="fab fa-telegram"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://fb.com/noname" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://t.me/noname" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://instagram.com/noname" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
 
             <div class="copyright" id="Noname">
-                © 2026 Website => <span class="highlight">noname</span>
-                <= for <span class="design">Design</span> and <span>Digital</span>
+                © 2026 Website<span class="highlight"> noname</span><span class="design"> Design</span> and
+                <span>Digital Services</span>
             </div>
 
         </div>
     </footer>
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- style Js -->
