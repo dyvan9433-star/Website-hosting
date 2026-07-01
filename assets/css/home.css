@@ -1136,6 +1136,7 @@ footer {
   font-weight: 500;
   color: var(--noname);
 }
+
 .footer-bottom h3 {
   margin-bottom: 15px;
   font-weight: 500;
@@ -1205,7 +1206,8 @@ footer {
   color: var(--text);
   margin-top: 20px;
 }
-.highlight{
+
+.highlight {
   color: var(--noname);
 }
 
@@ -1297,18 +1299,20 @@ footer {
   }
 }
 
+
 /* Interaction when change Language */
 .fade-in {
-  animation: fadeInUp 0.5s ease;
+  animation: fadeInUp 0.5s ease both !important;
 }
 
 @keyframes fadeInUp {
   from {
-    opacity: 0;
+    opacity: 0 !important;
     transform: translateY(10px);
   }
+
   to {
-    opacity: 1;
+    opacity: 1 !important;
     transform: translateY(0);
   }
 }
