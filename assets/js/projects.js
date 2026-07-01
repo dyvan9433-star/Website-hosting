@@ -3,6 +3,12 @@ function toggleMode() {
   document.getElementById("body").classList.toggle("dark-mode");
 }
 
+// header style
+AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+});
 
 // right buuton
 function filter(category, btn) {
@@ -58,6 +64,29 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollObserver();
 });
 
+
+// View Website
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+
+        // stagger effect for portfolio cards
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, index * 150);
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  items.forEach(el => observer.observe(el));
+});
 
 
 
@@ -250,7 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
       iden21: "Identity Design",
       digital: "The Inauguration Ceremony of the Digital Technology Center.",
       iden22: "Identity Design",
-      test: "UNIIC SIGNING CEREMONY 2025",
+      mak: "UNIIC SIGNING CEREMONY 2025",
       iden23: "Identity Design",
       uihead:"All Projects",
       smooth: "Smooth and Responsive Design",
@@ -403,7 +432,7 @@ document.addEventListener("DOMContentLoaded", () => {
       iden21: "ការរចនាអត្តសញ្ញាណ",
       digital: "ពិធីបើកសម្ពោធមជ្ឈមណ្ឌលបច្ចេកវិទ្យាឌីជីថល",
       iden22: "ការរចនាអត្តសញ្ញាណ",
-      test: "ពិធីចុះហត្ថលេខា UNIIC ២០២៥",
+      mak: "ពិធីចុះហត្ថលេខា UNIIC ២០២៥",
       iden23: "ការរចនាអត្តសញ្ញាណ",
       uihead: "គម្រោងទាំងអស់",
       smooth: "ការរចនាដែលរលូន និងឆ្លើយតបបានល្អ",
@@ -515,7 +544,6 @@ document.addEventListener("DOMContentLoaded", () => {
     set("mobileStudio", t.studio);
     set("mobileInsights", t.insights);
     set("mobileContact", t.contact);
-
     set("Agen", t.agen);
     set("Modern", t.modern);
     set("Creat", t.creat);
@@ -562,6 +590,7 @@ document.addEventListener("DOMContentLoaded", () => {
     set("Men", t.men);
     set("Iden14", t.iden); 
     set("Sim", t.sim);
+    set("Iden15", t.iden15);
     set("Un", t.Un); 
     set("Iden16", t.iden);
     set("Cere", t.cere);
@@ -576,7 +605,7 @@ document.addEventListener("DOMContentLoaded", () => {
     set("Iden21", t.iden);
     set("Digital", t.digital);
     set("Iden22", t.iden);
-    set("Test", t.test);
+    set("Mak", t.mak);
     set("Iden23", t.iden);
     set("Uihead", t.uihead);
     set("Smooth", t.smooth);
@@ -738,7 +767,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Iden21",
         "Digital",
         "Iden22",
-        "Test",
+        "Mak",
         "Iden23",
         "AllPro",
         "smooth",
@@ -816,8 +845,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "Share",
         "Share1",
         "Share2",
-
-
         "WorkWith",
         "InFo",
         "Address",
@@ -835,12 +862,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// header style
-AOS.init({
-    duration: 800,
-    once: true,
-    offset: 100
-});
+
 
 
 
