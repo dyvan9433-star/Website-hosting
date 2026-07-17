@@ -315,6 +315,7 @@ const translations = {
     img13: "AI Ready ASEAN Training on Mar 15, 2026.",
     img14: "The Royal Coronation Ceremony of His Majesty King Norodom Sihamoni, the King of the Kingdom of Cambodia, was officially celebrated from October 29, 2004, to October 29, 2005",
     img15: "Selling drinks",
+    dt130: "Building trust through every successful project we deliver.",
     img16: "The Royal Ceremony of the Khmer Traditional New Year Festival.",
     allprojects: "← All Project",
     aiasean:"AI Ready ASEAN Training on Mar 15, 2026",
@@ -325,6 +326,7 @@ const translations = {
     digitalcentertext:"Hun Sen Kamchamar Kindergarten to August 12, 2017 is the last year of the Chea Sim Kamchamar (Sangkat Sangkat Sangkat Samang) Global Year. Special features: such as: Learning in one place, creating a system of preschool education from primary to grade 1. For staff and community: empowering the Royal Government and staff working in the city to send young children to study on the spot and for the people of Samang Commune. Human resource training education: The first basic kindergarten targeted to transform the Kamchamar area, which was previously a battlefield, to provide a ”human resource learning and training area” for Prey Veng province and the country. The decision that the kindergarten assembly hall adds a more special introduction function in Chea SimKamchamar University",
     happynewyear:"Khmer New Year Festival",
     happynewyeartitle:"The Royal Khmer New Year is a grand festival held over three days every year, from April 13-15 (sometimes April 14-16), to celebrate the arrival of the new year’s deities. The festival has a deep meaning in preserving culture, family, gatherings, and honoring ancestors, starting with Maha Sangkranti, Vanbat, and Choi Sak.",
+    st120:"Our Impact",
     projectcompleted:"Projects Completed",
     number50:"500+",
     number40:"4000+",
@@ -378,7 +380,9 @@ const translations = {
     digitalcentertext:" ការសម្ពោធសាលាមត្តេយ្យសិក្សា ហ៊ុន សែន កំចាយមារ កាលពីថ្ងៃទី១១ ខែកក្កដា ឆ្នាំ២០២៤ គឺស្ថិតនៅក្នុងបរិវេណ សាកលវិទ្យាល័យជាតិ ជាស៊ីម កំចាយមារ (ភូមិថ្នល់កែង ឃុំស្មោងខាងជើង) ផ្ទាល់តែម្តង។ការដាក់បញ្ចូលសាលាមត្តេយ្យនៅក្នុងបរិវេណសាកលវិទ្យាល័យនេះ គឺជាយុទ្ធសាស្ត្រមួយដែលគេហៅថា ”មជ្ឈមណ្ឌលអប់រំ និងបណ្តុះបណ្តាល ជា ស៊ីម កំចាយមារ” ដែលមានចំណុចពិសេសដូចជា៖ ការអប់រំពេញលេញមួយកន្លែង៖ វាបង្កើតឱ្យមានប្រព័ន្ធអប់រំតាំងពីថ្នាក់មត្តេយ្យ បឋមសិក្សា វិទ្យាល័យ រហូតដល់ថ្នាក់សាកលវិទ្យាល័យ នៅក្នុងតំបន់តែមួយ។ភាពងាយស្រួលដល់បុគ្គលិក និងសហគមន៍៖ ផ្តល់ភាពងាយស្រួលដល់មន្ត្រីរាជការ សាស្ត្រាចារ្យ និងបុគ្គលិកដែលបម្រើការងារក្នុងសាកលវិទ្យាល័យ អាចបញ្ជូនកូនតូចៗឱ្យមករៀននៅក្បែរកន្លែងធ្វើការ និងសម្រាប់ប្រជាពលរដ្ឋក្នុងឃុំស្មោងខាងជើងផងដែរ។ ការបណ្តុះបណ្តាលធនធានមនុស្ស៖ សាលាមត្តេយ្យនេះគឺជាគ្រឹះដំបូងគេបង្អស់ ក្នុងគោលដៅប្រែក្លាយតំបន់កំចាយមារ ដែលពីមុនជាសមរភូមិ ឱ្យទៅជា ”តំបន់អប់រំ” និងបណ្តុះបណ្តាលធនធានមនុស្ស ដ៏សំខាន់សម្រាប់ខេត្តព្រៃវែង និងប្រទេសជាតិ។ក្នុងពិធីសម្ពោធនោះ សម្តេចក្រឡាហោម ស ខេង ក៏បានសង្កត់ធ្ងន់ថា ការកសាងសាលាមត្តេយ្យនេះ គឺជាការបំពេញបន្ថែមនូវរចនាសម្ព័ន្ធអប់រំឱ្យកាន់តែសម្បូរបែបនៅក្នុងសាកលវិទ្យាល័យជាតិ ជា ស៊ីម កំចាយមារ។",
     happynewyear:"ព្រះរាជពិធីបុណ្យចូលឆ្នាំថ្មីប្រពៃណីជាតិខ្មែរ",
     happynewyeartitle:"ព្រះរាជពិធីបុណ្យចូលឆ្នាំថ្មីប្រពៃណីជាតិខ្មែរ គឺជាពិធីបុណ្យដ៏ធំដែលប្រារព្ធឡើងមានរយៈពេល ៣ ថ្ងៃ ជារៀងរាល់ឆ្នាំគឺនៅថ្ងៃទី១៣-១៥ ខែមេសា (ជួនកាលថ្ងៃទី១៤-១៦) ដើម្បីអបអរទេវតាឆ្នាំថ្មីចុះមកទទួលតំណែង។ ពិធីនេះមានអត្ថន័យជ្រាលជ្រៅក្នុងការថែរក្សាវប្បធម៌ លក្ខណៈគ្រួសារ ការជួបជុំ និងការគោរពដូនតា ដោយចាប់ផ្ដើមពីថ្ងៃមហាសង្ក្រាន្ត, ថ្ងៃវនបត, និងថ្ងៃឡើងស័ក។",
+    st120:"ឥទ្ធិពល និងស្នាដៃរបស់យើង",
     projectcompleted:"គម្រោងដែលបានបញ្ចប់",
+    dt130:"ការកសាងទំនុកចិត្តតាមរយៈគ្រប់គម្រោងដែលយើងបានបញ្ចប់ដោយជោគជ័យ",
     number50:"៥០០+",
     number40:"៤០០០+",
     happyclient:"អតិថិជនមានភាពពេញចិត្ត",
@@ -425,6 +429,9 @@ function changeLanguage() {
 
   document.getElementById("mobileHome").textContent =
     t.home;
+
+  document.getElementById("Dt130").textContent =
+    t.dt130;
 
   document.getElementById("mobileProjects").textContent =
     t.projects;
@@ -537,6 +544,9 @@ function changeLanguage() {
      document.getElementById("Number40").textContent =
     t.number40;
 
+    document.getElementById("St120").textContent =
+    t.st120;
+
     document.getElementById("HappyClient").textContent =
     t.happyclient;
 
@@ -620,11 +630,13 @@ function changeLanguage() {
     "aseanAllready",
     "DigitalCenter",
     "AddTime",
+    "St120",
     "DigitalCenterText",
     "HappyNewYear",
     "HappyNewYearTitle",
     "ProjectCompleted",
     "Number50",
+    "Dt130",
     "Number40",
     "HappyClient",
     "Number2",

@@ -3,7 +3,6 @@ function toggleMode() {
   document.getElementById("body").classList.toggle("dark-mode");
 }
 
-
 // 2. Mouse Parallax Effect
 const hero = document.getElementById("contactHero");
 

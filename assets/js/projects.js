@@ -326,6 +326,10 @@ document.addEventListener("DOMContentLoaded", () => {
       j11: "Episode 1 of the comedy story “Digital Grandma and Grandpa.”",
       iden37: "Identity Design",
       k12: "Product display",
+      flas:"Flashsante",
+      iden100: "Identity Design",
+      iden101: "Identity Design",
+      fh:"FHDEV.INFO",
       l13: "AUTOCAR",
       iden38: "Identity Design",
       m14:"Event Programs",
@@ -340,6 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
       t21:"The National Independence Day ceremony, which is celebrated every year on November 9.",
       iden41: "Identity Design",
       u22: "Product display",
+      lo110:"Logo",
       v23: "Beats EP On-Ear Headphones",
       iden43: "Identity Design",
       w24: "Event Programs",
@@ -354,6 +359,7 @@ document.addEventListener("DOMContentLoaded", () => {
       withss:"website with clean UI design.",
       livess:"Live Website",
       share:"Share",
+      light:"Chicken & Rooster",
       share1:"Share",
       share2:"Share",
       workwith: "Work with us",
@@ -382,6 +388,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mobile:"កម្មវិធីទូរស័ព្ទ",
       improve:"កម្មវិធី iOS និង Android ដែលស្រស់ស្អាត រហ័ស និងមានប្រសិទ្ធភាព",
       my: "បណ្ណាល័យរូបភាពរបស់ខ្ញុំ",
+      light:"មាន់ញី មាន់ឈ្មោល",
       all: "ទាំងអស់",
       festival: "ពិធីបុណ្យ",
       event: "កម្មវិធីព្រឹត្តិការណ៍",
@@ -389,7 +396,7 @@ document.addEventListener("DOMContentLoaded", () => {
       festivalboats: "ព្រះរាជពិធីបុណ្យអុំទូក",
       iden: "ការរចនាអត្តសញ្ញាណ",
       auto: "រថយន្តស្វ័យប្រវត្តិ",
-      iden1: "ការរចនាអត្តសញ្ញាណ",
+      iden1: "ការរចនាអត្តសញ្ញាណ", 
       khmernewyear: "ព្រះរាជពិធីបុណ្យចូលឆ្នាំខ្មែរ",
       iden2: "ការរចនាអត្តសញ្ញាណ",
       selling: "ការលក់ភេសជ្ជៈ",
@@ -414,6 +421,8 @@ document.addEventListener("DOMContentLoaded", () => {
       iden12: "ការរចនាអត្តសញ្ញាណ",
       indep: "ព្រះរាជពិធីបុណ្យឯករាជ្យជាតិ ដែលប្រារព្ធឡើងរៀងរាល់ឆ្នាំនៅថ្ងៃទី ៩ ខែវិច្ឆិកា",
       iden13: "ការរចនាអត្តសញ្ញាណ",
+      fh:"FHDEV.INFO",
+      iden101:"ការរចនាអត្តសញ្ញាណ",
       men: "ម៉ឺនុយ",
       iden14: "ការរចនាអត្តសញ្ញាណ",
       sim: "មជ្ឈមណ្ឌលអប់រំ និងបណ្តុះបណ្តាល ជា ស៊ីម កុំចាយយមារ",
@@ -488,9 +497,12 @@ document.addEventListener("DOMContentLoaded", () => {
       p17: "ពិធីបើកសម្ពោធមជ្ឈមណ្ឌលបច្ចេកវិទ្យាឌីជីថល",
       iden40: "ការរចនាអត្តសញ្ញាណ",
       q18: "ពិធីបុណ្យ",
+      flas:"Flashsante",
+      iden100: "ការរចនាអត្តសញ្ញាណ",
       r19: "ព្រះរាជពិធីបុណ្យអុំទូក",
       iden41: "ការរចនាអត្តសញ្ញាណ",
       s20: "ពិធីបុណ្យ",
+      lo110:"និមិត្តសញ្ញា",
       t21: "ព្រះរាជពិធីបុណ្យឯករាជ្យជាតិ ដែលប្រារព្ធឡើងរៀងរាល់ឆ្នាំនៅថ្ងៃទី ៩ ខែវិច្ឆិកា",
       iden42: "ការរចនាអត្តសញ្ញាណ",
       u22: "ការបង្ហាញផលិតផល",
@@ -544,6 +556,7 @@ document.addEventListener("DOMContentLoaded", () => {
     set("mobileStudio", t.studio);
     set("mobileInsights", t.insights);
     set("mobileContact", t.contact);
+    set("Light", t.light);
     set("Agen", t.agen);
     set("Modern", t.modern);
     set("Creat", t.creat);
@@ -554,6 +567,7 @@ document.addEventListener("DOMContentLoaded", () => {
     set("Fast", t.fats);
     set("Mobile", t.mobile);
     set("ImProve", t.improve);
+    
     set("My", t.my);
     set("All", t.all);
     set("Festival", t.festival);
@@ -614,10 +628,13 @@ document.addEventListener("DOMContentLoaded", () => {
     set("Iden24", t.iden24);
     set("Programs", t.event);
     set("U2025", t.u2025);
+    set("Lo110", t.lo110);
     set("Iden25", t.iden25);
     set("Festi", t.festi);
     set("Pchum", t.pchum);
     set("Iden26", t.iden26);
+    set("FH", t.fh);
+    set("Iden101", t.iden101);
     set("Festi1", t.festi1);
     set("Khmer1", t.khmer1);
     set("Iden27", t.iden27); 
@@ -665,6 +682,8 @@ document.addEventListener("DOMContentLoaded", () => {
     set("Iden41", t.iden41);
     set("S20", t.s20);
     set("T21", t.t21);
+    set("Flas", t.flas);
+    set("Iden100", t.iden100);
     set("Iden42", t.iden42);
     set("U22", t.u22);
     set("V23", t.v23);
@@ -731,6 +750,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Iden3",
         "King1",
         "Iden4",
+        "Light",
         "Asean",
         "Iden5",
         "Inauguration",
@@ -738,6 +758,9 @@ document.addEventListener("DOMContentLoaded", () => {
         "Inauguration1",
         "Iden7",
         "PchumBen",
+        "FH",
+        "Iden101",
+        "Lo110",
         "Iden8",
         "ChearSim",
         "Iden9",
@@ -797,6 +820,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "Iden31",
         "Val",
         "New",
+        "Flas",
+        "Iden100",
         "Iden32",
         "a1",
         "b2",
