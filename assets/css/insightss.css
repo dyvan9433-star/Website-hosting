@@ -35,11 +35,9 @@ body {
   left: 0;
   width: 100%;
   z-index: 999999;
-
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
@@ -163,6 +161,14 @@ body {
 .dark-mode {
   --text: #ffffff;
   --text-2: #cbd3e6;
+}
+.dark-mode .featured-body {
+    background: #1e1e1e;
+}
+
+.dark-mode .featured-body h2,
+.dark-mode .featured-body p {
+    color: #fff !important;
 }
 
 /* =========================
@@ -507,7 +513,7 @@ body {
     display:inline-block;
     padding:6px 14px;
     background:#dbeafe;
-    color:var(--primary);
+    color:var(--bg);
     border-radius:20px;
     font-size:13px;
     margin-bottom:12px;

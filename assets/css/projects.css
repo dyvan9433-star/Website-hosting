@@ -1418,3 +1418,17 @@ footer {
     transform: translateY(0);
   }
 }
+@media (max-width: 768px) {
+    .hero-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .hero-item {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+}
